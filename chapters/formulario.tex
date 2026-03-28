@@ -1,0 +1,100 @@
+% --- FORMULARIO: Operazioni vettoriali in vari sistemi di coordinate ---
+\addchap{Forme esplicite di operazioni vettoriali}
+
+Siano $\mathbf e_1,\mathbf e_2,\mathbf e_3$ i tre versori mutuamente ortogonali delle direzioni
+coordinate indicate nella colonna a sinistra, ed $A_1,A_2,A_3$ le corrispondenti componenti di un
+vettore $\mathbf A$. Allora:
+
+% Stile comune per i riquadri
+\tcbset{
+  colback=white,
+  boxrule=0.6pt,
+  colframe=black,
+  width=\textwidth,  % <-- larghezza piena
+  left=6pt, right=6pt, top=4pt, bottom=4pt,
+  rounded corners,
+  % 'enhanced' removed because it's not available in this tcolorbox version
+  before skip=10pt,
+  after skip=10pt
+  }
+
+% -------- CARTESIANE --------
+\begin{tcolorbox}[title={\normalsize \textbf{Coordinate cartesiane} \ $(x_1,x_2,x_3)$}]
+\[
+\nabla \psi = \mathbf e_1\,\frac{\partial \psi}{\partial x_1}
+            + \mathbf e_2\,\frac{\partial \psi}{\partial x_2}
+            + \mathbf e_3\,\frac{\partial \psi}{\partial x_3}
+\]
+\[
+\nabla\!\cdot\!\mathbf A = \frac{\partial A_1}{\partial x_1}
+                         + \frac{\partial A_2}{\partial x_2}
+                         + \frac{\partial A_3}{\partial x_3}
+\]
+\[
+\nabla\!\times\!\mathbf A =
+\mathbf e_1\!\left(\frac{\partial A_3}{\partial x_2}-\frac{\partial A_2}{\partial x_3}\right)
++ \mathbf e_2\!\left(\frac{\partial A_1}{\partial x_3}-\frac{\partial A_3}{\partial x_1}\right)
++ \mathbf e_3\!\left(\frac{\partial A_2}{\partial x_1}-\frac{\partial A_1}{\partial x_2}\right)
+\]
+\[
+\nabla^2 \psi=\frac{\partial^2\psi}{\partial x_1^2}
+             + \frac{\partial^2\psi}{\partial x_2^2}
+             + \frac{\partial^2\psi}{\partial x_3^2}
+\]
+\end{tcolorbox}
+
+% -------- CILINDRICHE --------
+\begin{tcolorbox}[title={\normalsize \textbf{Coordinate cilindriche} \ $(\rho,\varphi,z)$}]
+\[
+\nabla \psi = \mathbf e_\rho\,\frac{\partial \psi}{\partial \rho}
+            + \mathbf e_\varphi\,\frac{1}{\rho}\frac{\partial \psi}{\partial \varphi}
+            + \mathbf e_z\,\frac{\partial \psi}{\partial z}
+\]
+\[
+\nabla\!\cdot\!\mathbf A =
+\frac{1}{\rho}\frac{\partial}{\partial \rho}\!\big(\rho A_\rho\big)
++ \frac{1}{\rho}\frac{\partial A_\varphi}{\partial \varphi}
++ \frac{\partial A_z}{\partial z}
+\]
+\[
+\nabla\!\times\!\mathbf A =
+\mathbf e_\rho\!\left(\frac{1}{\rho}\frac{\partial A_z}{\partial \varphi}-\frac{\partial A_\varphi}{\partial z}\right)
++ \mathbf e_\varphi\!\left(\frac{\partial A_\rho}{\partial z}-\frac{\partial A_z}{\partial \rho}\right)
++ \mathbf e_z\!\left(\frac{1}{\rho}\frac{\partial}{\partial \rho}(\rho A_\varphi)-\frac{1}{\rho}\frac{\partial A_\rho}{\partial \varphi}\right)
+\]
+\[
+\nabla^2\psi=\frac{1}{\rho}\frac{\partial}{\partial \rho}\!\left(\rho\,\frac{\partial\psi}{\partial \rho}\right)
+            + \frac{1}{\rho^2}\frac{\partial^2\psi}{\partial \varphi^2}
+            + \frac{\partial^2\psi}{\partial z^2}
+\]
+\end{tcolorbox}
+
+% -------- SFERICHE --------
+\begin{tcolorbox}[title={\normalsize \textbf{Coordinate sferiche} \ $(r,\theta,\varphi)$}]
+\[
+\nabla \psi = \mathbf e_r\,\frac{\partial \psi}{\partial r}
+            + \mathbf e_\theta\,\frac{1}{r}\frac{\partial \psi}{\partial \theta}
+            + \mathbf e_\varphi\,\frac{1}{r\sin\theta}\frac{\partial \psi}{\partial \varphi}
+\]
+\[
+\nabla\!\cdot\!\mathbf A =
+\frac{1}{r^2}\frac{\partial}{\partial r}\!\big(r^2 A_r\big)
++ \frac{1}{r\sin\theta}\frac{\partial}{\partial \theta}\!\big(\sin\theta\, A_\theta\big)
++ \frac{1}{r\sin\theta}\frac{\partial A_\varphi}{\partial \varphi}
+\]
+
+\begin{align*}
+    \nabla\!\times\!\mathbf A =
+\mathbf e_r\,\frac{1}{r\sin\theta}\!\left[\frac{\partial}{\partial \theta}(A_\varphi\sin\theta)-\frac{\partial A_\theta}{\partial \varphi}\right]
++ \mathbf e_\theta\,\frac{1}{r}\!\left[\frac{1}{\sin\theta}\frac{\partial A_r}{\partial \varphi}-\frac{\partial}{\partial r}(rA_\varphi)\right] + \\ 
++ \mathbf e_\varphi\,\frac{1}{r}\!\left[\frac{\partial}{\partial r}(rA_\theta)-\frac{\partial A_r}{\partial \theta}\right] \quad \quad \quad \quad \quad \quad \quad \quad \quad  \quad
+\end{align*}
+
+
+
+\[
+\nabla^2\psi=\frac{1}{r^2}\frac{\partial}{\partial r}\!\left(r^2\frac{\partial \psi}{\partial r}\right)
+            + \frac{1}{r^2\sin\theta}\frac{\partial}{\partial \theta}\!\left(\sin\theta\,\frac{\partial \psi}{\partial \theta}\right)
+            + \frac{1}{r^2\sin^2\theta}\frac{\partial^2\psi}{\partial \varphi^2}
+\]
+\end{tcolorbox}

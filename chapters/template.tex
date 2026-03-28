@@ -1,0 +1,161 @@
+% !TEX root = ../Appunti_Fisica_2.tex
+\documentclass[11pt,oneside]{scrbook} % KOMA: pulito e flessibile
+
+% ---------- LINGUA & CODIFICA ----------
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+
+% ---------- TIPOGRAFIA CONSIGLIATA ----------
+\usepackage{lmodern}     % font semplice e diffuso
+\usepackage{microtype}   % micro-tipografia, migliore resa
+
+% ---------- GEOMETRIA PAGINA ----------
+% Scegli *una* delle due geometrie qui sotto.
+% (1) Impostazioni consigliate per A4 (Italia) con ampio margine esterno:
+\usepackage[
+  a4paper,
+  top=24mm,
+  bottom=28mm,
+  inner=28mm,   % margine interno (verso rilegatura)
+  outer=50mm,   % margine esterno: ampio per le note a margine
+  heightrounded
+]{geometry}
+\setlength{\headheight}{17pt} % evita sovrapposizioni con l'header
+\setlength{\headsep}{6mm}     % distanza tra header e corpo
+
+
+% (2) Se vuoi replicare il formato del PDF caricato (US Letter 8.5x11"):
+% \usepackage[
+%   letterpaper,
+%   top=25mm,
+%   bottom=30mm,
+%   inner=30mm,
+%   outer=55mm,
+%   heightrounded
+% ]{geometry}
+
+% ---------- HEADER/FOOTER ----------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % pulisci
+
+% intestazione: solo titolo del capitolo (sinistra), pagina a destra
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyfoot[R]{\thepage}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[R]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+% ---------- STRUMENTI DI STRUTTURA ----------
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+\usepackage{titlesec}
+
+% --- Titoli puliti ---
+% Capitolo
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}
+  {\thechapter}{1ex}{}
+\titlespacing*{\chapter}{0pt}{-0.5em}{1.5ex}
+
+% Capitolo
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}
+  {\thechapter}{1ex}{}
+\titlespacing*{\chapter}{0pt}{1.5ex}{1.5ex}
+
+% Sezione
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\thesection}{1em}{}
+
+% Sottosezione
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {\thesubsection}{0.8em}{}
+
+% SOTTO-sottosezione  <--- AGGIUNGI QUESTO BLOCCO
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}
+  {\thesubsubsection}{0.8em}{}
+\titlespacing*{\subsubsection}{0pt}{0.8ex}{0.4ex}
+
+% ---------- PAGINA SEPARATRICE ----------
+\newcommand{\partpage}[1]{%
+  \cleardoublepage          % vai a pagina nuova (pari se oneside)
+  \thispagestyle{empty}     % niente header/footer
+  \null\vfill               % spazio verticale elastico sopra
+  \begin{center}
+    {\Huge\bfseries #1}
+  \end{center}
+  \vfill\null               % spazio verticale elastico sotto
+  \cleardoublepage          % lascia la pagina successiva libera
+}
+
+% ---------- AMBIENTI UTILI ----------
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{subcaption} 
+
+% ---------- NOTE A MARGINE (parole-chiave/sidenote) ----------
+% \marginpar stampa nel margine esterno con oneside.
+% Definiamo un comando comodo e graficamente coerente:
+\newcommand{\mkeyword}[1]{%
+  \marginpar{\raggedright\footnotesize\emph{#1}}%
+}
+
+% Se preferisci le note a sinistra, attiva la riga seguente:
+% \reversemarginpar
+
+% ---------- PARAGRAFI E SPAZI ----------
+\setlength{\parindent}{0.8em}  % rientro tradizionale
+\setlength{\parskip}{0.25em}   % piccolo spazio extra tra paragrafi
+
+%----------- COMANDI AGGIUNTIVI -----------
+% --- Comando per vettori colonna di lunghezza variabile ---
+
+\newcommand{\colvec}[1]{%
+  \begin{pmatrix}
+    #1
+  \end{pmatrix}%
+}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\newcommand{\FIG}[1]{
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\linewidth]{figure/image#1.png}
+    \caption{}
+    \label{}
+  \end{figure}
+}
+
+\newcommand{\eps}{\varepsilon}
+
+% ---------- BIBLIOGRAFIA ----------
+\usepackage[backend=biber,style=numeric,sorting=nyt]{biblatex}
+\addbibresource{bibliografia.bib} % nome del file .bib
+
+% ---------- FRONTESPIZIO ----------
+\title{\textbf{Appunti di Fisica 2}}
+\author{Roberto Riccucci}
+\date{}
+
+\publishers{
+  Email: \text{roberto.riccucci1304@gmail.com} \\
+  Versione: v0.1
+}
+

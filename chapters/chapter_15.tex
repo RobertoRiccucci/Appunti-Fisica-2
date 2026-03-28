@@ -1,0 +1,108 @@
+\chapter{Potenziale vettore}
+
+Proprio come la relazione $\nabla \times \mathbf{E} = 0$ ci ha permesso di introdurre un potenziale scalare in elettrostatica tale per cui vale 
+
+\begin{equation*}
+    \mathbf{E} = - \nabla V
+\end{equation*}
+
+Anche la relazione $\nabla \cdot \mathbf{B} = 0$ ci permette di introdurre un \emph{potenziale vettore $\mathbf{A}$ \mkeyword{potenziale vettore} in magnetostatica} tale per cui:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation} \label{eq:potenziale_vettore}
+    \mathbf{B} = \nabla \times \mathbf{A}
+\end{equation}
+\end{tcolorbox}
+
+Questa forma è garantita dal teorema dei campi solinoidali. \\
+
+In particolare la scelta di $\mathbf{A}$ non è univoca, infatti è sempre possibile applicare una \emph{trasformazione di gauge} tale per cui
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \mathbf{A} \to \mathbf{A} + \nabla \psi
+\end{equation}
+\end{tcolorbox}
+
+dove $\psi$ è una funzione scalare arbitraria, per cui continui a valere la \ref{eq:potenziale_vettore}. Verifichiamo questo fatto. 
+
+\begin{equation*}
+    \nabla \times (\mathbf{A} + \nabla \psi ) = \nabla \times \mathbf{A} + (\nabla \times \nabla  \psi) = \nabla \times \mathbf{A}
+\end{equation*}
+
+Dove abbiamo sfruttato che il rotore di un gradiente è zero. \\
+
+Una buona scelta di gauge è quella tale per cui 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation} \label{eq:divergenza_potenziale_vettore}
+    \nabla \cdot \mathbf{A} = 0
+\end{equation}
+\end{tcolorbox}
+
+Andiamo a dimostrare che una scelta di gauge di questo tipo è sempre possibile. Consideriamo un potenziale vettore del tipo 
+
+\begin{equation*}
+    \mathbf{A} = \mathbf{A}_0 + \nabla \psi 
+\end{equation*}
+
+Allora la divergenza di questo è 
+
+\begin{equation*}
+    \nabla \cdot \mathbf{A} = \nabla \cdot \mathbf{A}_0 + \nabla ^2 \psi 
+\end{equation*}
+
+Se vogliamo imporre la \ref{eq:divergenza_potenziale_vettore}, dobbiamo trovare una funzione scalare $\psi$ tale per cui 
+
+\begin{equation*}
+    \nabla^2 \psi = - \nabla \cdot \mathbf{A}_0
+\end{equation*}
+
+Si nota facilmente che questa forma assomiglia molto all'equazione di Poisson \ref{eq:equazione_di_Poisson}, con $\nabla \cdot \mathbf{A}_0$ al posto $\rho/\varepsilon_0$ come sorgente. Sappiamo che, in base alla regione di spazio, è sempre possibile risolvere l'equazione di Poisson, questo comporta che è sempre possibile fare una scelta di gauge tale per cui il potenziale vettore è solinoidale. \\
+
+In base a questa forma, allora, la legge di Ampère locale diventa
+
+\begin{equation*}
+    \nabla \times \mathbf{B} = \nabla \times (\nabla \times \mathbf{A}) = \nabla (\nabla \cdot \mathbf{A}) - \nabla ^2 \mathbf{A} = \mu_0 \mathbf{j}
+\end{equation*}
+
+Dato che abbiamo preso il potenziale vettore solinoidale, si ha 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \nabla ^2 \mathbf{A} = - \mu_0 \mathbf{j}
+\end{equation}
+\end{tcolorbox}
+
+Ma questa, come prima, non è altro che un'equazione di Poisson (o meglio, sono tre equazioni di Poisson, una per ogni componente). Supponendo che $\mathbf{j}$ sia definito su tutto lo spazio, si ottiene che 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation} \label{eq:forma_esplicita_potenziale_vet}
+    \mathbf{A} = \frac{\mu_0}{4 \pi} \int_{\tau} \frac{\mathbf{j}}{r} d \tau
+\end{equation}
+\end{tcolorbox}
+
+In particolare, se stiamo considerando un filo in cui scorre corrente la precedente relazione può essere scritta come 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \mathbf{A} = \frac{\mu_0}{4 \pi} \int \frac{i \ d \mathbf{s}}{r} 
+\end{equation}
+\end{tcolorbox}
+
+\'E possibile trovare un'ulteriore importante relazione tra $\mathbf{B}$ e $\mathbf{A}$, infatti, posta $\Sigma$ una superficie e $C(\Sigma)$ il bordo di tale superficie, risulta
+
+\begin{equation*}
+    \int_{\Sigma} \mathbf{B} \cdot  \mathbf{u}_n \ d \Sigma  = \int_{\Sigma} (\nabla \times \mathbf{A}) \cdot \mathbf{u}_n \ d\Sigma = \oint_{C(\Sigma)} \mathbf{A} \cdot d \mathbf{s}
+\end{equation*}
+
+Cioè
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \int_{\Sigma} \mathbf{B} \cdot  \mathbf{u}_n \ d \Sigma = \oint_{C(\Sigma)} \mathbf{A} \cdot d \mathbf{s} 
+\end{equation}
+\end{tcolorbox}
+
+Quindi il flusso di $\mathbf{B}$ attraverso $\Sigma$ è uguale alla circuitazione di $\mathbf{A}$ lungo il bordo $C(\Sigma)$ di $\Sigma$. 
+

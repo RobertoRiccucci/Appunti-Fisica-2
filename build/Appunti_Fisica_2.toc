@@ -1,0 +1,152 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\nonumberline Prefazione}{ii}{chapter*.1}%
+\contentsline {chapter}{\nonumberline Forme esplicite di operazioni vettoriali}{vii}{chapter*.3}%
+\contentsline {chapter}{\numberline {1}Forza elettrostatica e Campo elettrostatico}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Campo elettrostatico}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Linee di forza del campo elettrostatico}{4}{subsection.1.1.1}%
+\contentsline {chapter}{\numberline {2}Lavoro elettrico e Potenziale elettrostatico}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Potenziale elettrostatico}{6}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Calcolo del potenziale elettrostatico}{6}{subsection.2.1.1}%
+\contentsline {chapter}{\numberline {3}Legge di Gauss}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Dimostrazione della legge di Gauss}{10}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Relazioni locali}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Campo elettrostatico come gradiente del potenziale elettrostatico}{13}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Superfici equipotenziali}{14}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Rotore di un campo vettoriale e Teorema di Stokes}{15}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Campo vettoriale conservativo}{17}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Legge di Gauss in forma differenziale.\\ Divergenza di un campo vettoriale.}{18}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Equazioni di Poisson e di Laplace}{19}{subsection.4.3.1}%
+\contentsline {chapter}{\numberline {5}Energia elettrostatica}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Energia elettrostatica per una distribuzione continua}{22}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Dipolo elettrico}{24}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Potenziale di una distribuzione di cariche nell'approssimazione di dipolo}{26}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Forza su un dipolo elettrico}{28}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Campo elettrostatico uniforme}{28}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Campo elettrostatico non uniforme}{29}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}interazione tra dipoli}{29}{subsection.6.2.3}%
+\contentsline {chapter}{\numberline {7}Conduttori}{31}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Capacità di un conduttore isolato}{33}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Conduttori cavi}{34}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Gabbia di Faraday}{34}{subsection.7.2.1}%
+\contentsline {section}{\numberline {7.3}Condensatori}{36}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Condensatore piano}{37}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Condensatore sferico}{37}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Condensatore cilindrico}{38}{subsection.7.3.3}%
+\contentsline {section}{\numberline {7.4}Energia elettrostatica per i condensatori}{39}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Forza tra le armature di un condensatore}{39}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Forza tra le armature di un condensatore a potenziale costante}{40}{subsection.7.5.1}%
+\contentsline {chapter}{\numberline {8}Unicità delle soluzioni con condizioni al contorno}{41}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Condizioni al contorno di Dirichlet o di Neumann}{41}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Soluzione formale del problema elettrostatico dei valori al contorno con la funzione di Green}{43}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Delta di Dirac e Identità di Green}{43}{subsection.8.2.1}%
+\contentsline {chapter}{\numberline {9}Problemi con condizioni al contorno}{46}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Metodo delle cariche immagine}{46}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Carica posizionata davanti a un piano conduttore infinito messo a terra}{46}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Carica in presenza di una sfera conduttrice carica messa a terra}{47}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}Carica in presenza di una sfera conduttrice carica isolata}{48}{subsection.9.1.3}%
+\contentsline {subsection}{\numberline {9.1.4}Carica in presenza di una sfera conduttrice a potenziale fissato}{49}{subsection.9.1.4}%
+\contentsline {subsection}{\numberline {9.1.5}Sfera conduttrice in un campo elettrostatico uniforme}{49}{subsection.9.1.5}%
+\contentsline {subsection}{\numberline {9.1.6}Carica all'interno di una sfera conduttrice messa a terra}{50}{subsection.9.1.6}%
+\contentsline {subsection}{\numberline {9.1.7}Energia del sistema con il metodo delle cariche immagine}{51}{subsection.9.1.7}%
+\contentsline {section}{\numberline {9.2}Metodo di separazione delle variabili}{52}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Funzioni ortogonali e sviluppi}{52}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Coordinate cartesiane}{54}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Coordinate sferiche}{55}{subsection.9.2.3}%
+\contentsline {subsubsection}{\numberline {9.2.3.1}Equazione di Legendre e i polinomi di Legendre}{56}{subsubsection.9.2.3.1}%
+\contentsline {chapter}{\numberline {10}Sviluppo in multipoli}{60}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Armoniche sferiche}{60}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}Teorema di somma per le armoniche sferiche}{62}{subsection.10.1.1}%
+\contentsline {section}{\numberline {10.2}Multipoli}{63}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Quadrupolo}{64}{subsection.10.2.1}%
+\contentsline {chapter}{\numberline {11}Dielettrici}{65}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Campo elettrico prodotto da un dielettrico polarizzato}{66}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}Interpretazione fisica delle cariche di polarizzazione}{68}{subsection.11.1.1}%
+\contentsline {section}{\numberline {11.2}Equazioni dell'elettrostatica in presenza di dielettrici}{68}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}Relazioni per dielettrici lineari}{69}{subsection.11.2.1}%
+\contentsline {section}{\numberline {11.3}Discontinuità dei campi sulla superficie di separazione tra due dielettrici}{70}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}Problemi al contorno con i dielettrici}{72}{subsection.11.3.1}%
+\contentsline {subsubsection}{\numberline {11.3.1.1}Carica entro un dielettrico semi-infinito}{72}{subsubsection.11.3.1.1}%
+\contentsline {subsubsection}{\numberline {11.3.1.2}Sfera dielettrica in campo uniforme}{73}{subsubsection.11.3.1.2}%
+\contentsline {section}{\numberline {11.4}Energia elettrostatica nei dielettrici}{75}{section.11.4}%
+\contentsline {chapter}{\numberline {12}Corrente elettrica}{78}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Legge di conservazione della carica}{79}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Conduttività elettrica e legge di Ohm}{80}{section.12.2}%
+\contentsline {chapter}{\numberline {13}Forza magnatica e Campo magnetico}{81}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Legge di Gauss per il campo magnetico}{81}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Forza magnetica su una carica in moto}{83}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}Moto in campo magnetico uniforme, $\mathbf {\theta = \pi /2}$}{83}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {13.2.2}Moto in campo magnetico uniforme, $\theta $ generico}{84}{subsection.13.2.2}%
+\contentsline {section}{\numberline {13.3}Forza magnetica su un conduttore percorso da corrente}{85}{section.13.3}%
+\contentsline {subsection}{\numberline {13.3.1}Campo magnetico uniforme e filo rettilineo}{85}{subsection.13.3.1}%
+\contentsline {subsection}{\numberline {13.3.2} Campo magnetico uniforme e filo curvilineo piano}{86}{subsection.13.3.2}%
+\contentsline {chapter}{\numberline {14}Sorgenti del campo magnetico}{87}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Campo magnetico prodotto da una corrente}{87}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}Divergenza del campo magnetico}{88}{subsection.14.1.1}%
+\contentsline {subsection}{\numberline {14.1.2}Filo rettilineo indefinito. Legge di Biot-Savart}{89}{subsection.14.1.2}%
+\contentsline {subsection}{\numberline {14.1.3}Spira circolare}{90}{subsection.14.1.3}%
+\contentsline {subsection}{\numberline {14.1.4}Solenoide rettilineo}{91}{subsection.14.1.4}%
+\contentsline {section}{\numberline {14.2}Azioni elettrodinamiche tra circuiti percorsi da corrente}{93}{section.14.2}%
+\contentsline {subsection}{\numberline {14.2.1}Forza tra due fili rettilinei}{94}{subsection.14.2.1}%
+\contentsline {section}{\numberline {14.3}Legge di Ampère}{95}{section.14.3}%
+\contentsline {chapter}{\numberline {15}Potenziale vettore}{99}{chapter.15}%
+\contentsline {chapter}{\numberline {16}Dipolo magnetico}{101}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Momento magnetico di una spira filiforme piana}{103}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Dipolo magnetico elementare}{103}{section.16.2}%
+\contentsline {section}{\numberline {16.3}Energia di un dipolo magnetico}{104}{section.16.3}%
+\contentsline {section}{\numberline {16.4}Momento meccanico di un dipolo magnetico}{104}{section.16.4}%
+\contentsline {subsection}{\numberline {16.4.1}Interazione tra dipoli}{105}{subsection.16.4.1}%
+\contentsline {section}{\numberline {16.5}Espressioni di forza, momento e lavoro tramite il flusso magnetico}{105}{section.16.5}%
+\contentsline {chapter}{\numberline {17}Proprietà magnetiche della materia}{107}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Magnetizzazione}{108}{section.17.1}%
+\contentsline {subsection}{\numberline {17.1.1}interpretazione fisica}{110}{subsection.17.1.1}%
+\contentsline {section}{\numberline {17.2}Equazioni della magnetostatica nei mezzi}{111}{section.17.2}%
+\contentsline {section}{\numberline {17.3}Discontinuità dei campi sulla superficie di separazione tra due mezzi magnetizzati}{113}{section.17.3}%
+\contentsline {subsection}{\numberline {17.3.1}Discontinuità tra mezzi}{114}{subsection.17.3.1}%
+\contentsline {section}{\numberline {17.4}Confronto tra le leggi dell'elettrostatica e della magnetostatica in mezzi omogenei indefiniti}{115}{section.17.4}%
+\contentsline {chapter}{\numberline {18}Legge di Faraday}{117}{chapter.18}%
+\contentsline {subsection}{\numberline {18.0.1}Legge di Lenz}{118}{subsection.18.0.1}%
+\contentsline {section}{\numberline {18.1}Invarianza sotto trasformazioni di Galileo}{118}{section.18.1}%
+\contentsline {subsection}{\numberline {18.1.1}Forma diffenziale della legge di Faraday}{119}{subsection.18.1.1}%
+\contentsline {section}{\numberline {18.2}Autoinduzione}{120}{section.18.2}%
+\contentsline {subsection}{\numberline {18.2.1}Forza elettromotrice di autoinduzione}{120}{subsection.18.2.1}%
+\contentsline {section}{\numberline {18.3}Mutua indunzione}{121}{section.18.3}%
+\contentsline {subsection}{\numberline {18.3.1}Circuiti accoppiati}{121}{subsection.18.3.1}%
+\contentsline {chapter}{\numberline {19}Legge di Ampère-Maxwell}{122}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Simmetria con la legge di Faraday}{123}{section.19.1}%
+\contentsline {section}{\numberline {19.2}Campi magnetici quasi-statici ed effetto pelle}{123}{section.19.2}%
+\contentsline {chapter}{\numberline {20}Equazioni di Maxwell}{124}{chapter.20}%
+\contentsline {section}{\numberline {20.1}Le equazioni di Maxwell}{124}{section.20.1}%
+\contentsline {section}{\numberline {20.2}Il potenziale vettore e il potenziale scalare}{125}{section.20.2}%
+\contentsline {subsection}{\numberline {20.2.1}Gauge di Lorenz}{126}{subsection.20.2.1}%
+\contentsline {subsection}{\numberline {20.2.2}Gauge di Coulomb}{127}{subsection.20.2.2}%
+\contentsline {chapter}{\numberline {21}Leggi di conservazione}{128}{chapter.21}%
+\contentsline {section}{\numberline {21.1}Teorema di Poynting}{128}{section.21.1}%
+\contentsline {section}{\numberline {21.2}Conservazione della quantità di moto}{130}{section.21.2}%
+\contentsline {subsection}{\numberline {21.2.1}Tensore degli sforzi di Maxwell}{130}{subsection.21.2.1}%
+\contentsline {section}{\numberline {21.3}Conservazione del momento angolare}{132}{section.21.3}%
+\contentsline {chapter}{\numberline {22}Onde elettromagnetiche}{133}{chapter.22}%
+\contentsline {section}{\numberline {22.1}Soluzione dell'equazione di d'Alembert}{133}{section.22.1}%
+\contentsline {section}{\numberline {22.2}Onde elettromagnetiche in assenza di sorgenti nel vuoto e loro proprietà}{135}{section.22.2}%
+\contentsline {subsection}{\numberline {22.2.1}Proprietà delle onde magnetiche nel vuoto}{136}{subsection.22.2.1}%
+\contentsline {section}{\numberline {22.3}Onde monocromatiche nel vuoto}{138}{section.22.3}%
+\contentsline {subsection}{\numberline {22.3.1}Polarizzazione delle onde elettromagnetiche monocromatiche}{139}{subsection.22.3.1}%
+\contentsline {subsection}{\numberline {22.3.2}Energia di un'onda elettromagnetica monocromatica}{140}{subsection.22.3.2}%
+\contentsline {section}{\numberline {22.4}Onde sferiche nel vuoto}{141}{section.22.4}%
+\contentsline {section}{\numberline {22.5}Onde cilindriche nel vuoto}{142}{section.22.5}%
+\contentsline {subsection}{\numberline {22.5.1}Funzioni di Bessel}{142}{subsection.22.5.1}%
+\contentsline {section}{\numberline {22.6}Onde elettromagnetiche in assenza di sorgenti in un mezzo}{146}{section.22.6}%
+\contentsline {subsection}{\numberline {22.6.1}Onde monocromatiche in un mezzo}{147}{subsection.22.6.1}%
+\contentsline {section}{\numberline {22.7}Soluzione equazione d'onda con sorgente}{148}{section.22.7}%
+\contentsline {subsection}{\numberline {22.7.1}Soluzione equazione di Helmholtz}{149}{subsection.22.7.1}%
+\contentsline {section}{\numberline {22.8}Potenziali ritardati}{152}{section.22.8}%
+\contentsline {subsection}{\numberline {22.8.1}Potenziali di Liénard-Wiechert}{152}{subsection.22.8.1}%
+\contentsline {section}{\numberline {22.9}Sorgenti monocromatiche e sviluppo in multipoli}{153}{section.22.9}%
+\contentsline {subsection}{\numberline {22.9.1}Le tre zone}{154}{subsection.22.9.1}%
+\contentsline {section}{\numberline {22.10}Dipolo elettrico oscillante}{155}{section.22.10}%
+\contentsline {subsection}{\numberline {22.10.1}Campi del dipolo elettrico oscillante}{155}{subsection.22.10.1}%
+\contentsline {section}{\numberline {22.11}Termine di ordine successivo: dipolo magnetico e quadrupolo elettrico}{156}{section.22.11}%
+\contentsline {subsection}{\numberline {22.11.1}Dipolo magnetico oscillante}{157}{subsection.22.11.1}%
+\contentsline {subsection}{\numberline {22.11.2}Quadrupolo elettrico oscillante}{157}{subsection.22.11.2}%
+\contentsline {section}{\numberline {22.12}Confronto tra dipolo elettrico e dipolo magnetico}{158}{section.22.12}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

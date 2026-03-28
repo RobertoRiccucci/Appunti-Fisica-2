@@ -1,0 +1,132 @@
+\chapter{Equazioni di Maxwell}
+
+Nei capitoli precedenti abbiamo trattato principalmente problemi stazionari di elettricità e magentismo. Le tecniche matematiche utilizzate erano simili, ma i fenomeni elettrici e magnetici sono stati trattati come indipendenti.
+L'unico legame fra di essi era nel fatto che le correnti che producono campi magnetici, essendo cariche in movimento, sono di natura essenzialmente elettrica.\\
+
+La natura quasi indipendente dei fenomeni elettrici e magnetici scompare quando si considerano problemi in cui vi è una dipendenza dal tempo. La scoperta dell'induzione da parte di Faraday ha distrutto questa indipendenza. 
+Campi magnetici variabili nel tempo danno origine a campi elettrici e viceversa. 
+Dobbiamo allora parlare di \emph{campi elettromagnetici} piuttosto che di campi elettrici o magnetici. \\
+
+L'importanza dell'interconnessione fra campi elettrici e magnetici e della loro essenziale unità si può comprendere chiaramente ed in modo completo solo nell'ambito della teoria della relatività speciale.
+Per il momento ci accontenteremo di esaminare i fenomeni fondamentali e di dedurre l'insieme di equazioni noto come equazioni di Maxwell, che descrive il comportamento dei campi elettromagnetici. Verranno poi discussi i potenziali vettore e scalare, le trasformazioni di gauge, e le funzioni di Green per l'equazione d'onda, incluse le soluzioni ritardate per i campi come pure per i potenziali. 
+Seguirà una derivazione delle equazioni dell'elettromagnetismo macroscopico. Verranno trattate infine le leggi di conservazione dell'energia e dell'impulso e le proprietà di trasformazione delle quantità elettromagnetiche ed anche l'interessante argomento dei monopoli magnetici.
+
+\section{Le equazioni di Maxwell}
+
+Le leggi fondamentali dell'elettricità o del magnetismo che abbiamo discusso fino ad ora possono essere riassunte in forma differenziale dalle seguenti quattro equazioni che prendono il nome di \emph{equazioni di Maxwell}: \mkeyword{equazioni di Maxwell}
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{align} \label{eq: Equazioni_di_Maxwell}
+\text{Legge di Gauss} & \qquad \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0} \\
+\text{Assenza di poli magnetici liberi} & \qquad \nabla \cdot \mathbf{B} = 0 \\
+\text{Legge di Faraday} & \qquad \nabla \times \mathbf{E} = - \frac{\partial \mathbf{B}}{\partial t} \\
+\text{Legge di Ampère - Maxwell } & \qquad \nabla \times \mathbf{B} = \mu_0 \left( \mathbf{j} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right)
+\end{align}
+\end{tcolorbox}
+
+\newpage
+
+Queste equazioni formano la base di tutti i fenomeni elettromagnetici classici. \\
+
+Combinato con l'equazione per la forza di Lorentz e la seconda legge del moto di Newton, questo insieme di equazioni fornisce una descrizione \emph{completa} della dinamica classica delle particelle cariche in interazione con il campo elettromagnetico. 
+
+\section{Il potenziale vettore e il potenziale scalare}
+
+Le equazioni di Maxwell sono un sistema di equazioni alle derivate parziali del primo ordine che legano le varie componenti dei campi elettrico e magnetico. 
+In situazioni semplici esse possono essere risolte così come sono. \'E però spesso conveniente introdurre dei potenziali che risolvono identicamente alcune delle equazioni di Maxwell per ottenere un numero minore di equazioni di secondo ordine. \\
+
+Abbiamo già familiarizzato con questo concetto in elettrostatica e in magnetostatica , dove abbiamo utilizzato il potenziale scalre $V$ (che adesso andremo a chiamare $\phi$) e il potenziale vettore $\mathbf{A}$. \\
+Poiché $\nabla \cdot \mathbf{B} = 0$ è ancora valida, possiamo definire $\mathbf{B}$ in termini di un potenziale vettore:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \mathbf{B} = \nabla \times \mathbf{A}
+\end{equation}
+\end{tcolorbox}
+
+L'altra equazione omogenea nella \ref{eq: Equazioni_di_Maxwell}, la legge di Faraday, si può allora scrivere 
+
+\begin{equation} \label{eq: Legge_di_Faraday_con_potenziali}
+    \nabla \times \left(\mathbf{E} + \frac{\partial \mathbf{A}}{\partial t} \right) = 0
+\end{equation}
+
+Questo significa che la quantità a rotore nullo nella \ref{eq: Legge_di_Faraday_con_potenziali} si può scrivere come il gradiente di una qualche funzione scalare, ossia, un potenziale scalare $\phi$:
+
+\begin{equation}
+    \mathbf{E} + \frac{\partial \mathbf{A}}{\partial t} = - \nabla \phi
+\end{equation}
+
+oppure 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \mathbf{E} = - \nabla \phi - \frac{\partial \mathbf{A}}{\partial t}
+\end{equation}
+\end{tcolorbox}
+
+Le definizioni di $\mathbf{B}$ ed $\mathbf{E}$ in termini dei potenziali $\mathbf{A}$ e $\phi$ sono tali da soddisfare identicamente le due equazioni di Maxwell omogenee. Il comportamento dinamico di $\mathbf{A}$ e $\phi$ sarà determinato dalle due equazioni non omogenee nella \ref{eq: Equazioni_di_Maxwell}. \\
+
+\newpage
+
+A questo punto conviene limitare le nostre considerazioni alle equazioni di Maxwell nel vuoto. Le equazioni non omogenee nella \ref{eq: Equazioni_di_Maxwell} possono allora essere scritte in termini dei potenziali come segue
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{align} \label{eq: Potenziali_prima_gauge}
+    \nabla^2 \phi + \frac{\partial}{\partial t} (\nabla \cdot \mathbf{A}) = - \frac{\rho}{\varepsilon_0}\\
+    \nabla^2 \mathbf{A} - \frac{1}{c^2} \frac{\partial^2 \mathbf{A}}{\partial t^2} - \nabla \left( \nabla \cdot \mathbf{A} + \frac{1}{c^2} \frac{\partial \phi}{\partial t} \right) = - \mu_0 \mathbf{j} 
+\end{align} 
+\end{tcolorbox}
+
+Abbiamo quindi ridotto il sistema delle quattro equazioni di Maxwell a due equazioni. \\
+Queste sono però ancora equazioni accoppiate. Si può ottenere il disaccoppiamento facendo uso dell'arbitrarietà insita nella definizione dei potenziali. Poiché $\mathbf{B}$ è definito come il rotore di $\mathbf{A}$, il potenziale vettore è determinato a meno del gradiente di una qualche funzione scalare $\psi$ che gli può essere sommata. Pertanto $\mathbf{B}$ è lasciato immutato dalla trasformazione
+
+\begin{equation*}
+    \mathbf{A} \to \mathbf{A'} = \mathbf{A} + \nabla \psi
+\end{equation*}
+
+Affiché anche il campo elettrico non cambi, il potenziale scalare deve essere trasformato contemporaneamente
+
+\begin{equation}
+    \phi \to \phi' = \phi - \frac{\partial \psi}{\partial t}
+\end{equation}
+
+La libertà implicita dei potenziali significa che possiamo scegliere un insieme di potenziali $(\mathbf{A}, \phi)$ che soddisfano le \ref{eq: Potenziali_prima_gauge}. \\
+In particolare il passaggio da una coppia di potenziali a un'altra prende il nome di trasformazione di gauge \mkeyword{trasformazioni di gauge}e l'invarianza dei campi sotto tali trasformazioni è detta invarianza di gauge. 
+
+\subsection{Gauge di Lorenz}
+
+Una trasformazione di gauge molto utile che permette di disaccoppiare le \ref{eq: Potenziali_prima_gauge} è quella per cui 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \nabla \cdot \mathbf{A} + \frac{1}{c^2} \frac{\partial \phi}{\partial t} = 0
+\end{equation}
+\end{tcolorbox}
+
+Questa condizione prende il nome di condizione di Lorenz. \mkeyword{condizione di Lorenz}\\
+Questa scelta disaccoppia le equazioni in \ref{eq: Potenziali_prima_gauge} e lascia due equazioni d'onda non omogenee, una per $\phi$ e una per $\mathbf{A}$:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{align} \label{eq: Gauge_Lorenz}
+    \nabla^2 \phi - \frac{1}{c^2} \frac{\partial^2 \phi}{\partial t^2} = - \frac{\rho}{\varepsilon_0} \\
+    \nabla^2 \mathbf{A} - \frac{1}{c^2} \frac{\partial^2 \mathbf{A}}{\partial t^2} = -\mu_0 \mathbf{j}
+\end{align}
+\end{tcolorbox}
+
+Queste equazioni, unite alla condizione di Lorenz costituiscono un insieme di equazioni equivalente sotto ogni aspetto alle equazioni di Maxwell nel vuoto. 
+
+\subsection{Gauge di Coulomb}
+
+Un'altra gauge utile per i potenziali è la cosidetta gauge di Coulomb, di radiazione o trasversa. Questa è la gauge per la quale 
+
+\begin{equation}
+    \nabla \cdot \mathbf{A} = 0
+\end{equation}
+
+Sostituendo nella \ref{eq: Potenziali_prima_gauge} si vede che il potenziale scalare soddisfa l'equazione di Poisson
+
+\begin{equation}
+    \nabla^2 \phi = -\frac{\rho}{\varepsilon_0}
+\end{equation}
+
+Il potenziale scalare è semplicemente il potenziale di Coulomb \emph{istantaneo} dovuto alla denistà di carica $\rho(\mathbf{r}, t)$. Questa è l'origine del nome "gauge di Coulomb".

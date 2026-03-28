@@ -1,0 +1,271 @@
+\chapter{Leggi di conservazione}
+
+In questo capitolo andremo a studiare la conservazione \emph{dell'energia, della quantità di moto e del momento angolare} in elettrodinamica.
+
+\section{Teorema di Poynting}
+ 
+Iniziamo considerando la conservazione dell'energia, a cui ci si riferisce spesso come al \emph{teorema di Poynting}. Per una singola carica $q$ la potenza spesa da parte dei campo elettromagnetici esterni $\mathbf{E}$ e $\mathbf{B}$ è 
+
+\begin{equation*}
+    dP = q(\mathbf{E} + \mathbf{v} \times \mathbf{B}) \cdot \mathbf{v} = q \mathbf{v} \cdot \mathbf{E} 
+\end{equation*}
+
+Se abbiamo una distribuzione continua di carica e di corrente, la potenza totale spesa da parte dei campi in un volume finito $\tau$ è 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation} \label{eq: Potenza_spesa_campo}
+    P = \int_{\tau} \mathbf{j} \cdot \mathbf{E} \ d\tau 
+\end{equation}
+\end{tcolorbox}
+
+Questa potenza rappresenta una conversione di energia elettromagnetica in energia meccanica o termica.
+Essa deve essere bilanciata da un decremento corrispondente dell'energia del campo elettromagnetico entro il volume $\tau$. 
+Per mostrare esplicitamente questa legge di trasformazione, facciamo uso delle equazioni di Maxwell per esprimere l'integrando della \ref{eq: Potenza_spesa_campo} in un altro modo. Facciamo uso della legge di Ampère-Maxwell per eliminare $\mathbf{j}$:
+
+\begin{equation}
+    \mathbf{j} \cdot \mathbf{E} = \frac{1}{\mu_0} \mathbf{E} \cdot (\nabla \times \mathbf{B}) - \varepsilon_0 \mathbf{E} \cdot \frac{\partial \mathbf{E}}{\partial t} 
+\end{equation}
+
+Sfruttando l'identità
+
+\begin{equation}
+    \nabla \cdot (\mathbf{E} \times \mathbf{B}) = \mathbf{B} \cdot (\nabla \times \mathbf{E}) - \mathbf{E} \cdot (\nabla \times \mathbf{B})
+\end{equation}
+
+E la legge di Faraday
+
+\begin{equation}
+    \mathbf{E} \cdot (\nabla \times \mathbf{B}) = - \mathbf{B} \cdot \frac{\partial \mathbf{B}}{\partial t} - \nabla \cdot (\mathbf{E} \times \mathbf{B})
+\end{equation}
+
+Mentre 
+
+\begin{equation}
+    \mathbf{B} \cdot \frac{\partial \mathbf{B}}{\partial t} = \frac{1}{2} \frac{\partial}{\partial t} (B^2) \quad , \quad \mathbf{E} \cdot \frac{\partial \mathbf{E}}{\partial t} = \frac{1}{2} \frac{\partial}{\partial t} (E^2)
+\end{equation}
+
+Quindi 
+
+\begin{equation} \label{eq: teorema_Poynting_esplic}
+    \mathbf{j} \cdot \mathbf{E} = - \frac{1}{2} \frac{\partial}{\partial t} \left( \varepsilon_0 E^2 + \frac{1}{\mu_0} B^2 \right) - \frac{1}{\mu_0} \nabla \cdot (\mathbf{E} \times \mathbf{B})
+\end{equation}
+
+La \ref{eq: teorema_Poynting_esplic} si può scrivere 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{align}
+    - \int_{\tau} \mathbf{j} \cdot \mathbf{E} \ d\tau = \frac{d}{dt} \int_{\tau} \frac{1}{2} \left( \varepsilon_0 E^2 + \frac{1}{\mu_0} B^2 \right) \ d\tau + \frac{1}{\mu_0} \oint_{\Sigma} (\mathbf{E} \times \mathbf{B}) \cdot \mathbf{u}_n \ d\Sigma
+\end{align}
+\end{tcolorbox}
+
+Poiché il volume $\tau$ è arbitrario, si può porre questa equazione nella forma di un equazione differenziale di continuità, o legge di conservazione
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation} \label{eq: teorema_di_Poynting}
+    \frac{\partial u}{\partial t} + \nabla \cdot \mathbf{S} = - \mathbf{j} \cdot \mathbf{E}
+\end{equation}
+\end{tcolorbox}
+
+Indicando la densità totale di energia con \mkeyword{densità totale di energia}
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation} \label{eq: densità_totale_energia}
+    u = \frac{1}{2} \left( \varepsilon_0 E^2 + \frac{1}{\mu_0} B^2 \right)
+\end{equation}
+\end{tcolorbox}
+
+Il vettore $\mathbf{S}$, che rappresenta il flusso di energia, è chiamato vettore di Poynting. \mkeyword{vettore di Poynting} Esso è dato da
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation} \label{eq: vettore_Poynting}
+    \mathbf{S} = \frac{1}{\mu_0} \mathbf{E} \times \mathbf{B}
+\end{equation}
+\end{tcolorbox}
+
+Poiché nella legge di conservazione compare soltanto la sua divergenza, ne segue che il vettore di Poynting è definito a meno del gradiente di una campo vettoriale arbitrario che gli può essere sommato. \\
+
+Il significato delle forme integrale o differenziale del teorema di Poynting è che la derivata rispetto al tempo dell'energia elettromagnetica contenuta entro un certo volume, più l'energia che attraversa la superficie di condune del volume per unità di tempo, è uguale al lavoro totale fatto dai campi sulle sorgenti entro il volume. 
+
+\newpage
+
+\section{Conservazione della quantità di moto}
+
+Prima di poter parlare della conservazione della quantità di moto in elettrodinamica, è necessario introdurre un nuovo strumento che prende il nome di tensore degli sforzi di Maxwell
+
+\subsection{Tensore degli sforzi di Maxwell}
+
+La forza totale elettromagnetica agente su una particella carica è 
+
+\begin{equation}
+    \mathbf{f} = q (\mathbf{E} + \mathbf{v} \times \mathbf{B})
+\end{equation}
+
+Allora se consideriamo un volume $\tau$ di particelle la forza totale risulta essere 
+
+\begin{equation}
+    \mathbf{F} = \int_{\tau} (\rho \mathbf{E} + \mathbf{j} \times \mathbf{B}) \ d\tau
+\end{equation}
+
+Possiamo utilizzare le equazioni di Maxwell per eliminare $\rho$ e $\mathbf{j}$, infatti:
+
+\begin{equation}
+    \rho = \varepsilon_0 \nabla \cdot \mathbf{E} \quad , \quad \mathbf{j} = \frac{1}{\mu_0} \nabla \times \mathbf{B} - \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}
+\end{equation}
+
+Quindi, sostituendo, l'integrando diventa 
+
+\begin{equation}
+    \rho \mathbf{E} + \mathbf{j} \times \mathbf{B} = \varepsilon_0 (\nabla \cdot \mathbf{E}) \mathbf{E} + \left( \frac{1}{\mu_0} \nabla \times \mathbf{B} - \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right) \times \mathbf{B}
+\end{equation}
+
+Sfruttando il fatto che 
+
+\begin{equation*}
+    \frac{\partial}{\partial t} (\mathbf{E} \times \mathbf{B}) =  \left( \frac{\partial \mathbf{E}}{\partial t} \times \mathbf{B} \right) + \left( \mathbf{E} \times \frac{\partial \mathbf{B}}{\partial t} \right)
+\end{equation*}
+
+e la legge di Faraday, otteniamo che 
+
+\begin{equation}
+    \rho \mathbf{E} + \mathbf{j} \times \mathbf{B} = \varepsilon_0 [\mathbf{E}(\nabla \cdot \mathbf{E}) - \mathbf{E} \times (\nabla \times \mathbf{E})] + \frac{1}{\mu_0}[(\nabla \cdot \mathbf{B})\mathbf{B} - \mathbf{B} \times (\nabla \times \mathbf{B})] - \varepsilon_0 \frac{\partial}{\partial} (\mathbf{E} \times \mathbf{B})
+\end{equation}
+
+Dove abbiamo aggiunto il termine $(\nabla \cdot \mathbf{B}) \mathbf{B}$ per motivi di simmetria (il quale non modifica in alcun modo l'espressione in quanto $\nabla \cdot \mathbf{B} = 0$).\\
+Inoltre possiamo sfruttare la relazione
+
+\begin{equation*}
+    \nabla (E^2) = 2(\mathbf{E} \cdot \nabla) \mathbf{E} + 2 \mathbf{E} \times (\nabla \times \mathbf{E}) 
+\end{equation*}
+
+e quindi 
+
+\begin{equation}
+    \mathbf{E} \times (\nabla \times \mathbf{E}) = \frac{1}{2} \nabla (E^2) - (\mathbf{E} \cdot \nabla) \mathbf{E}
+\end{equation}
+
+E lo stesso vale per $\mathbf{B}$, quindi
+
+\begin{align}
+    \rho \mathbf{E} + \mathbf{j} \times \mathbf{B} = \varepsilon_0 [(\nabla \cdot \mathbf{E})\mathbf{E} + (\mathbf{E} \cdot \nabla) \mathbf{E}] + \frac{1}{\mu_0} [(\nabla \cdot \mathbf{B})\mathbf{B} + (\mathbf{B} \cdot \nabla)\mathbf{B}] + \\
+    - \frac{1}{2} \nabla \left( \varepsilon_0 E^2 + \frac{1}{\mu_0} B^2 \right) - \varepsilon_0 \frac{\partial}{\partial t}(\mathbf{E} \times \mathbf{B})
+\end{align}
+
+Questa forma è migliore rispetto a quella iniziale per evidenti motivi di simmetria, tuttavia può essere ancora migliorata introducendo il tensore degli sforzi di Maxwell: \mkeyword{tensore degli sforzi di Maxwell} 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    T_{ij} \equiv \varepsilon_0 \left( E_i E_j - \frac{1}{2}\delta_{ij} E^2 \right) + \frac{1}{\mu_0} \left( B_i B_j - \frac{1}{2}\delta_{ij} B^2\right)
+\end{equation}
+\end{tcolorbox}
+
+Gli indici $i$ e $j$ si riferiscono alle coordinate $x$, $y$ e $z$. \'E possibile definire un prodotto tra un 2-tensore e un vettore nel seguente modo 
+
+\begin{equation}
+    \left( \mathbf{a} \cdot \mathbf{T} \right)_j = \sum_{i = x,y,z} a_i T_{ij}  \quad , \quad \left( \mathbf{T} \cdot \mathbf{a}\right)_j = \sum_{i = x,y,z} T_{ji} a_i
+\end{equation}
+
+Allora, in particolare, la j-esima componente della divergenza del tensore di Maxwell $\mathbf{T}$ risulta essere
+
+\begin{align}
+    \left( \nabla \cdot \mathbf{T} \right)_j = \varepsilon_0 \left[ (\nabla \cdot \mathbf{E})E_j + (\mathbf{E} \cdot \nabla) E_j - \frac{1}{2}\nabla_jE^2 \right]\\
+    + \frac{1}{\mu_0}\left[ (\nabla \cdot \mathbf{B})B_j + (\mathbf{B} \cdot \nabla) B_j - \frac{1}{2}\nabla_jB^2 \right]
+\end{align}
+
+ma allora vale che 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \rho \mathbf{E} + \mathbf{j} \times \mathbf{B} = \nabla \cdot \mathbf{T} - \varepsilon_0\mu_0 \frac{\partial \mathbf{S}}{\partial t}
+\end{equation}
+\end{tcolorbox}
+
+Dove $\mathbf{S}$ è il vettore di Poynting. \\
+
+Quindi la forza elettromagnetica totale sul volume $\tau$ è 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \mathbf{F} = \oint_{\Sigma} \mathbf{T} \cdot \mathbf{u}_n \ d\Sigma - \varepsilon_0 \mu_0 \frac{d}{dt} \int_{\tau} \mathbf{S} \ d\tau 
+\end{equation}
+\end{tcolorbox}
+
+Dove abbiamo usare il teorema della divergenza per trasformare il primo integrale in un integrale di superficie. \\
+
+Nel caso statico il secondo integrale cade e la forza elettromagnetica che agisce sulle cariche può essere espressa interamente in termini del tensore degli sforzi di Maxwell:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \mathbf{F} = \oint_{\Sigma} \mathbf{T} \cdot \mathbf{u}_n \ d\Sigma \qquad \text{statico}
+\end{equation}
+\end{tcolorbox}
+
+Adesso possiamo sfruttare la seconda legge della dinamica e scrivere 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \frac{d \mathbf{p}_{\text{mech}}}{dt} = - \varepsilon_0 \mu_0 \frac{d}{dt} \int_{\tau} \mathbf{S} \ d\tau + \oint_{\Sigma} \mathbf{T} \cdot \mathbf{u}_n \ d\Sigma
+\end{equation}
+\end{tcolorbox}
+
+dove $\mathbf{p}_{\text{mech}}$ è la quantità di moto (meccanica) totale delle particelle nel volume $\tau$.
+
+\newpage
+
+Possiamo pensare al primo integrale come \emph{l'impulso totale elettromagnetico entro il volume $\tau$}:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation} \label{eq: quantità_moto_campo}
+    \mathbf{p}_{\text{campo}} = \mu_0 \varepsilon_0 \int_{\tau} \mathbf{S} \ d\tau = \varepsilon_0 \int_{\tau} \mathbf{E} \times \mathbf{B} \ d\tau 
+\end{equation}
+\end{tcolorbox}
+
+Pertanto si ha che la conservazione del momento \mkeyword{conservazione del momento}in elettrodinamica risulta essere 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \frac{d}{dt} (\mathbf{p}_{\text{mech}} + \mathbf{p}_{\text{campo}}) = \oint_{\Sigma} \mathbf{T} \cdot \mathbf{u}_n \ d\Sigma
+\end{equation}
+\end{tcolorbox}
+
+Dalla \ref{eq: quantità_moto_campo} si capisce che la \emph{densità} di quantità di moto \mkeyword{densità di quantità di moto} è 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \mathbf{g} = \mu_0 \varepsilon_0 \mathbf{S} = \varepsilon_0 (\mathbf{E} \times \mathbf{B})
+\end{equation}
+\end{tcolorbox}
+
+Quindi, \emph{se l'impulso meccanico in $\tau$ non varia} (come nel caso di una regione di spazio vuoto)
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \frac{\partial \mathbf{g}}{\partial t} \ = \nabla \cdot \mathbf{T} 
+ \end{equation}
+\end{tcolorbox}
+
+Questa è l' "equazione di continuità" per l'impulso elettromagnetico. 
+
+\section{Conservazione del momento angolare}
+
+Da adesso il campo elettromagnetico (che inizialmente era considerato solamente come un mediatore delle forze tra le cariche), ha preso una "vita" propria.
+Trasporta l'energia 
+
+\begin{equation*}
+    u = \frac{1}{2} \left( \varepsilon_0 E^2 + \frac{1}{\mu_0}B^2 \right)
+\end{equation*}
+
+e un impulso 
+
+\begin{equation*}
+    \mathbf{g} = \varepsilon_0 (\mathbf{E} \times \mathbf{B})
+\end{equation*}
+
+Allora possiamo andare a definire anche un momento angolare:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \mathbf{l} = \mathbf{r} \times \mathbf{g} = \varepsilon_0 [\mathbf{r} \times (\mathbf{E} \times \mathbf{B})]
+\end{equation}
+\end{tcolorbox}
+
+Anche campi perfettamente \textit{statici} possono contenere quantità di moto e momento angolare, purché $\mathbf{E} \times \mathbf{B}$ sia diverso da zero, ed è solo quando questi contributi del campo vengono inclusi che le leggi di conservazione sono rispettate.

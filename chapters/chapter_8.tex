@@ -1,0 +1,219 @@
+\chapter{Unicità delle soluzioni con condizioni al contorno}
+
+Abbiamo visto che il comportamento di un campo elettrostatico può essere descritto dalle equazioni differenziali 
+
+\begin{align*}
+    \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0} \quad, \quad \nabla \times \mathbf{E} = 0 \quad , \quad \mathbf{E} = - \nabla V
+\end{align*}
+
+che combinate danno le \emph{equazione di Poisson} ed \emph{equazione di Laplace}
+
+\begin{equation*}
+    \nabla ^2 V = - \frac{\rho}{\varepsilon_0} \quad , \quad \nabla^2 V = 0
+\end{equation*}
+
+Se nei problemi elettrostatici comparissero sempre distribuzioni localizzate di carica, discrete o continue, senza superfici di confine, la soluzione generale \ref{eq:potenziale_senza_condizione} sarebbe quella più diretta e più conveniente per ogni problema. Non ci sarebbe alcun bisogno delle equazioni di Poisson o di Laplace. Nella realtà, molti, se non la maggior parte, dei problemi dell'elettrostatica sono formulati in regioni finite di spazio contenenti o meno delle cariche, e con delle condizioni al contorno assegnate sulle superfici di confine. Quindi la \ref{eq:potenziale_senza_condizione} non è più così utile se non in casi semplici. 
+
+\section{Condizioni al contorno di Dirichlet o di Neumann}
+
+Quali condizioni al contorno sono appropriate per l'equazione di Poisson (o di Laplace) per garantire l'esistenza di un'unica soluzione regolare entro una regione limitata?\\
+
+L'esperienza fisica ci porta a \mkeyword{problema di Dirichlet} ritenere che la specificazione del potenziale su una superficie chiusa (come nel caso di un sistema di conduttori) definisca un univoco problema di potenziale. Questo è chiamato \emph{problema di Dirichlet} o \emph{condizione al contorno di Dirichlet}. \\
+
+\' E similmente \mkeyword{condizione al contorno di Neumann} plausibile che la specificazione del campo elettrico (derivata normale del potenziale) ovunque sulla superficie (corrispondendo ad una data densità superficiale di carica) definisca pure un problema univoco. Questo è chiamata \emph{condizione al contorno di Neumann}. \\
+
+Andiamo adesso a mostrare l'unicità della soluzione all'equazione di Poisson all'interno di un volume $\tau$ con condizioni al bordo di Dirichlet o Neumann sulla superficie chiusa $\Sigma$ che lo delimita. \\
+
+Supponiamo per assurdo che esistano due funzioni potenziali $V_1$ e $V_2$ che soddisfano le condizioni al contorno. Allora possiamo andare a definire una funzione $f$ come
+
+\begin{equation*}
+    f = V_1 - V_2
+\end{equation*}
+
+Allora deve valere
+
+\begin{equation*}
+    \nabla ^2 f = \nabla^2V_1 - \nabla^2 V_2 = 0 \quad , \quad f(\Sigma) = V_1(\Sigma) - V_2(\Sigma) = 0 
+\end{equation*}
+
+Consideriamo 
+
+\begin{equation*}
+    \nabla (f \nabla f) = (\nabla f)^2 + f \nabla^2f
+\end{equation*}
+
+Usando il teorema della divergenza 
+
+\begin{equation*}
+    \int_{\tau} \nabla(f \nabla f) d\tau= \int_{\Sigma} f (\nabla f) d \Sigma \ \hat{n} = 0
+\end{equation*}
+
+L'ultima uguaglianza è dovuta al fatto che $f$ è nulla su tutta la superficie. Allora vale
+
+\begin{equation*}
+    \int_{\tau} \nabla(f \nabla f) d\tau = \int_{\tau} (\nabla f)^2 d \tau + \int_{\tau} f(\nabla^2 f) d\tau = 0
+\end{equation*}
+
+In particolare $\nabla^2 f = 0$, quindi risulta 
+
+\begin{equation*}
+    \int_{\tau} (\nabla f)^2 d \tau= 0
+\end{equation*}
+
+Ma poiché $(\nabla f)^2 \ge 0$, deve essere $\nabla f = 0$, quindi $f(\mathbf{r})$ è costante e dato che $f(\Sigma) = 0$ risulta che 
+
+\begin{equation}
+    V_1 = V_2
+\end{equation}
+
+In opposizione con la tesi. Abbiamo così dimostrato l'unicità del potenziale con condizioni al bordo fissate. 
+
+\newpage
+
+\section{Soluzione formale del problema elettrostatico dei valori al contorno con la funzione di Green}
+
+Per affrontare le condizioni al contorno è necessario sviluppare qualche nuovo strumento matematico, ossia la delta di Dirac e le identità di Green.
+
+
+\subsection{Delta di Dirac e Identità di Green}
+
+La delta di Dirac \mkeyword{Delta di Dirac} è una funzione matematica impropria, indicata, in una dimensione, con $\delta (x -a)$ con le proprietà: \\
+
+\begin{enumerate}
+    \item $\delta (x - a) = 0$ per $x \neq a$ \\
+    \item $\int \delta(x -a) dx = 1$ se la regione di integrazione include $x = a$, altrimenti vale zero. \\
+    \item $\int f(x) \delta (x -a) dx = f(a)$ \\
+    \item $\int f(x) \delta ' (x - a) dx = - f' (a)$, dove l'apice indica la derivazione rispetto all'argomento. \\
+\end{enumerate}
+
+Si può dare alla delta un significato intuitivo, ma non rigoroso, con il limite di una curva piccata, come gaussiana, che diventa sempre più stretta ma sempre più alta, in modo che l'area sottesa resti costante. \\
+
+Introduciamo adesso le due identità di Green. Queste si ottengono da semplici applicazioni del teorema della divergenza. \footnote{Per vedere la derivazione delle due identità consultare \cite{ElettrodinamicaClassica} o un buon manuale di Analisi 2} \\
+
+Siano \mkeyword{Prima identità di Green} $\phi$ e $\psi$ due campi scalari arbitrari, sia $\tau$ un volume delimitato da una superficie $\Sigma$ e sia $\partial / \partial n$ la derivata normale alla superficie $\Sigma$, la \emph{prima identità di Green} afferma
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \int _{\tau} (\phi \nabla^2 \psi + \nabla \phi \cdot \nabla \psi) \ d\tau = \oint _{\Sigma} \phi \frac{\partial \psi}{\partial n} \ d\Sigma 
+    \label{eq:prima_identità_Green}
+\end{equation}
+\end{tcolorbox}
+
+Se riscriviamo \mkeyword{Seconda identità di Green} la \ref{eq:prima_identità_Green} scambiando $\psi$ e $\phi$ e ne sottraiamo il risultato, otteniamo la seconda \emph{seconda identità di Green}
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \int_{\tau} (\phi \nabla^2 \psi - \psi \nabla^2 \phi) \ d \tau =\oint_{\Sigma} \left [ \phi \frac{\partial \psi}{\partial n} - \psi \frac{\partial \phi}{\partial n} \right ] \ d \Sigma
+    \label{eq:seconda_identità_Green}
+\end{equation}
+\end{tcolorbox}
+
+\newpage
+
+Adesso possiamo andare a ricavare una soluzione formale del problema con valori al contorno.\\
+
+Se andiamo a porre 
+
+\begin{equation}
+    \psi \equiv \frac{1}{R} = \frac{1}{|\mathbf{r} - \mathbf{r'}|}
+\end{equation}
+
+Dove $r$ è il punto di osservazione e $r'$ è la variabile di integrazione. \' E possibile ottenere che 
+
+\begin{equation*}
+    \nabla^2 \left( \frac{1}{R} \right ) = -4 \pi \delta (\mathbf{r} - \mathbf{r'})
+\end{equation*}
+
+Inoltre poniamo $\phi = V$, il potenziale scalare, ed utilizziamo $\nabla^2 V = - \rho/\varepsilon_0$. \\
+In questo modo, sostituendo nella \ref{eq:seconda_identità_Green} si ottiene 
+
+\begin{equation*}
+    \int_{\tau} \left [ -4 \pi V(\mathbf{r '}) \delta(\mathbf{r} - \mathbf{r'}) + \frac{1}{\varepsilon_0 R} \rho (\mathbf{r '})  \right ] d\tau = \oint_{\Sigma} \left[ V \frac{\partial}{\partial n'} \left(  \frac{1}{R}\right ) - \frac{1}{R} \frac{\partial V}{\partial n'}  \right ] \ d \Sigma'
+\end{equation*}
+
+Se il punto $\mathbf{r}$ si trova interno al volume $\tau$, si ha
+
+\begin{equation*}
+    \int_{\tau} [-4 \pi V(\mathbf{r'}) \delta(\mathbf{r} - \mathbf{r'})] d \tau = -4 \pi V(\mathbf{r})
+\end{equation*}
+
+Quindi sostituendo e isolando il potenziale si ottiene 
+
+\begin{equation}
+    V(\mathbf{r}) = \frac{1}{4 \pi \varepsilon_{0}} \int_{\tau} \frac{\rho(\mathbf{r'})}{R} d \tau + \frac{1}{4 \pi} \oint \left [ \frac{1}{R} \frac{\partial V}{\partial n'} - V \frac{\partial}{\partial n'} \left ( \frac{1}{R} \right ) \right ] \ d \Sigma' 
+    \label{eq:falsa_soluzione_potenziale}
+\end{equation}
+
+Un primo fatto da notare è che se la superficie $\Sigma$ va all'infinito e il campo elettrico su $\Sigma$ decresce più rapidamente di $R^{-1}$, allora l'integrale di superficie si annulla e la \ref{eq:falsa_soluzione_potenziale}
+riproduce esattamente la \ref{eq:potenziale_senza_condizione}. \\
+
+Tuttavia quella ottenuta \emph{non è la soluzione di un problema di valori al contorno}, perché una specificazione arbitraria sia di $V$ sia di $\partial V / \partial n$ è una sovradeterminazione del problema. \\
+
+Tuttavia possiamo andare a modificare la forma della \ref{eq:falsa_soluzione_potenziale} in modo che soddisfi solo una condizione. \\
+Infatti, un passo fondamentale nella derivazione della \ref{eq:falsa_soluzione_potenziale} è stata la relazione
+
+\begin{equation}
+    \nabla^2 \left (\frac{1}{|\mathbf{r} - \mathbf{r'}|} \right ) = - 4 \pi \delta (\mathbf{r} - \mathbf{r'})
+    \label{eq:relazione}
+\end{equation}
+
+Ma la funzione $1 / |\mathbf{r} - \mathbf{r'}|$ è solo una di una classe di funzioni dipendenti dalle variabili $\mathbf{r}$ e $\mathbf{r'}$, chiamate \emph{funzioni di Green} \mkeyword{funzioni di Green}, che soddisfano la \ref{eq:relazione}. In generale 
+
+\begin{equation}
+    \nabla ^2 G(\mathbf{r}, \mathbf{r'}) = -4 \pi \delta (\mathbf{r} -\mathbf{r'})
+\end{equation}
+
+dove
+
+\begin{equation}
+    G(\mathbf{r}, \mathbf{r'}) = \frac{1}{|\mathbf{r} - \mathbf{r'}|} + F(\mathbf{r}, \mathbf{r'})
+    \label{eq:funzione_Green}
+\end{equation}
+
+e la funzione $F$ è una funzione armonica, che quindi soddisfa il teorema di Laplace entro il volume $\tau$:
+
+\begin{equation*}
+    \nabla ^2 F(\mathbf{r}, \mathbf{r'}) = 0
+\end{equation*}
+
+Quindi, ponendo adesso $\phi = V$ e $\psi = G(\mathbf{r}, \mathbf{r'})$ e ripetendo tutti i passaggi si ottiene 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    V(\mathbf{r}) = \frac{1}{4 \pi \varepsilon_{0}} \int_{\tau} \rho(\mathbf{r'}) G(\mathbf{r}, \mathbf{r'}) d \tau + \frac{1}{4 \pi} \oint \left [ G(\mathbf{r}, \mathbf{r'}) \frac{\partial V}{\partial n'} - V(\mathbf{r'}) \frac{\partial G(\mathbf{r}, \mathbf{r'})}{\partial n'} \right ] \ d \Sigma' 
+    \label{eq:soluzione_generale_potenziale_contorno}
+\end{equation}
+\end{tcolorbox}
+
+La libertà disponibile nella definizione di $G$ significa che possiamo fare in modo che l'integrale di superficie dipenda solo dal tipo scelto di condizione di contorno. \\
+
+Per \emph{condizioni al contorno di Dirichlet} richiediamo \footnote{Per le condizioni al contorno di Neumann si consiglia di guardare \cite{ElettrodinamicaClassica}}
+
+\begin{equation}
+    G_D(\mathbf{r}, \mathbf{r'}) = 0 \quad \text{per $\mathbf{r'}$ su $\Sigma$}
+    \label{eq:condizione_di_Dirichlet}
+\end{equation}
+
+Allora il primo termine dell'integrale di superficie nella \ref{eq:soluzione_generale_potenziale_contorno} si annulla e la soluzione è 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    V(\mathbf{r}) = \frac{1}{4 \pi \varepsilon_{0}} \int_{\tau} \rho(\mathbf{r'}) G_D(\mathbf{r}, \mathbf{r'}) d \tau - \frac{1}{4 \pi} \oint V(\mathbf{r'}) \frac{\partial G_D(\mathbf{r}, \mathbf{r'})}{\partial n'} \ d \Sigma'
+\end{equation}
+\end{tcolorbox}
+
+Osserviamo che le funzioni di Green soddisfano le semplici condizioni al contorno \ref{eq:condizione_di_Dirichlet}, che non dipendono dalla forma dettagliata dei valori al contorno di Dirichlet (o di Neumann). Nonostante ciò \emph{spesso è piuttosto complicato, se non impossibile, determinare $G(\mathbf{r}, \mathbf{r'})$} a causa della sua dipendenza dalla forma della superficie $\Sigma$. 
+
+\newpage
+
+%\subsection{Metodo delle cariche immagini}
+
+%Consideriamo un conduttore $C$ con potenziale $V_0$ (essendo un conduttore la sua superficie è equipotenziale) e in prenseza di esso, una o più cariche puntiformi localizzate $Q_i$. \\
+
+%Se la geometria del coduttore è semplice(ad esempio piana, o sferica, ecc.) allora il problema dell'elettrostatica può essere risolto in maniera semplice ed efficace mediante il metodo cosiddetto delle \emph{cariche immagine}. \\ Questo metodo consiste nell'immaginare che il conduttore sia sostituito con una o più cariche puntiformi $Q'_i$ situate, rispetto al conduttore, dalla parte opposta rispetto alle $Q_i$, e disposte in modo che la somma dei potenziali generati dalle $Q_i$ e dalle $Q'_i$ sia $V_0$ su $\Sigma$.\\ 
+
+%L'insieme delle cariche $Q_i$ e $Q'_i$ genera allora, in assenza del conduttore, nella porzione $\tau$ di spazio vuoto prospiciente a $\Sigma$ dalla parte delle $Q_i$, la stessa configurazione di potenziale generata dalle $Q_i$ e dalla distribuzione (incognita) delle cariche presenti per induzione su $\Sigma$.\\
+
+%Ciò è conseguenza del \textit{teorema di unicità}, considerato che sia il sistema $(Q_i + S)$ che il sistema $(Q_i + Q'_i)$ hanno, nella porzione di spazio $\tau$, la stessa distribuzione di carica (rappresentata dalle $Q_i$) e le stesse condizioni al contorno (rappresentate da $V_0$ su $\Sigma$, e da $V \to 0$ all'infinito).\\
+
+%Il vantaggio del metodo delle cariche immagine consiste nel fatto che il potenziale generato dal sistema $(Q_i + Q'_i)$ è facilmente calcolabile mediante la \ref{eq:potenziale_per_più_cariche}.
