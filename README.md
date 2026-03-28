@@ -8,6 +8,3 @@ Le presenti note sono state scritte con due obiettivi principali: riportare in u
 
 Non sempre gli argomenti seguiranno l'ordine delle lezioni.
 
-<div align="center">
-  <img src="./Foto_eq_Maxwell.jpg" alt="Equazioni di Maxwell" width="500" style="border-radius: 10px;">
-</div>
