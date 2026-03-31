@@ -145,8 +145,20 @@
 \contentsline {subsection}{\numberline {22.9.1}Le tre zone}{154}{subsection.22.9.1}%
 \contentsline {section}{\numberline {22.10}Dipolo elettrico oscillante}{155}{section.22.10}%
 \contentsline {subsection}{\numberline {22.10.1}Campi del dipolo elettrico oscillante}{155}{subsection.22.10.1}%
-\contentsline {section}{\numberline {22.11}Termine di ordine successivo: dipolo magnetico e quadrupolo elettrico}{156}{section.22.11}%
+\contentsline {section}{\numberline {22.11}Termine di ordine successivo: dipolo magnetico e quadrupolo elettrico}{157}{section.22.11}%
 \contentsline {subsection}{\numberline {22.11.1}Dipolo magnetico oscillante}{157}{subsection.22.11.1}%
-\contentsline {subsection}{\numberline {22.11.2}Quadrupolo elettrico oscillante}{157}{subsection.22.11.2}%
-\contentsline {section}{\numberline {22.12}Confronto tra dipolo elettrico e dipolo magnetico}{158}{section.22.12}%
+\contentsline {subsection}{\numberline {22.11.2}Quadrupolo elettrico oscillante}{158}{subsection.22.11.2}%
+\contentsline {section}{\numberline {22.12}Confronto tra dipolo elettrico e dipolo magnetico}{159}{section.22.12}%
+\contentsline {chapter}{\numberline {23}Irraggiamento}{160}{chapter.23}%
+\contentsline {section}{\numberline {23.1}Irraggiamento di una carica puntiforme}{160}{section.23.1}%
+\contentsline {subsection}{\numberline {23.1.1}Forza di reazione di radiazione}{162}{subsection.23.1.1}%
+\contentsline {section}{\numberline {23.2}Irraggiamento di un dipolo elettrico oscillante}{163}{section.23.2}%
+\contentsline {subsection}{\numberline {23.2.1}Potenza irraggiata per unità di angolo solido}{164}{subsection.23.2.1}%
+\contentsline {subsection}{\numberline {23.2.2}Potenza istantanea}{164}{subsection.23.2.2}%
+\contentsline {section}{\numberline {23.3}Irraggiamento di un dipolo magnetico oscillante}{164}{section.23.3}%
+\contentsline {subsection}{\numberline {23.3.1}Confronto tra irraggiamento del dipolo elettrico e del dipolo magnetico}{165}{subsection.23.3.1}%
+\contentsline {section}{\numberline {23.4}Irraggiamento di una sorgente arbitraria}{165}{section.23.4}%
+\contentsline {section}{\numberline {23.5}Irraggiamento atomico}{166}{section.23.5}%
+\contentsline {subsection}{\numberline {23.5.1}Perdita di energia per irraggiamento}{167}{subsection.23.5.1}%
+\contentsline {subsection}{\numberline {23.5.2}Diffusione della luce}{168}{subsection.23.5.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

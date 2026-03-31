@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber build/Appunti_Fisica_2"] 0 "build/Appunti_Fisica_2.bcf" "build/Appunti_Fisica_2.bbl" "build/Appunti_Fisica_2" 1774713890.81499 0
+["biber build/Appunti_Fisica_2"] 0 "build/Appunti_Fisica_2.bcf" "build/Appunti_Fisica_2.bbl" "build/Appunti_Fisica_2" 1774979301.91135 0
   "bibliografia.bib" 0 -1 0 ""
   "build/Appunti_Fisica_2.bcf" 0 -1 0 "pdflatex"
   (generated)
   "build/Appunti_Fisica_2.bbl"
   "build/Appunti_Fisica_2.blg"
   (rewritten before read)
-["pdflatex"] 1774713871.44733 "/Users/robertoriccucci/Desktop/VS_CODE/LaTeX/Appunti_Fisica_2/Appunti_Fisica_2.tex" "build/Appunti_Fisica_2.pdf" "Appunti_Fisica_2" 1774713890.81526 0
-  "/Users/robertoriccucci/Desktop/VS_CODE/LaTeX/Appunti_Fisica_2/Appunti_Fisica_2.tex" 1774520673.70655 1632 448c4d2735622e1bf99d244960fff25b ""
+["pdflatex"] 1774979282.48225 "/Users/robertoriccucci/Desktop/VS_CODE/LaTeX/Appunti_Fisica_2/Appunti_Fisica_2.tex" "build/Appunti_Fisica_2.pdf" "Appunti_Fisica_2" 1774979301.91158 0
+  "/Users/robertoriccucci/Desktop/VS_CODE/LaTeX/Appunti_Fisica_2/Appunti_Fisica_2.tex" 1774857331.53133 1665 47a03b42616a5992fb9349adf5cfdbb8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -275,11 +275,11 @@
   "/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1773329026 5541377 04880c840ca220163a28f1a3af0ee662 ""
   "/usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1773329021 3636763 ed2d53e30453e24de8c7c59e921a3de1 ""
   "/usr/local/texlive/2026/texmf.cnf" 1772409725 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
-  "Appunti_Fisica_2.tex" 1774520673.70655 1632 448c4d2735622e1bf99d244960fff25b ""
-  "build/Appunti_Fisica_2.aux" 1774713890.52941 118924 9fb3f16d2b0a5ad8ba7ee2af391c1ce0 "pdflatex"
+  "Appunti_Fisica_2.tex" 1774857331.53133 1665 47a03b42616a5992fb9349adf5cfdbb8 ""
+  "build/Appunti_Fisica_2.aux" 1774979301.63759 128425 5becdc820d15080f4c36920bcb87f8de "pdflatex"
   "build/Appunti_Fisica_2.bbl" 0 -1 0 "biber build/Appunti_Fisica_2"
-  "build/Appunti_Fisica_2.run.xml" 1774713890.54834 2391 49005ca77324bbc133bec213d5f12c00 "pdflatex"
-  "build/Appunti_Fisica_2.toc" 1774713890.54842 15354 ef2921c6d2063bc079d3251383623d25 "pdflatex"
+  "build/Appunti_Fisica_2.run.xml" 1774979301.6567 2391 49005ca77324bbc133bec213d5f12c00 "pdflatex"
+  "build/Appunti_Fisica_2.toc" 1774979301.65676 16607 4b6d1535e85010d7c7a27fff5b119e77 "pdflatex"
   "chapters/chapter_1.tex" 1774258451.91342 5899 9680c752e82ca9da5ea19869a88d1430 ""
   "chapters/chapter_10.tex" 1774713550.18209 10707 0452e6ee859a13e58d9c25df9291f84d ""
   "chapters/chapter_11.tex" 1773929635.07059 25484 db9f6d6686b8d8d381d3d4849865b431 ""
@@ -287,14 +287,15 @@
   "chapters/chapter_13.tex" 1773929635.0706 12615 e46694e24e64cc0667285c8ac15e2ec2 ""
   "chapters/chapter_14.tex" 1773929635.07056 27487 872b421b33b2cefc946e4817e1ac3ac7 ""
   "chapters/chapter_15.tex" 1773929635.07056 4670 e170a561303dd50ab05e84f0785d5bae ""
-  "chapters/chapter_16.tex" 1774710852.21635 12281 1c8d437cecc8d095bc291e5dc8f67085 ""
+  "chapters/chapter_16.tex" 1774855178.49814 12279 08b89af7734d6679d5f3498471542d51 ""
   "chapters/chapter_17.tex" 1773929635.07058 19591 de5f318ef67514d0d0e1df74def597ec ""
   "chapters/chapter_18.tex" 1774255978.70695 12050 d248d1772bf54cfc5563afaca3fc9b29 ""
   "chapters/chapter_19.tex" 1774082249.10234 4501 2fd55967c5b7e32678d2c76d2d749d19 ""
   "chapters/chapter_2.tex" 1774258451.92038 8106 af9c2a4a65c0335ca85f10ab95a11ab3 ""
   "chapters/chapter_20.tex" 1774537646.66298 8709 64aeb5042da5da844647e49597ec582b ""
   "chapters/chapter_21.tex" 1774450776.94238 13162 31ee6f5489793aabdbb0d3da8e36acb8 ""
-  "chapters/chapter_22.tex" 1774713852.23903 69718 c7d797bcaf8e6913a236826a2250f7f2 ""
+  "chapters/chapter_22.tex" 1774967566.77022 62252 81dba50445d87ff5f953921450b96987 ""
+  "chapters/chapter_23.tex" 1774979243.35183 46033 aaf664dff5744efcd9ee531e037912ad ""
   "chapters/chapter_3.tex" 1774258451.91341 7278 328f2ecf55248eefc0908bb4885abb24 ""
   "chapters/chapter_4.tex" 1773929635.10775 15815 7ff8ad9aeba52eb8cc880296a2a59b33 ""
   "chapters/chapter_5.tex" 1773929635.07099 5150 3928336a8b88005f1ed293f2b30738a0 ""
@@ -368,7 +369,9 @@
   "figure/image66.png" 1774366857.76968 91797 a8309eee939508588ecc6a4d5acd9a23 ""
   "figure/image67.png" 1774513113.50165 147201 22acc8dbdc58c324aa1ec5e28354e3da ""
   "figure/image68.png" 1774523823.20881 100283 0bedf98bb5fd1513f90c028b44a52fd1 ""
+  "figure/image69.png" 1774859724.47568 784954 2141264f90c8f525e3741d30d0bbb759 ""
   "figure/image7.png" 1773332797.58435 106643 42cbab956d5184a0e108702bb8a561e1 ""
+  "figure/image70.png" 1774973251.42803 127275 9636f217ab702cff70208746c1812a41 ""
   "figure/image8.png" 1773332798.28634 331213 e367ee6f86b0675b1397b438f889794f ""
   (generated)
   "build/Appunti_Fisica_2.aux"

@@ -4,5 +4,8 @@
   "latex-workshop.hover.preview.maxLines": 40,
   "editor.snippetSuggestions": "top",
   "cSpell.language": "it,it-IT,en",
-  "ltex.language": "it-IT"
+  "ltex.language": "it-IT",
+  "[latex]": {
+    "editor.inlineSuggest.enabled": false
+  }
 }

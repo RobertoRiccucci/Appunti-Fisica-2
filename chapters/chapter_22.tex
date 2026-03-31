@@ -927,21 +927,14 @@ Utilizzando le soluzioni ritardate \ref{eq: soluzioni_ritardate} per le equazion
 \begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
 \begin{align} \label{potenziali ritardati}
     \phi(\mathbf{r},t) = \frac{1}{4\pi \eps_0} \int_{\tau} \frac{[\rho (\mathbf{r'}, t')]_{\text{rit}}}{|\mathbf{r} - \mathbf{r'}|} d^3r' = \frac{1}{4\pi \eps_0} \int_{\tau} \frac{\rho (\mathbf{r'}, t - \frac{|\mathbf{r} - \mathbf{r}'|}{c})}{|\mathbf{r} - \mathbf{r'}|} d^3r'\\
-    \mathbf{A}(\mathbf{r},t) = \frac{\mu}{4\pi} \int_{\tau} \frac{[\mathbf{j}(\mathbf{r}', t')]_{\text{rit}}}{|\mathbf{r} - \mathbf{r'}|} d^3 r' = \frac{\mu}{4\pi} \int_{\tau} \frac{\mathbf{j}(\mathbf{r}', t - \frac{|\mathbf{r} - \mathbf{r}'|}{c})}{|\mathbf{r} - \mathbf{r'}|} d^3 r' 
+    \mathbf{A}(\mathbf{r},t) = \frac{\mu_0}{4\pi} \int_{\tau} \frac{[\mathbf{j}(\mathbf{r}', t')]_{\text{rit}}}{|\mathbf{r} - \mathbf{r'}|} d^3 r' = \frac{\mu_0}{4\pi} \int_{\tau} \frac{\mathbf{j}(\mathbf{r}', t - \frac{|\mathbf{r} - \mathbf{r}'|}{c})}{|\mathbf{r} - \mathbf{r'}|} d^3 r' 
 \end{align}
 \end{tcolorbox}
 
-I potenziali ritardati \ref{potenziali ritardati} sono la generalizzazione 
-dinamica dei potenziali statici di Coulomb e Biot-Savart: la distribuzione 
-di carica e corrente che contribuisce al potenziale nel punto $\mathbf{r}$ 
-all'istante $t$ non è quella presente in $\mathbf{r'}$ all'istante $t$, 
-bensì quella presente all'istante ritardato $t' = t - |\mathbf{r} - 
-\mathbf{r'}|/c$, cioè il tempo necessario affinché un segnale che viaggia 
-alla velocità della luce raggiunga $\mathbf{r}$ da $\mathbf{r'}$.\\
+I potenziali ritardati \ref{potenziali ritardati} sono la generalizzazione dinamica dei potenziali statici di Coulomb e Biot-Savart: la distribuzione di carica e corrente che contribuisce al potenziale nel punto $\mathbf{r}$ all'istante $t$ non è quella presente in $\mathbf{r'}$ all'istante $t$, bensì quella presente all'istante ritardato $t' = t - |\mathbf{r} - \mathbf{r'}|/c$, cioè il tempo necessario affinché un segnale che viaggia alla velocità della luce raggiunga $\mathbf{r}$ da $\mathbf{r'}$.\\
 
-Questo risultato è fisicamente fondamentale: i campi elettromagnetici non 
-si propagano istantaneamente, ma con velocità $c$, in accordo con la 
-causalità relativistica. \footnote{\'E possibile ottenere anche un'espressione esplicita per i campi grazie all'equazione di Jefimenko, tuttavia l'utilità di questi è limitata dato che solitamente è più semplice calcolare i potenziali ritardati e differenziarli se necessario. Si trovano approfondimenti in \cite{ElettrodinamicaClassica} e \cite{IntroductiontoElectrodynamics}}
+Questo risultato è fisicamente fondamentale: i campi elettromagnetici non si propagano istantaneamente, ma con velocità $c$, in accordo con la causalità relativistica. \footnote{\'E possibile ottenere anche un'espressione esplicita per i campi grazie all'equazione di Jefimenko, tuttavia l'utilità di questi è limitata dato che solitamente è più semplice calcolare i potenziali ritardati e differenziarli se necessario. 
+Si trovano approfondimenti in \cite{ElettrodinamicaClassica} e \cite{IntroductiontoElectrodynamics}}
 
 \subsection{Potenziali di Liénard-Wiechert}
 
@@ -955,7 +948,7 @@ Un caso particolarmente importante e istruttivo è quello di una carica puntifor
 Sostituendo nelle \ref{potenziali ritardati} e integrando con attenzione — tenendo conto che la delta temporale introduce un fattore geometrico dovuto alla dipendenza di $|\mathbf{r} - \mathbf{r'}|$ dalla posizione della carica — si ottengono i \emph{potenziali di Liénard-Wiechert}: \mkeyword{potenziali di Liénard-Wiechert}
 
 \begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
-\begin{align}
+\begin{align} \label{eq: potenziali_Liènard-Wiechert}
     \phi(\mathbf{r}, t) = \frac{q}{4\pi\varepsilon_0} \left( \frac{1}{\mathcal{R} - \boldsymbol{\mathcal{R}} \cdot \boldsymbol{\beta}} \right)_{\text{rit}} \\
     \mathbf{A}(\mathbf{r}, t) = \frac{\mu_0 q c}{4\pi} \left( \frac{\boldsymbol{\beta}}{\mathcal{R} - \boldsymbol{\mathcal{R}} \cdot \boldsymbol{\beta}} \right)_{\text{rit}}
 \end{align}
@@ -1143,9 +1136,7 @@ I campi si separano naturalmente in due contributi con andamenti diversi in $r$:
 
 \newpage
 
-    \item \textbf{Campo di radiazione} ($r \gg \lambda$): domina il 
-    termine $\sim r^{-1}$, che decade lentamente e trasporta energia 
-    a grande distanza. I campi risultano:
+    \item \textbf{Campo di radiazione} ($r \gg \lambda$): domina il termine $\sim r^{-1}$, che decade lentamente e trasporta energia a grande distanza. I campi risultano:
 
     \begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
     \begin{align}
@@ -1159,8 +1150,19 @@ I campi si separano naturalmente in due contributi con andamenti diversi in $r$:
     \end{tcolorbox}
 
     Si nota che $\mathbf{E}_{\text{rad}}$ è proporzionale alla componente di $\ddot{\mathbf{p}}_r$ \emph{trasversale} a $\hat{r}$, e che $\frac{1}{c}\mathbf{E}_{\text{rad}} = \mathbf{B}_{\text{rad}} \times \hat{r}$: i due campi sono mutuamente ortogonali e ortogonali alla direzione di propagazione $\hat{r}$, esattamente come per un'onda piana. 
-    Se $\hat{r} \parallel \ddot{\mathbf{p}}_r$ i campi si annullano: non vi è irraggiamento lungo la direzione del dipolo.
+    Se $\hat{r} \parallel \ddot{\mathbf{p}}_r$ i campi si annullano.\\
+
+    Quindi, ad esempio, se il dipolo oscilla lungo $\hat{z}$, $\mathbf{B}_{\text{rad}}$ avrà componente solo lungo $\hat{\phi}$, mentre $\mathbf{E}_{\text{rad}}$ avrà componente solo lungo $\hat{\theta}$.
 \end{itemize}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.65\linewidth]{figure/image69.png}
+  \caption{Rappresentazione schematica della produzione e della propagazione delle linee di campo elettrico prodotte da un dipolo elettrico oscillante}
+  \label{fig:etichetta}
+\end{figure}
+
+\newpage
 
 \section{Termine di ordine successivo: dipolo magnetico e quadrupolo elettrico}
 
@@ -1195,9 +1197,7 @@ E quindi
      (\hat{r} \cdot \mathbf{r'}) \mathbf{j} = \frac{1}{2}\left[(\hat{r} \cdot \mathbf{r'}) \mathbf{j} + (\hat{r} \cdot \mathbf{j}) \mathbf{r'}\right] + \frac{1}{2}(\mathbf{r'} \times \mathbf{j}) \times \hat{r}
 \end{equation}
 
-Queste due termini vanno analizzati separatamente, in quanto danno contributi fisicamente distinti.
-
-\newpage
+Questi due termini vanno analizzati separatamente, in quanto danno contributi fisicamente distinti.
 
 \subsection{Dipolo magnetico oscillante}
 
@@ -1215,6 +1215,8 @@ Dalla definizione di momento magnetico data in magnetostatica \eqref{eq:momento_
 \end{equation}
 \end{tcolorbox}
 
+\newpage 
+
 Pertanto il potenziale vettore riferito al secondo termine diventa 
 
 \begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
@@ -1227,8 +1229,8 @@ dove $\mathbf{m}_r = \mathbf{m}(t - r/c)$ è il momento magnetico valutato al te
 
 \begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
 \begin{align}
-    \mathbf{E}_{\text{rad}} &= \frac{\mu_0}{4\pi c} \frac{\ddot{\mathbf{m}}_r \times \hat{r}}{r} \\[6pt]
-    \mathbf{B}_{\text{rad}} &= -\frac{\mu_0}{4\pi c^2} \frac{(\ddot{\mathbf{m}}_r \times \hat{r}) \times \hat{r}}{r}
+    \mathbf{E}_{\text{rad}} &= \frac{\mu_0}{4\pi c} \frac{\ddot{\mathbf{m}}_r \times \hat{r}}{r} \label{eq: campo_elettrico_dip_magnetico}\\[6pt]
+    \mathbf{B}_{\text{rad}} &= -\frac{\mu_0}{4\pi c^2} \frac{(\ddot{\mathbf{m}}_r \times \hat{r}) \label{eq: campo_magnetico_dip_magnetico} \times \hat{r}}{r}
 \end{align}
 \end{tcolorbox}
 
@@ -1262,8 +1264,6 @@ boxrule=0.8pt]
 
 dove con $i$ e $j$ si va ad indicare due delle coordinate $x, y, z$ dell'elemento che si trova in $\mathbf{r}'$.\\
 
-\newpage
-
 Il potenziale vettore del quadrupolo risulta quindi:
 
 \begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
@@ -1275,11 +1275,11 @@ Il potenziale vettore del quadrupolo risulta quindi:
 
 dove $\mathbf{Q}_r$ indica il tensore valutato al tempo ritardato.
 
+newpage
+
 \section{Confronto tra dipolo elettrico e dipolo magnetico}
 
-\'E istruttivo raccogliere i risultati ottenuti e confrontare la 
-struttura dei campi dei due tipi di dipolo oscillante nella zona 
-di radiazione:
+\'E istruttivo raccogliere i risultati ottenuti e confrontare la struttura dei campi dei due tipi di dipolo oscillante nella zona di radiazione:
 
 \begin{center}
 \renewcommand{\arraystretch}{2.4}
@@ -1307,231 +1307,8 @@ $\dfrac{\mu_0}{4\pi c}\dfrac{\ddot{\mathbf{m}}_r \times \hat{r}}{r}$ \\
 
 \vspace{0.5em}
 
-La struttura è identica nei due casi, con i ruoli di $\mathbf{E}$ 
-e $\mathbf{B}$ scambiati e $\mathbf{p}$ sostituito da $\mathbf{m}/c$, 
-in accordo con la simmetria duale delle equazioni di Maxwell nel vuoto. 
-Il fattore aggiuntivo $1/c$ nel dipolo magnetico implica che, a parità 
-di ampiezza delle oscillazioni, la radiazione magnetica è soppressa 
-rispetto a quella elettrica — il che spiega perché nelle sorgenti 
-non relativistiche il dipolo elettrico domina sempre.\\
+La struttura è identica nei due casi, con i ruoli di $\mathbf{E}$ e $\mathbf{B}$ scambiati e $\mathbf{p}$ sostituito da $\mathbf{m}/c$, in accordo con la simmetria duale delle equazioni di Maxwell nel vuoto. 
+Il fattore aggiuntivo $1/c$ nel dipolo magnetico implica che, a parità di ampiezza delle oscillazioni, la radiazione magnetica è soppressa rispetto a quella elettrica — il che spiega perché nelle sorgenti non relativistiche il dipolo elettrico domina sempre.\\
 
-I potenziali ritardati costituiscono il punto di partenza per lo 
-studio della radiazione elettromagnetica. Nel capitolo successivo 
-vedremo come, a partire da questi risultati, sia possibile calcolare 
-la potenza irradiata da ciascun multipolo e ricavare la formula di 
-Larmor.
-
-
-
-% \newpage 
-% . 
-% \newpage
-
-% \section{Dipolo magnetico oscillante}
-
-% Per completezza, consideriamo anche una distribuzione di correnti con momento di dipolo magnetico oscillante $\mathbf{m}(t) = \mathbf{m}_0 e^{-i\omega t}$. L'analogo del potenziale vettore \ref{eq: potenziale_vettore_dipolo} è:
-
-% \begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, 
-% boxrule=0.8pt]
-% \begin{equation}
-%     \mathbf{A}(\mathbf{r}, t) = \frac{\mu_0}{4\pi} 
-%     \frac{\dot{\mathbf{m}}_r \times \hat{r}}{cr}
-% \end{equation}
-% \end{tcolorbox}
-
-% I campi di radiazione risultano:
-
-% \begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, 
-% boxrule=0.8pt]
-% \begin{align}
-%     \mathbf{B}_{\text{rad}} &= -\frac{\mu_0}{4\pi c^2} 
-%     \frac{(\ddot{\mathbf{m}}_r \times \hat{r}) \times \hat{r}}{r} \\[6pt]
-%     \mathbf{E}_{\text{rad}} &= \frac{\mu_0}{4\pi c} 
-%     \frac{\ddot{\mathbf{m}}_r \times \hat{r}}{r}
-% \end{align}
-% \end{tcolorbox}
-
-% La struttura è formalmente identica a quella del dipolo elettrico \eqref{eq: E_rad_dipolo}--\eqref{eq: B_rad_dipolo}, con i ruoli di $\mathbf{E}$ e $\mathbf{B}$ scambiati e $\mathbf{p}$ sostituito da $\mathbf{m}/c$. 
-% Questo riflette la simmetria duale delle equazioni di Maxwell nel vuoto.
-
-% \section{Termine di ordine successivo: dipolo magnetico e quadrupolo elettrico}
-
-% Torniamo allo sviluppo \eqref{eq: sviluppo_G} e consideriamo il termine 
-% $n = 1$. Il contributo al potenziale vettore è:
-
-% \begin{equation}
-%     \mathbf{A}_1(\mathbf{r}) = \frac{\mu_0}{4\pi} \frac{e^{ikr}}{r} 
-%     (-ik) \int (\hat{r} \cdot \mathbf{r'}) \, \mathbf{j}(\mathbf{r'}) 
-%     \, d^3r'
-% \end{equation}
-
-% Includendo la dipendenza temporale e ricordando che $-ik = -i\omega/c 
-% = \partial_t/c$, si ha:
-
-% \begin{equation}
-%     \mathbf{A}_1(\mathbf{r}, t) = \frac{\mu_0}{4\pi c} 
-%     \frac{\partial_t}{r} \int (\hat{r} \cdot \mathbf{r'}) \, 
-%     \mathbf{j}(\mathbf{r'}, t_r) \, d^3r'
-% \end{equation}
-
-% Per separare i contributi fisicamente distinti, scomponiamo 
-% l'integrando in parte simmetrica e antisimmetrica rispetto allo 
-% scambio $\hat{r} \leftrightarrow \mathbf{j}$:
-
-% \begin{align}
-%     (\hat{r} \cdot \mathbf{r'}) \mathbf{j} = 
-%     \frac{1}{2}\left[(\hat{r} \cdot \mathbf{r'}) \mathbf{j} + 
-%     (\hat{r} \cdot \mathbf{j}) \mathbf{r'}\right] + 
-%     \frac{1}{2}\left[(\hat{r} \cdot \mathbf{r'}) \mathbf{j} - 
-%     (\hat{r} \cdot \mathbf{j}) \mathbf{r'}\right]
-% \end{align}
-
-% Il secondo termine si riscrive come:
-
-% \begin{equation}
-%     \frac{1}{2}\left[(\hat{r} \cdot \mathbf{r'}) \mathbf{j} - 
-%     (\hat{r} \cdot \mathbf{j}) \mathbf{r'}\right] = 
-%     \frac{1}{2}(\mathbf{r'} \times \mathbf{j}) \times \hat{r}
-% \end{equation}
-
-% Il suo integrale è legato al \emph{momento di dipolo magnetico}: 
-% \mkeyword{momento di dipolo magnetico}
-
-% \begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, 
-% boxrule=0.8pt]
-% \begin{equation}\label{eq: momento_dipolo_magnetico}
-%     \mathbf{m} = \frac{1}{2} \int \mathbf{r'} \times \mathbf{j}(\mathbf{r'}) 
-%     \, d^3r'
-% \end{equation}
-% \end{tcolorbox}
-
-% che per una spira percorsa da corrente $I_0$ di area $\Sigma$ vale 
-% $\mathbf{m} = I_0 \Sigma \hat{z}$, in accordo con la definizione 
-% magnetostatica.\\
-
-% Il primo termine, la parte simmetrica, dà invece origine al 
-% \emph{quadrupolo elettrico}, che tratteremo nella sezione successiva.
-
-% \subsection{Dipolo magnetico: potenziale e campi}
-
-% Il contributo del dipolo magnetico al potenziale vettore è:
-
-% \begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, 
-% boxrule=0.8pt]
-% \begin{equation}\label{eq: potenziale_dipolo_magnetico}
-%     \mathbf{A}_M(\mathbf{r}, t) = \frac{\mu_0}{4\pi c} 
-%     \frac{\dot{\mathbf{m}}_r \times \hat{r}}{r}
-% \end{equation}
-% \end{tcolorbox}
-
-% dove $\mathbf{m}_r = \mathbf{m}(t - r/c)$ è il momento di dipolo 
-% magnetico valutato al tempo ritardato. I campi di radiazione 
-% ($r \gg \lambda$) risultano:
-
-% \begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, 
-% boxrule=0.8pt]
-% \begin{align}
-%     \mathbf{E}_{\text{rad}} &= \frac{\mu_0}{4\pi c} 
-%     \frac{\ddot{\mathbf{m}}_r \times \hat{r}}{r} \\[6pt]
-%     \mathbf{B}_{\text{rad}} &= -\frac{\mu_0}{4\pi c^2} 
-%     \frac{(\ddot{\mathbf{m}}_r \times \hat{r}) \times \hat{r}}{r}
-% \end{align}
-% \end{tcolorbox}
-
-% \section{Quadrupolo elettrico}
-
-% \subsection{Tensore del momento di quadrupolo}
-
-% La parte simmetrica del termine $n=1$ è legata al momento di 
-% quadrupolo elettrico. Si definisce il \emph{tensore del momento di 
-% quadrupolo} \mkeyword{tensore del momento di quadrupolo} a traccia 
-% nulla come:
-
-% \begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, 
-% boxrule=0.8pt]
-% \begin{equation}\label{eq: tensore_quadrupolo}
-%     Q_{\alpha\beta} = \int \left(3r'_\alpha r'_\beta - r'^2 \delta_{\alpha\beta}
-%     \right) \rho(\mathbf{r'}) \, d^3r'
-% \end{equation}
-% \end{tcolorbox}
-
-% dove $\alpha, \beta \in \{x, y, z\}$ e $\delta_{\alpha\beta}$ è il 
-% delta di Kronecker. Si può verificare che $\sum_\alpha Q_{\alpha\alpha} 
-% = 0$ (traccia nulla).\\
-
-% Come esempio, consideriamo una distribuzione di quattro cariche 
-% $\pm q$ disposte in modo da avere carica totale e dipolo nulli. 
-% Per una distribuzione con simmetria assiale lungo $z$, il tensore 
-% si riduce a:
-
-% \begin{equation}
-%     Q = \frac{d^2 q}{4}
-%     \begin{pmatrix} -1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 2 \end{pmatrix}
-% \end{equation}
-
-% Introducendo il vettore $[Q\hat{r}]_\alpha = \sum_\beta Q_{\alpha\beta} 
-% \hat{r}_\beta$, si può dimostrare, mediante integrazione per parti 
-% e l'equazione di continuità $\nabla \cdot \mathbf{j} = -\partial_t \rho$, 
-% che:
-
-% \begin{equation}
-%     \frac{1}{2} \int \left[(\hat{r} \cdot \mathbf{r'})\mathbf{j} + 
-%     (\hat{r} \cdot \mathbf{j})\mathbf{r'}\right] d^3r' = 
-%     \frac{1}{2} \frac{\dot{\mathbf{Q}}\hat{r}}{3}
-% \end{equation}
-
-% dove $[\dot{\mathbf{Q}}\hat{r}]_\alpha = \sum_\beta \dot{Q}_{\alpha\beta} 
-% \hat{r}_\beta$.
-
-% \subsection{Potenziale vettore del quadrupolo}
-
-% Il contributo del quadrupolo elettrico al potenziale vettore è:
-
-% \begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, 
-% boxrule=0.8pt]
-% \begin{equation}\label{eq: potenziale_quadrupolo}
-%     \mathbf{A}_Q(\mathbf{r}, t) = \frac{\mu_0}{24\pi c} 
-%     \frac{\ddot{\mathbf{Q}}_r \hat{r}}{r}
-% \end{equation}
-% \end{tcolorbox}
-
-% dove $\mathbf{Q}_r$ è il tensore di quadrupolo valutato al tempo 
-% ritardato.
-
-% \section{Confronto tra dipolo elettrico e dipolo magnetico}
-
-% È istruttivo raccogliere i risultati ottenuti e confrontare 
-% la struttura dei campi dei due tipi di dipolo oscillante nella 
-% zona di radiazione:
-
-% \begin{center}
-% \renewcommand{\arraystretch}{2.2}
-% \begin{tabular}{lcc}
-% \hline
-% & \textbf{Dipolo elettrico} & \textbf{Dipolo magnetico} \\
-% \hline
-% Potenziale vettore & 
-% $\dfrac{\mu_0}{4\pi}\dfrac{\dot{\mathbf{p}}_r}{r}$ & 
-% $\dfrac{\mu_0}{4\pi c}\dfrac{\dot{\mathbf{m}}_r \times \hat{r}}{r}$ \\
-
-% $\mathbf{B}_\text{rad}$ & 
-% $\dfrac{\mu_0}{4\pi c}\dfrac{\ddot{\mathbf{p}}_r \times \hat{r}}{r}$ & 
-% $-\dfrac{\mu_0}{4\pi c^2}\dfrac{(\ddot{\mathbf{m}}_r \times \hat{r}) \times \hat{r}}{r}$ \\
-
-% $\mathbf{E}_\text{rad}$ & 
-% $\dfrac{\mu_0}{4\pi}\dfrac{(\ddot{\mathbf{p}}_r \times \hat{r}) \times \hat{r}}{r}$ & 
-% $\dfrac{\mu_0}{4\pi c}\dfrac{\ddot{\mathbf{m}}_r \times \hat{r}}{r}$ \\
-% \hline
-% \end{tabular}
-% \end{center}
-
-% \vspace{0.5em}
-
-% La struttura è formalmente identica nei due casi, con i ruoli di 
-% $\mathbf{E}$ e $\mathbf{B}$ scambiati e $\mathbf{p}$ sostituito 
-% da $\mathbf{m}/c$, in accordo con la simmetria duale delle equazioni 
-% di Maxwell. Il fattore aggiuntivo $1/c$ nel dipolo magnetico implica 
-% che, a parità di ampiezza delle oscillazioni, la radiazione magnetica 
-% è soppressa di un fattore $v/c$ rispetto a quella elettrica — il che 
-% spiega perché nelle sorgenti non relativistiche il dipolo elettrico 
-% domina sempre.
+I potenziali ritardati costituiscono il punto di partenza per lo studio della radiazione elettromagnetica. 
+Nel capitolo successivo vedremo come, a partire da questi risultati, sia possibile calcolare la potenza irradiata da ciascun multipolo e ricavare la formula di Larmor.
