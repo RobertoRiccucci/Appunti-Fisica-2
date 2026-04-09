@@ -2383,6 +2383,7 @@
     <bcf:citekey order="8" intorder="1">ElettrodinamicaClassica</bcf:citekey>
     <bcf:citekey order="9" intorder="1">IntroductiontoElectrodynamics</bcf:citekey>
     <bcf:citekey order="10" intorder="1">IntroductiontoElectrodynamics</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">LezioniDiMeccanicaClassica</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

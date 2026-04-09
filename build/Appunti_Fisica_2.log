@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.12)  31 MAR 2026 19:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.12)  9 APR 2026 17:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1073,6 +1073,9 @@ LaTeX Warning: Label `fig:etichetta' multiply defined.
 
 LaTeX Warning: Label `fig:etichetta' multiply defined.
 
+
+LaTeX Warning: Label `fig:etichetta' multiply defined.
+
 )
 \openout1 = `Appunti_Fisica_2.aux'.
 
@@ -1360,11 +1363,16 @@ Overfull \hbox (1.09496pt too wide) detected at line 152
  []\T1/lmss/bx/n/10.95 160
  []
 
-)
+
+Overfull \hbox (1.09496pt too wide) detected at line 164
+ []\T1/lmss/bx/n/10.95 170
+ []
+
+[6])
 \tf@toc=\write5
 \openout5 = `Appunti_Fisica_2.toc'.
 
-) (./chapters/formulario.tex [6]
+) (./chapters/formulario.tex [7]
 chapter without number
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -1377,7 +1385,7 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [7
+) [8
 
 
 {/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}] (./chapters/chapter_1.tex
@@ -1460,7 +1468,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
-<figure/image1.png, id=396, 1278.7775pt x 1403.2425pt>
+<figure/image1.png, id=432, 1278.7775pt x 1403.2425pt>
 File: figure/image1.png Graphic file (type png)
 <use figure/image1.png>
 Package pdftex.def Info: figure/image1.png  used on input line 96.
@@ -1471,7 +1479,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--102
  []
 
 [3 <./figure/image1.png>]
-<figure/image3.png, id=407, 636.3775pt x 872.25874pt>
+<figure/image3.png, id=443, 636.3775pt x 872.25874pt>
 File: figure/image3.png Graphic file (type png)
 <use figure/image3.png>
 Package pdftex.def Info: figure/image3.png  used on input line 116.
@@ -1517,7 +1525,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
-<figure/image4.png, id=439, 660.4675pt x 695.59875pt>
+<figure/image4.png, id=475, 660.4675pt x 695.59875pt>
 File: figure/image4.png Graphic file (type png)
 <use figure/image4.png>
 Package pdftex.def Info: figure/image4.png  used on input line 133.
@@ -1544,7 +1552,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 4.
-<figure/image6.png, id=456, 515.9275pt x 413.545pt>
+<figure/image6.png, id=492, 515.9275pt x 413.545pt>
 File: figure/image6.png Graphic file (type png)
 <use figure/image6.png>
 Package pdftex.def Info: figure/image6.png  used on input line 15.
@@ -1563,7 +1571,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
 
  <./figure/image6.png>]
-<figure/image7.png, id=467, 474.77374pt x 773.89125pt>
+<figure/image7.png, id=503, 474.77374pt x 773.89125pt>
 File: figure/image7.png Graphic file (type png)
 <use figure/image7.png>
 Package pdftex.def Info: figure/image7.png  used on input line 51.
@@ -1584,7 +1592,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
  []
 
 [10 <./figure/image7.png>]
-<figure/image8.png, id=478, 1669.23625pt x 946.53625pt>
+<figure/image8.png, id=514, 1669.23625pt x 946.53625pt>
 File: figure/image8.png Graphic file (type png)
 <use figure/image8.png>
 Package pdftex.def Info: figure/image8.png  used on input line 102.
@@ -1639,7 +1647,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--75
  []
 
 [14]
-<figure/image2.png, id=504, 612.2875pt x 739.76375pt>
+<figure/image2.png, id=541, 612.2875pt x 739.76375pt>
 File: figure/image2.png Graphic file (type png)
 <use figure/image2.png>
 Package pdftex.def Info: figure/image2.png  used on input line 95.
@@ -1667,7 +1675,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 209--210
 
  []
 
-<figure/image11.png, id=533, 559.08875pt x 476.78125pt>
+<figure/image11.png, id=570, 559.08875pt x 476.78125pt>
 File: figure/image11.png Graphic file (type png)
 <use figure/image11.png>
 Package pdftex.def Info: figure/image11.png  used on input line 215.
@@ -1715,7 +1723,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<figure/image5.png, id=559, 995.72pt x 904.37875pt>
+<figure/image5.png, id=595, 995.72pt x 904.37875pt>
 File: figure/image5.png Graphic file (type png)
 <use figure/image5.png>
 Package pdftex.def Info: figure/image5.png  used on input line 9.
@@ -1746,7 +1754,7 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-<figure/image12.png, id=587, 560.0925pt x 632.3625pt>
+<figure/image12.png, id=624, 560.0925pt x 632.3625pt>
 File: figure/image12.png Graphic file (type png)
 <use figure/image12.png>
 Package pdftex.def Info: figure/image12.png  used on input line 14.
@@ -1755,7 +1763,7 @@ Package pdftex.def Info: figure/image12.png  used on input line 14.
 
 
  <./figure/image12.png>]
-<figure/image13.png, id=601, 493.845pt x 498.86375pt>
+<figure/image13.png, id=637, 493.845pt x 498.86375pt>
 File: figure/image13.png Graphic file (type png)
 <use figure/image13.png>
 Package pdftex.def Info: figure/image13.png  used on input line 84.
@@ -1765,12 +1773,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
-<figure/image14.png, id=616, 449.68pt x 347.2975pt>
+<figure/image14.png, id=653, 449.68pt x 347.2975pt>
 File: figure/image14.png Graphic file (type png)
 <use figure/image14.png>
 Package pdftex.def Info: figure/image14.png  used on input line 101.
 (pdftex.def)             Requested size: 126.19199pt x 97.4599pt.
-<figure/image15.png, id=617, 397.485pt x 358.33875pt>
+<figure/image15.png, id=654, 397.485pt x 358.33875pt>
 File: figure/image15.png Graphic file (type png)
 <use figure/image15.png>
 Package pdftex.def Info: figure/image15.png  used on input line 108.
@@ -1796,7 +1804,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 181--182
  []
 
 [27]
-<figure/image16.png, id=636, 542.025pt x 418.56375pt>
+<figure/image16.png, id=673, 542.025pt x 418.56375pt>
 File: figure/image16.png Graphic file (type png)
 <use figure/image16.png>
 Package pdftex.def Info: figure/image16.png  used on input line 193.
@@ -1807,12 +1815,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 217--218
  []
 
 [28 <./figure/image16.png>]
-<figure/image17.png, id=647, 1106.1325pt x 512.91624pt>
+<figure/image17.png, id=683, 1106.1325pt x 512.91624pt>
 File: figure/image17.png Graphic file (type png)
 <use figure/image17.png>
 Package pdftex.def Info: figure/image17.png  used on input line 245.
 (pdftex.def)             Requested size: 225.34811pt x 104.49109pt.
-<figure/image18.png, id=648, 522.95375pt x 272.01625pt>
+<figure/image18.png, id=684, 522.95375pt x 272.01625pt>
 File: figure/image18.png Graphic file (type png)
 <use figure/image18.png>
 Package pdftex.def Info: figure/image18.png  used on input line 270.
@@ -1855,7 +1863,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-<figure/image30.png, id=668, 718.685pt x 347.2975pt>
+<figure/image30.png, id=704, 718.685pt x 347.2975pt>
 File: figure/image30.png Graphic file (type png)
 <use figure/image30.png>
 Package pdftex.def Info: figure/image30.png  used on input line 22.
@@ -1888,7 +1896,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
-<figure/image31.png, id=677, 341.275pt x 253.94875pt>
+<figure/image31.png, id=713, 341.275pt x 253.94875pt>
 File: figure/image31.png Graphic file (type png)
 <use figure/image31.png>
 Package pdftex.def Info: figure/image31.png  used on input line 52.
@@ -1903,7 +1911,7 @@ Overfull \hbox (27.37506pt too wide) in paragraph at lines 76--76
 [] 
  []
 
-<figure/image32.png, id=678, 203.76125pt x 247.92625pt>
+<figure/image32.png, id=714, 203.76125pt x 247.92625pt>
 File: figure/image32.png Graphic file (type png)
 <use figure/image32.png>
 Package pdftex.def Info: figure/image32.png  used on input line 86.
@@ -1919,7 +1927,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--113
  []
 
 [33 <./figure/image32.png>]
-<figure/image33.png, id=698, 280.04625pt x 197.73875pt>
+<figure/image33.png, id=734, 280.04625pt x 197.73875pt>
 File: figure/image33.png Graphic file (type png)
 <use figure/image33.png>
 Package pdftex.def Info: figure/image33.png  used on input line 124.
@@ -1929,7 +1937,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
-<figure/image34.png, id=699, 328.22626pt x 272.01625pt>
+<figure/image34.png, id=735, 328.22626pt x 272.01625pt>
 File: figure/image34.png Graphic file (type png)
 <use figure/image34.png>
 Package pdftex.def Info: figure/image34.png  used on input line 138.
@@ -1965,7 +1973,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--153
  []
 
 [35]
-<figure/image35.png, id=712, 555.07375pt x 151.56625pt>
+<figure/image35.png, id=749, 555.07375pt x 151.56625pt>
 File: figure/image35.png Graphic file (type png)
 <use figure/image35.png>
 Package pdftex.def Info: figure/image35.png  used on input line 164.
@@ -1989,7 +1997,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--194
 LaTeX Warning: Marginpar on page 36 moved.
 
 [36 <./figure/image35.png>]
-<figure/image36.png, id=722, 656.4525pt x 531.9875pt>
+<figure/image36.png, id=758, 656.4525pt x 531.9875pt>
 File: figure/image36.png Graphic file (type png)
 <use figure/image36.png>
 Package pdftex.def Info: figure/image36.png  used on input line 205.
@@ -1999,7 +2007,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
-<figure/image37.png, id=723, 439.6425pt x 424.58624pt>
+<figure/image37.png, id=759, 439.6425pt x 424.58624pt>
 File: figure/image37.png Graphic file (type png)
 <use figure/image37.png>
 Package pdftex.def Info: figure/image37.png  used on input line 230.
@@ -2009,7 +2017,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
-<figure/image38.png, id=734, 228.855pt x 675.52374pt>
+<figure/image38.png, id=770, 228.855pt x 675.52374pt>
 File: figure/image38.png Graphic file (type png)
 <use figure/image38.png>
 Package pdftex.def Info: figure/image38.png  used on input line 251.
@@ -2173,7 +2181,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
 
 ]
-<figure/image19.png, id=820, 1091.07625pt x 577.15625pt>
+<figure/image19.png, id=856, 1091.07625pt x 577.15625pt>
 File: figure/image19.png Graphic file (type png)
 <use figure/image19.png>
 Package pdftex.def Info: figure/image19.png  used on input line 44.
@@ -2188,7 +2196,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
-<figure/image20.png, id=821, 608.2725pt x 228.855pt>
+<figure/image20.png, id=857, 608.2725pt x 228.855pt>
 File: figure/image20.png Graphic file (type png)
 <use figure/image20.png>
 Package pdftex.def Info: figure/image20.png  used on input line 57.
@@ -2228,7 +2236,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
-<figure/image21.png, id=839, 485.815pt x 596.2275pt>
+<figure/image21.png, id=875, 485.815pt x 596.2275pt>
 File: figure/image21.png Graphic file (type png)
 <use figure/image21.png>
 Package pdftex.def Info: figure/image21.png  used on input line 143.
@@ -2237,7 +2245,7 @@ Package pdftex.def Info: figure/image21.png  used on input line 143.
 LaTeX Warning: Citation 'ElettromagnetismoeOnde' on page 49 undefined on input line 148.
 
 [49 <./figure/image21.png>]
-<figure/image22.png, id=851, 471.7625pt x 477.785pt>
+<figure/image22.png, id=888, 471.7625pt x 477.785pt>
 File: figure/image22.png Graphic file (type png)
 <use figure/image22.png>
 Package pdftex.def Info: figure/image22.png  used on input line 168.
@@ -2443,7 +2451,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
-<figure/image29.png, id=963, 953.5625pt x 729.72626pt>
+<figure/image29.png, id=1000, 953.5625pt x 729.72626pt>
 File: figure/image29.png Graphic file (type png)
 <use figure/image29.png>
 Package pdftex.def Info: figure/image29.png  used on input line 106.
@@ -2496,7 +2504,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<figure/image23.png, id=998, 1355.0625pt x 439.6425pt>
+<figure/image23.png, id=1034, 1355.0625pt x 439.6425pt>
 File: figure/image23.png Graphic file (type png)
 <use figure/image23.png>
 Package pdftex.def Info: figure/image23.png  used on input line 14.
@@ -2577,7 +2585,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
-<figure/image24.png, id=1023, 1345.025pt x 168.63pt>
+<figure/image24.png, id=1059, 1345.025pt x 168.63pt>
 File: figure/image24.png Graphic file (type png)
 <use figure/image24.png>
 Package pdftex.def Info: figure/image24.png  used on input line 136.
@@ -2617,7 +2625,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
 
-<figure/image25.png, id=1042, 1314.9125pt x 616.3025pt>
+<figure/image25.png, id=1078, 1314.9125pt x 616.3025pt>
 File: figure/image25.png Graphic file (type png)
 <use figure/image25.png>
 Package pdftex.def Info: figure/image25.png  used on input line 253.
@@ -2633,12 +2641,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 274--275
  []
 
 [70 <./figure/image25.png>] [71]
-<figure/image26.png, id=1062, 1670.24pt x 1351.0475pt>
+<figure/image26.png, id=1099, 1670.24pt x 1351.0475pt>
 File: figure/image26.png Graphic file (type png)
 <use figure/image26.png>
 Package pdftex.def Info: figure/image26.png  used on input line 320.
 (pdftex.def)             Requested size: 131.45403pt x 106.3131pt.
-<figure/image27.png, id=1063, 1156.32pt x 672.5125pt>
+<figure/image27.png, id=1100, 1156.32pt x 672.5125pt>
 File: figure/image27.png Graphic file (type png)
 <use figure/image27.png>
 Package pdftex.def Info: figure/image27.png  used on input line 343.
@@ -2648,7 +2656,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 356--357
 
  []
 
-<figure/image28.png, id=1076, 1541.76pt x 1027.84pt>
+<figure/image28.png, id=1112, 1541.76pt x 1027.84pt>
 File: figure/image28.png Graphic file (type png)
 <use figure/image28.png>
 Package pdftex.def Info: figure/image28.png  used on input line 399.
@@ -2768,7 +2776,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
 
 ]
-<figure/image39.png, id=1121, 770.88pt x 368.37625pt>
+<figure/image39.png, id=1157, 770.88pt x 368.37625pt>
 File: figure/image39.png Graphic file (type png)
 <use figure/image39.png>
 Package pdftex.def Info: figure/image39.png  used on input line 79.
@@ -2825,7 +2833,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
 
 ]
-<figure/image40.png, id=1154, 695.59875pt x 437.635pt>
+<figure/image40.png, id=1190, 695.59875pt x 437.635pt>
 File: figure/image40.png Graphic file (type png)
 <use figure/image40.png>
 Package pdftex.def Info: figure/image40.png  used on input line 32.
@@ -2878,7 +2886,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-<figure/image41.png, id=1163, 310.15875pt x 218.8175pt>
+<figure/image41.png, id=1199, 310.15875pt x 218.8175pt>
 File: figure/image41.png Graphic file (type png)
 <use figure/image41.png>
 Package pdftex.def Info: figure/image41.png  used on input line 90.
@@ -2896,7 +2904,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 117.
 
-<figure/image42.png, id=1175, 650.43pt x 367.3725pt>
+<figure/image42.png, id=1212, 650.43pt x 367.3725pt>
 File: figure/image42.png Graphic file (type png)
 <use figure/image42.png>
 Package pdftex.def Info: figure/image42.png  used on input line 123.
@@ -2939,7 +2947,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<figure/image43.png, id=1203, 394.47375pt x 161.60374pt>
+<figure/image43.png, id=1240, 394.47375pt x 161.60374pt>
 File: figure/image43.png Graphic file (type png)
 <use figure/image43.png>
 Package pdftex.def Info: figure/image43.png  used on input line 21.
@@ -2972,13 +2980,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
-<figure/image44.png, id=1225, 292.09125pt x 262.9825pt>
+<figure/image44.png, id=1261, 292.09125pt x 262.9825pt>
 File: figure/image44.png Graphic file (type png)
 <use figure/image44.png>
 Package pdftex.def Info: figure/image44.png  used on input line 111.
 (pdftex.def)             Requested size: 187.7882pt x 169.07866pt.
 [89 <./figure/image44.png>]
-<figure/image45.png, id=1232, 427.5975pt x 321.2pt>
+<figure/image45.png, id=1269, 427.5975pt x 321.2pt>
 File: figure/image45.png Graphic file (type png)
 <use figure/image45.png>
 Package pdftex.def Info: figure/image45.png  used on input line 167.
@@ -2989,7 +2997,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--179
  []
 
 [90 <./figure/image45.png>]
-<figure/image46.png, id=1243, 458.71375pt x 205.76875pt>
+<figure/image46.png, id=1279, 458.71375pt x 205.76875pt>
 File: figure/image46.png Graphic file (type png)
 <use figure/image46.png>
 Package pdftex.def Info: figure/image46.png  used on input line 216.
@@ -2999,7 +3007,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
 
-<figure/image47.png, id=1261, 359.3425pt x 207.77625pt>
+<figure/image47.png, id=1297, 359.3425pt x 207.77625pt>
 File: figure/image47.png Graphic file (type png)
 <use figure/image47.png>
 Package pdftex.def Info: figure/image47.png  used on input line 281.
@@ -3024,7 +3032,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
-<figure/image48.png, id=1272, 433.62pt x 370.38374pt>
+<figure/image48.png, id=1308, 433.62pt x 370.38374pt>
 File: figure/image48.png Graphic file (type png)
 <use figure/image48.png>
 Package pdftex.def Info: figure/image48.png  used on input line 326.
@@ -3108,7 +3116,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-<figure/image49.png, id=1354, 1027.84pt x 449.68pt>
+<figure/image49.png, id=1390, 1027.84pt x 449.68pt>
 File: figure/image49.png Graphic file (type png)
 <use figure/image49.png>
 Package pdftex.def Info: figure/image49.png  used on input line 11.
@@ -3152,7 +3160,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 144--145
  []
 
 [103]
-<figure/image50.png, id=1389, 236.885pt x 224.84pt>
+<figure/image50.png, id=1425, 236.885pt x 224.84pt>
 File: figure/image50.png Graphic file (type png)
 <use figure/image50.png>
 Package pdftex.def Info: figure/image50.png  used on input line 152.
@@ -3173,7 +3181,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--194
  []
 
 [104 <./figure/image50.png>]
-<figure/image51.png, id=1399, 343.2825pt x 388.45125pt>
+<figure/image51.png, id=1435, 343.2825pt x 388.45125pt>
 File: figure/image51.png Graphic file (type png)
 <use figure/image51.png>
 Package pdftex.def Info: figure/image51.png  used on input line 199.
@@ -3206,12 +3214,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<figure/image52.png, id=1415, 169.63374pt x 424.58624pt>
+<figure/image52.png, id=1451, 169.63374pt x 424.58624pt>
 File: figure/image52.png Graphic file (type png)
 <use figure/image52.png>
 Package pdftex.def Info: figure/image52.png  used on input line 11.
 (pdftex.def)             Requested size: 84.5041pt x 211.50868pt.
-<figure/image53.png, id=1416, 163.61125pt x 402.50375pt>
+<figure/image53.png, id=1452, 163.61125pt x 402.50375pt>
 File: figure/image53.png Graphic file (type png)
 <use figure/image53.png>
 Package pdftex.def Info: figure/image53.png  used on input line 18.
@@ -3230,7 +3238,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
 
  <./figure/image52.png> <./figure/image53.png>]
-<figure/image54.png, id=1424, 614.295pt x 157.58875pt>
+<figure/image54.png, id=1461, 614.295pt x 157.58875pt>
 File: figure/image54.png Graphic file (type png)
 <use figure/image54.png>
 Package pdftex.def Info: figure/image54.png  used on input line 54.
@@ -3260,12 +3268,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
-<figure/image55.png, id=1441, 273.02pt x 148.555pt>
+<figure/image55.png, id=1478, 273.02pt x 148.555pt>
 File: figure/image55.png Graphic file (type png)
 <use figure/image55.png>
 Package pdftex.def Info: figure/image55.png  used on input line 139.
 (pdftex.def)             Requested size: 169.00822pt x 91.96033pt.
-<figure/image56.png, id=1442, 317.185pt x 144.54pt>
+<figure/image56.png, id=1479, 317.185pt x 144.54pt>
 File: figure/image56.png Graphic file (type png)
 <use figure/image56.png>
 Package pdftex.def Info: figure/image56.png  used on input line 144.
@@ -3280,7 +3288,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
-<figure/image58.png, id=1443, 464.73625pt x 186.6975pt>
+<figure/image58.png, id=1480, 464.73625pt x 186.6975pt>
 File: figure/image58.png Graphic file (type png)
 <use figure/image58.png>
 Package pdftex.def Info: figure/image58.png  used on input line 164.
@@ -3314,7 +3322,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 276--277
  []
 
 [112]
-<figure/image59.png, id=1473, 446.66875pt x 291.0875pt>
+<figure/image59.png, id=1509, 446.66875pt x 291.0875pt>
 File: figure/image59.png Graphic file (type png)
 <use figure/image59.png>
 Package pdftex.def Info: figure/image59.png  used on input line 294.
@@ -3334,12 +3342,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 328--329
 
  []
 
-<figure/image60.png, id=1482, 305.14pt x 164.615pt>
+<figure/image60.png, id=1519, 305.14pt x 164.615pt>
 File: figure/image60.png Graphic file (type png)
 <use figure/image60.png>
 Package pdftex.def Info: figure/image60.png  used on input line 334.
 (pdftex.def)             Requested size: 135.20709pt x 72.94322pt.
-<figure/image61.png, id=1483, 304.13625pt x 183.68625pt>
+<figure/image61.png, id=1520, 304.13625pt x 183.68625pt>
 File: figure/image61.png Graphic file (type png)
 <use figure/image61.png>
 Package pdftex.def Info: figure/image61.png  used on input line 340.
@@ -3458,7 +3466,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-<figure/image63.png, id=1518, 1250.6725pt x 851.18pt>
+<figure/image63.png, id=1554, 1250.6725pt x 851.18pt>
 File: figure/image63.png Graphic file (type png)
 <use figure/image63.png>
 Package pdftex.def Info: figure/image63.png  used on input line 82.
@@ -3508,7 +3516,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
 
 ]
-<figure/image64.png, id=1567, 261.97874pt x 260.975pt>
+<figure/image64.png, id=1603, 261.97874pt x 260.975pt>
 File: figure/image64.png Graphic file (type png)
 <use figure/image64.png>
 Package pdftex.def Info: figure/image64.png  used on input line 84.
@@ -3517,7 +3525,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 85.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 85.
-<figure/image65.png, id=1568, 256.96pt x 241.90375pt>
+<figure/image65.png, id=1604, 256.96pt x 241.90375pt>
 File: figure/image65.png Graphic file (type png)
 <use figure/image65.png>
 Package pdftex.def Info: figure/image65.png  used on input line 91.
@@ -3660,7 +3668,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 275--276
 
  []
 
-<figure/image66.png, id=1744, 544.0325pt x 244.915pt>
+<figure/image66.png, id=1781, 544.0325pt x 244.915pt>
 File: figure/image66.png Graphic file (type png)
 <use figure/image66.png>
 Package pdftex.def Info: figure/image66.png  used on input line 279.
@@ -3670,7 +3678,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 379--380
 
  []
 
-<figure/image67.png, id=1782, 352.31625pt x 265.99374pt>
+<figure/image67.png, id=1818, 352.31625pt x 265.99374pt>
 File: figure/image67.png Graphic file (type png)
 <use figure/image67.png>
 Package pdftex.def Info: figure/image67.png  used on input line 384.
@@ -3699,7 +3707,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 561--562
 
  []
 
-<figure/image68.png, id=1820, 238.8925pt x 348.30125pt>
+<figure/image68.png, id=1857, 238.8925pt x 348.30125pt>
 File: figure/image68.png Graphic file (type png)
 <use figure/image68.png>
 Package pdftex.def Info: figure/image68.png  used on input line 565.
@@ -3800,7 +3808,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1152--1154
 
  []
 
-<figure/image69.png, id=1959, 619.31375pt x 614.295pt>
+<figure/image69.png, id=1996, 619.31375pt x 614.295pt>
 File: figure/image69.png Graphic file (type png)
 <use figure/image69.png>
 Package pdftex.def Info: figure/image69.png  used on input line 1160.
@@ -3889,7 +3897,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 264--265
 
  []
 
-<figure/image70.png, id=2072, 591.20876pt x 1268.74pt>
+<figure/image70.png, id=2108, 591.20876pt x 1268.74pt>
 File: figure/image70.png Graphic file (type png)
 <use figure/image70.png>
 Package pdftex.def Info: figure/image70.png  used on input line 270.
@@ -3924,11 +3932,198 @@ Underfull \hbox (badness 10000) in paragraph at lines 337--339
 
  []
 
-[167] [168])
+[167] [168]) (./chapters/chapter_24.tex [169]
+chapter 24.
 
-LaTeX Warning: Empty bibliography on input line 98.
+Class scrbook Warning: Redefinition of \@makechapterhead detected.
+(scrbook)              Note: KOMA-Script does use styles for commands like
+(scrbook)              \chapter. Currently it internally still provides and
+(scrbook)              uses \@makechapterhead, but a completely different
+(scrbook)              definition compared to the standard classes.
+(scrbook)              So redefining or using internal \@makechapterhead
+(scrbook)              by users or package authors may already break
+(scrbook)              KOMA-Script and will not work with a coming version,
+(scrbook)              that will remove this deprecated code.
 
-[169] (build/Appunti_Fisica_2.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+<figure/image71.png, id=2149, 2349.77875pt x 449.68pt>
+File: figure/image71.png Graphic file (type png)
+<use figure/image71.png>
+Package pdftex.def Info: figure/image71.png  used on input line 25.
+(pdftex.def)             Requested size: 375.57639pt x 71.87479pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+
+ []
+
+[170
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+
+ []
+
+[171 <./figure/image71.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 75--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+
+ []
+
+[172]
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+
+ []
+
+
+LaTeX Warning: Citation 'LezioniDiMeccanicaClassica' on page 173 undefined on input line 165.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+
+ []
+
+[173]
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--231
+
+ []
+
+[174]
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
+
+ []
+
+[175]
+Underfull \hbox (badness 10000) in paragraph at lines 290--292
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 293--295
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
+
+ []
+
+
+Overfull \hbox (118.26749pt too wide) in paragraph at lines 301--338
+ [][] 
+ []
+
+[176]
+Underfull \hbox (badness 10000) in paragraph at lines 346--347
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
+
+ []
+
+[177]
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
+
+ []
+
+
+Overfull \hbox (3.37355pt too wide) in paragraph at lines 448--448
+[]\T1/lmr/m/it/9 (-20) quadripotenziale  
+ []
+
+[178]
+Underfull \hbox (badness 10000) in paragraph at lines 476--477
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 510--511
+
+ []
+
+[179]
+Underfull \hbox (badness 10000) in paragraph at lines 548--549
+
+ []
+
+[180]
+Underfull \hbox (badness 10000) in paragraph at lines 603--604
+
+ []
+
+)
+
+LaTeX Warning: Empty bibliography on input line 100.
+
+[181] (build/Appunti_Fisica_2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
@@ -3950,18 +4145,18 @@ Package logreq Info: Writing requests to 'Appunti_Fisica_2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42738 strings out of 467525
- 830957 string characters out of 5418982
- 1784891 words of memory out of 5000000
- 69506 multiletter control sequences out of 15000+600000
- 773339 words of font info for 367 fonts, out of 8000000 for 9000
+ 42918 strings out of 467525
+ 833701 string characters out of 5418982
+ 1786014 words of memory out of 5000000
+ 69582 multiletter control sequences out of 15000+600000
+ 773846 words of font info for 372 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,18n,111p,11311b,2253s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on build/Appunti_Fisica_2.pdf (176 pages, 9804530 bytes).
+Output written on build/Appunti_Fisica_2.pdf (189 pages, 9974221 bytes).
 PDF statistics:
- 2950 PDF objects out of 2984 (max. 8388607)
- 2547 compressed objects within 26 object streams
- 1018 named destinations out of 1200 (max. 500000)
- 77388 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 3177 PDF objects out of 3580 (max. 8388607)
+ 2757 compressed objects within 28 object streams
+ 1109 named destinations out of 1200 (max. 500000)
+ 77521 words of extra memory for PDF output out of 89155 (max. 10000000)
 
