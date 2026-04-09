@@ -1,7 +1,7 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
 \contentsline {chapter}{\nonumberline Prefazione}{ii}{chapter*.1}%
-\contentsline {chapter}{\nonumberline Forme esplicite di operazioni vettoriali}{vii}{chapter*.3}%
+\contentsline {chapter}{\nonumberline Forme esplicite di operazioni vettoriali}{viii}{chapter*.3}%
 \contentsline {chapter}{\numberline {1}Forza elettrostatica e Campo elettrostatico}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Campo elettrostatico}{3}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Linee di forza del campo elettrostatico}{4}{subsection.1.1.1}%
@@ -161,4 +161,20 @@
 \contentsline {section}{\numberline {23.5}Irraggiamento atomico}{166}{section.23.5}%
 \contentsline {subsection}{\numberline {23.5.1}Perdita di energia per irraggiamento}{167}{subsection.23.5.1}%
 \contentsline {subsection}{\numberline {23.5.2}Diffusione della luce}{168}{subsection.23.5.2}%
+\contentsline {chapter}{\numberline {24}Elettromagnetismo e relatività}{170}{chapter.24}%
+\contentsline {section}{\numberline {24.1}Relatività del campo magnetico: un esempio introduttivo}{170}{section.24.1}%
+\contentsline {section}{\numberline {24.2}Operatori in relatività}{173}{section.24.2}%
+\contentsline {subsection}{\numberline {24.2.1}Quadrivettori}{173}{subsection.24.2.1}%
+\contentsline {subsection}{\numberline {24.2.2}Tensore metrico e prodotto scalare}{174}{subsection.24.2.2}%
+\contentsline {subsection}{\numberline {24.2.3}Quadrigradiente}{174}{subsection.24.2.3}%
+\contentsline {subsection}{\numberline {24.2.4}Divergenza}{175}{subsection.24.2.4}%
+\contentsline {subsection}{\numberline {24.2.5}D'Alembertiano}{176}{subsection.24.2.5}%
+\contentsline {section}{\numberline {24.3}Quadrivelocità}{177}{section.24.3}%
+\contentsline {subsection}{\numberline {24.3.1}Quadrimpulso}{177}{subsection.24.3.1}%
+\contentsline {section}{\numberline {24.4}Quadricorrente}{178}{section.24.4}%
+\contentsline {section}{\numberline {24.5}Quadripotenziale}{178}{section.24.5}%
+\contentsline {section}{\numberline {24.6}Formulazione covariante dell'elettromagnetismo}{179}{section.24.6}%
+\contentsline {subsection}{\numberline {24.6.1}equazioni di Maxwell in forma covariante }{180}{subsection.24.6.1}%
+\contentsline {subsection}{\numberline {24.6.2}Trasformazione dei campi}{181}{subsection.24.6.2}%
+\contentsline {subsection}{\numberline {24.6.3}Invarianti del campo elettromagnetico}{181}{subsection.24.6.3}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

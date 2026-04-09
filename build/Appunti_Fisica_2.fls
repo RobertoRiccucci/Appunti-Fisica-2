@@ -867,6 +867,14 @@ INPUT ./figure/image70.png
 INPUT ./figure/image70.png
 INPUT ./figure/image70.png
 INPUT ./figure/image70.png
+INPUT ./chapters/chapter_24.tex
+INPUT ./chapters/chapter_24.tex
+INPUT chapters/chapter_24.tex
+INPUT ./figure/image71.png
+INPUT ./figure/image71.png
+INPUT ./figure/image71.png
+INPUT ./figure/image71.png
+INPUT ./figure/image71.png
 INPUT build/Appunti_Fisica_2.aux
 INPUT build/Appunti_Fisica_2.run.xml
 OUTPUT build/Appunti_Fisica_2.run.xml

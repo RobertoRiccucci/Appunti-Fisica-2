@@ -1,0 +1,627 @@
+\chapter{Elettromagnetismo e relatività}
+
+
+L'elettromagnetismo e la relatività speciale sono legati in modo profondo e non accidentale. 
+Storicamente, fu proprio lo studio delle equazioni di Maxwell a condurre Einstein alla formulazione della relatività speciale nel 1905: le equazioni di Maxwell non erano invarianti sotto le trasformazioni di Galileo, e questo suggeriva che il principio di relatività richiedesse una revisione profonda della meccanica newtoniana, non dell'elettromagnetismo.\\
+
+In questo capitolo andreamo a trattare vari concetti e argomenti.\\
+
+Come prima cosa andremo a mostrare, tramite un esempio concreto, come il campo magnetico di un filo percorso da corrente emerga naturalmente come conseguenza relativistica del campo elettrostatico, quando si cambia sistema di riferimento. 
+Questo illustra in modo fisicamente trasparente l'unità di elettricità e magnetismo, senza ancora ricorrere al formalismo tensoriale.\\
+
+\emph{\'E importante sottolineare che i concetti basilari di relatività sono dati per noti e a partire da questi andremo a svilupparne altri riguardanti l'elettromagnetismo.} 
+
+\section{Relatività del campo magnetico: un esempio introduttivo}
+
+Grazie al primo postulato di Einstein della Relatività ristretta sappiamo che le leggi della fisica sono le stesse in tutti i sistemi di riferimento inerziali. In particolari devono essere invarianti sotto le trasformazioni di Lorentz. \\
+
+Tuttavia, osservando la forza di Lorentz, si nota immediatamente che questa dipende esplicitamente dalle velocità della carica e quindi dal sistema di riferimento in cui essa si trova. \\
+Per analizzare la situazione, allora, consideriamo un esempio. \\
+
+Supponiamo di considerare una carica negativa $q$ che si muove con velocità $\mathbf{v}_0$ parallelamente a un filo in cui scorre corrente. Consideriamo, inoltre, due sistemi di riferimento: il primo, che chiameremo $S$ fisso rispetto al filo, mentre il secondo, che chiameremo $S'$ fisso rispetto alla carica $q$.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1.0\linewidth]{figure/image71.png}
+  \caption{}
+  \label{fig:etichetta}
+\end{figure}
+
+Studiamo cosa accade nei due sistemi.\\
+
+Nel sistema di riferimento $S$ si ha ovviamente una forza magnetica che agisce sulla carica. Questa è diretta verso il filo, quindi se la carica non fosse vincolata la vedremmo spostarsi verso il filo. Tuttavia, supponendo di essere nel sistema di riferimento $S'$ non può esistere alcuna forza magnetica che agisce su $q$, in quanto, per come abbiamo scelto $S'$, questa è ferma.\\
+
+Consideriamo una descrizione microscopica del filo. In un conduttore, la corrente elettrica è dovuta al moto degli elettroni, mentre i protoni sono fermi. 
+Supponiamo che la densità degli elettroni sia $\rho_{-}$ e che la loro velocità nel sistema di riferimento $S$ sia $\mathbf{v}$. La densità delle cariche positive è $\rho_{+}$, che deve essere uguale in modulo ma opposta in segno a $\rho_{-}$, in quanto stiamo considerando un filo elettricamente neutro. Questo comporta che non ci sia alcun campo elettrico fuori dal filo e che la forza che agisce sulla particella sia 
+
+\begin{equation}
+    \mathbf{F} = q \mathbf{v_0} \times \mathbf{B}
+\end{equation}
+ 
+Sapendo che il campo magnetico generato da un filo infinito è dato dalla legge di Biot-Savart \eqref{eq:legge_Biot-Savart} possiamo scrivere la forza come 
+
+\begin{equation}
+    F = \frac{I q v_0}{2 \pi \eps_0 c^2 \ r}
+\end{equation}
+
+Possiamo scrivere la corrente come $\rho_{-} v \ \Sigma$, dove $\Sigma$ è la sezione di area del filo. Allora
+
+\begin{equation}
+    F = \frac{1}{4 \pi \eps_0 c^2} \frac{2q\rho_{-}\Sigma v v_0}{r} 
+\end{equation}
+
+Potremmo continuare ad analizzare il caso in cui $v$ e $v_0$ sono arbitrari, tuttavia, per semplicità di calcolo, andremo a prendere il caso particolare $v_0 = v$, e quindi la forza diventa 
+
+\begin{equation}\label{eq:forza_in_S}
+    F = \frac{q}{2 \pi \eps_0} \frac{\rho_{-} \Sigma}{r} \frac{v^2}{c^2}
+\end{equation}
+
+E quindi la \eqref{eq:forza_in_S} rappresenta la forza che agisce sulla carica $q$ \emph{nel sistema di riferimento $S$}.\\
+
+Analizziamo cosa accade nel sistema $S'$. \\
+In questo sistema di riferimento la carica $q$ e le cariche negative sono a riposo (in quanto abbiamo supposto che $v_0 = v$), mentre le cariche positive si spostano con una velocità $v$ e pertanto generano un campo magnetico $\mathbf{B}'$. \\
+Tuttavia, essendo la velocità della carica $q$ nulla, su questa \emph{non agisce alcuna forza magnetica}. Se si ha una qualche forza che agisce su $q$ deve essere di natura elettrica, e quindi provenire da un campo elettrico.\\
+Il campo elettrico deve essere quindi non nullo, cosa che, per la legge di Gauss, può accadere solo se il filo non è elettricamente neutro. Questo vuol dire che \emph{il moto del filo ne modifica la densità di carica}.
+
+\newpage
+
+Questo può avvenire in due modi: 
+
+\begin{itemize}
+    \item il moto del filo modifica le cariche delle particelle 
+    \item il moto del filo modifica il volume 
+\end{itemize}
+
+Analizziamo la prima opzione.\\
+Se il moto del filo modificasse le cariche allora la carica di un particella dovrebbe dipendere dalla sua velocità, ma se questo fosse vero, allora, riscaldando un materiale (cosa che corrisponde ad aumentare l'energia cinetica delle particelle che lo compongono) si dovrebbe creare un campo elettrico, in quanto gli elettroni e i protoni hanno massa diversa e quindi si muovono a velocità diverse. 
+Ma questo fatto non è mai stato osservato sperimentalmente e quindi si deduce che \emph{le cariche sono sempre le stesse, indipendentemente dal sistema di riferimento}. \\
+
+Analizziamo la seconda opzione.\\
+Consideriamo un momento il caso stazionario. Se prendiamo una intervallo $L_0$ del filo, questo conterrà una carica $Q = \rho_0 L_0 \Sigma_0$. Se la stessa carica è osservata in un altro sistema di riferimento che si muove a velocità $\mathbf{v}$, per la contrazione degli spazio si ha 
+
+\begin{equation}
+    L = L_0 \sqrt{1 - v^2/c^2}
+\end{equation}
+
+mentre la sezione di area $Sigma_0$ rimane inalterata. Per quanto detto prima, la carica deve rimanere la stessa in tutti i sistemi di rifermento, e quindi deve valere $\rho L = \rho_0 L_0$ che, sostituendo, diventa
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation} 
+    \rho = \frac{\rho_0}{\sqrt{1 - v^2/c^2}}
+\end{equation}
+\end{tcolorbox}
+
+Dove $\rho_0$ rappresenta la densità di carica in un sistema a riposo. Applichiamo questo risultato al nostro caso. In $S'$ si ha 
+
+\begin{equation}
+    \rho_{+}' = \frac{\rho_{+}}{\sqrt{1 - v^2/c^2}}
+\end{equation}
+
+mentre, dato che $\rho_{-}'$ è la densità di carica negativa a riposo, risulta
+
+\begin{equation}
+    \rho_{-}' = \rho_{-} \sqrt{1 - v^2/c^2}
+\end{equation}
+
+Pertanto la densità di carica del filo risulta essere 
+
+\begin{equation}
+    \rho' = \frac{\rho_{+}}{\sqrt{1 - v^2/c^2}} + \rho_{-} \sqrt{1 - v^2/c^2} = \rho_{+} \frac{v^2/c^2}{1 - v^2/c^2} \neq 0
+\end{equation}
+
+Dove abbiamo posto $\rho_{-} = - \rho_{+}$. \\
+
+Allora il campo elettrico in questo sistema di riferimento risulta essere
+
+\begin{equation}
+    E' = \frac{\rho' \Sigma}{2 \pi \eps_0} = \frac{\rho_{+} \Sigma v^2/c^2}{2 \pi \eps_0 r \sqrt{1 - v^2/c^2}}
+\end{equation}
+
+Quindi la forza sulla carica nel sistema di riferimento $S'$ è 
+
+\begin{equation}
+    F' = \frac{q}{2\pi \eps_0} \frac{\rho_{+} \Sigma}{r} \frac{v^2/c^2}{\sqrt{1 - v^2/c^2}}
+\end{equation}
+
+Comparando la forza che agisce su $q$ in $S$ e quella in $S'$, risulta
+
+\begin{equation}
+    F' = \frac{F}{\sqrt{1 - v^2/c^2}}
+\end{equation}
+
+Si ha quindi che le forze non sono le stessa, ma questa relazione è la corretta trasformazione relativistica. \\
+
+Abbiamo deciso di riportare questo esempio (che è importante dal punto di vista concettuale, ma che non da un grande contributo a livello teorico) in quanto mostra come il campo magnetico si può trasformare in un campo elettrice e viceversa, dando in un questo modo un buono spunto per capire la parte formale che seguirà in questo capitolo. 
+
+\section{Operatori in relatività}
+
+Prima di continuare, è necessario introdurre la matematica che sarà necessaria per il resto del capitolo. \\
+In questa sezione andremo a generalizzare alcuni concetti matematici che abbiamo usato fino ad adesso e daremo significati diversi a operatori già noti (come nel caso dell'operatore di D'Alembert).
+
+\subsection{Quadrivettori}
+
+Sappiamo che la trasformazione di Lorentz \mkeyword{trasformazione di Lorentz}
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \Lambda^\mu_{\ \nu} = 
+    \begin{pmatrix} 
+        \gamma & -\gamma\beta & 0 & 0 \\ 
+        -\gamma\beta & \gamma & 0 & 0 \\ 
+        0 & 0 & 1 & 0 \\ 
+        0 & 0 & 0 & 1 
+    \end{pmatrix}
+\end{equation}
+\end{tcolorbox}
+
+descrive la trasformazione delle coordinate di un punto quando si passa da un sistema di riferimento a un altro. Quindi se consideriamo un quadrivettore posizione, definito come 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    x^{\mu} = (ct, \mathbf{x}) = (x^0, x^1, x^2, x^3, x^4)
+\end{equation}
+\end{tcolorbox}
+
+cioè come un vettore controvariante\footnote{Supponiamo che il lettore sappia la differenza tra vettore covariante e controvariante. In caso una spiegazione si trova in \cite{LezioniDiMeccanicaClassica}}, e lo applichiamo alla trasformazione di Lorentz, otterremo il quadrivettore posizione in un altro sistema di riferimento. \\
+
+Tuttavia il quadrivettore posizione non è l'unico ad vere questa proprietà, e quindi andremo a definire come quadrivettori tutte le grandezze fisiche che trasformano, sotto una trasformazione di Lorentz, nello stesso modo delle coordinate spaziali e temporali di un punto. 
+
+\subsection{Tensore metrico e prodotto scalare}
+
+Nello spaziotempo di Minkowski, il prodotto scalare tra due quadrivettori non è quello euclideo. Per capire perché, osserviamo che l'intervallo spaziotemporale
+
+\begin{equation}
+    s^2 = c^2t^2 - |\mathbf{x}|^2
+\end{equation}
+
+deve essere invariante sotto trasformazioni di Lorentz — è questo che garantisce che la velocità della luce sia la stessa in tutti i sistemi di riferimento inerziali. 
+Scrivendolo in termini del quadrivettore posizione:
+
+\begin{equation}
+    s^2 = (x^0)^2 - (x^1)^2 - (x^2)^2 - (x^3)^2
+\end{equation}
+
+si nota che i segni delle componenti spaziali e temporali sono opposti. Questo suggerisce di definire il prodotto scalare quadridimensionale tramite il \emph{tensore metrico di Minkowski}: 
+\mkeyword{tensore metrico di Minkowski}
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    g_{\mu\nu} = g^{\mu\nu} = 
+    \begin{pmatrix} 
+        1 & 0 & 0 & 0 \\ 
+        0 & -1 & 0 & 0 \\ 
+        0 & 0 & -1 & 0 \\ 
+        0 & 0 & 0 & -1 
+    \end{pmatrix}
+\end{equation}
+\end{tcolorbox}
+
+Il tensore metrico permette di abbassare gli indici, passando dalla forma controvariante $x^\mu = (ct, \mathbf{x})$ alla forma 
+covariante:
+
+\begin{equation}
+    x_\mu = g_{\mu\nu} x^\nu = (ct, -\mathbf{x})
+\end{equation}
+
+Il \emph{prodotto scalare} tra due quadrivettori $a^\mu$ e $b^\mu$ è definito come: \mkeyword{prodotto scalare quadridimensionale}
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    a^\mu b_\mu = a^\mu g_{\mu\nu} b^\nu = 
+    a^0 b^0 - \mathbf{a}\cdot\mathbf{b}
+\end{equation}
+\end{tcolorbox}
+
+dove la somma sugli indici ripetuti è implicita (convenzione di Einstein). \mkeyword{convenzione di Einstein}
+
+\subsection{Quadrigradiente}
+
+In analisi vettoriale tridimensionale, il gradiente di uno scalare è un vettore. Vogliamo costruire l'analogo quadridimensionale: dato uno scalare di Lorentz $\phi(x^\mu)$, cerchiamo un operatore differenziale che, applicato a $\phi$, dia un quadrivettore.\\
+
+Il candidato naturale sembrerebbe essere $(\partial_t, \nabla)$, per analogia con il caso tridimensionale. Tuttavia questo è \emph{sbagliato}, come ora mostriamo.\\
+
+Consideriamo la variazione di uno scalare $\phi$ sotto una trasformazione di coordinate. Poiché $\phi$ è uno scalare di Lorentz, la sua variazione $d\phi$ deve essere la stessa in tutti i sistemi di riferimento. Possiamo scrivere:
+
+\begin{equation}
+    d\phi = \frac{\partial\phi}{\partial x^\mu}dx^\mu
+\end{equation}
+
+Poiché $d\phi$ è uno scalare e $dx^\mu$ è un quadrivettore controvariante, perché la loro contrazione sia uno scalare è necessario che $\partial\phi/\partial x^\mu$ si trasformi come un quadrivettore \emph{covariante}. 
+Vediamo quale forma ha esplicitamente.\\
+
+Ricordando che $x^\mu = (ct, \mathbf{x})$, le derivate rispetto alle componenti del quadrivettore posizione sono:
+
+\begin{equation}
+    \frac{\partial}{\partial x^\mu} = \left(\frac{\partial}{\partial(ct)}, \frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z}\right) = \left(\frac{1}{c}\partial_t, \nabla\right)
+\end{equation}
+
+Per verificare che si trasformi come un vettore covariante, applichiamola alla legge di trasformazione delle coordinate. 
+Un vettore covariante deve trasformare con $(\Lambda^{-1})^T$, ovvero con la stessa matrice di $\Lambda$ ma con $\beta \to -\beta$ (boost inverso). Si verifica che:
+
+\begin{equation}
+    \frac{\partial}{\partial x'^\mu} = \frac{\partial x^\nu}{\partial x'^\mu}\frac{\partial}{\partial x^\nu} = (\Lambda^{-1})^\nu_{\ \mu}\frac{\partial}{\partial x^\nu}
+\end{equation}
+
+che è esattamente la legge di trasformazione di un quadrivettore covariante. Definiamo quindi il \emph{quadrigradiente covariante}: 
+\mkeyword{quadrigradiente covariante}
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}\label{eq: quadrigradiente_covariante}
+    \partial_\mu \equiv \frac{\partial}{\partial x^\mu} = \left(\frac{1}{c}\partial_t,\, \nabla\right)
+\end{equation}
+\end{tcolorbox}
+
+e il corrispondente quadrigradiente controvariante, ottenuto alzando l'indice con la metrica $g^{\mu\nu}$:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}\label{eq: quadrigradiente_controvariante}
+    \partial^\mu = g^{\mu\nu}\partial_\nu = 
+    \left(\frac{1}{c}\partial_t,\, -\nabla\right)
+\end{equation}
+\end{tcolorbox}
+
+Si noti che la componente spaziale cambia segno passando dalla forma covariante a quella controvariante — esattamente come accade per il quadrivettore posizione. La differenza di segno rispetto alla forma naïve $(\partial_t, \nabla)$ è una conseguenza diretta della metrica di Minkowski con segnatura $(-,+,+,+)$: la derivazione rispetto a $x^\mu$ abbassa l'indice, mentre per ottenere un oggetto controvariante bisogna alzarlo con $g^{\mu\nu}$, il che introduce i segni meno nelle componenti spaziali.\\
+
+\subsection{Divergenza}
+
+Adesso che abbiamo definito un prodotto scalare e un gradiente è possibile definire anche una divergenza nel caso relativistico. \\
+
+Consideriamo un quadrivettore $b^{\mu} = (b_t, \mathbf{b})$, allora il prodotto scalare tra $\partial_{\mu}$ e $b^{\mu}$ risulta essere 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}\label{eq:divergenze_relatività}
+    \partial_{\mu} b^{\mu} = \frac{1}{c} \partial_t b_t - (-\partial_x)b_x - (-\partial_y)b_y - (-\partial_z)b_z = \frac{1}{c} \partial_t b_t + \nabla \cdot \mathbf{b}
+\end{equation}
+\end{tcolorbox}
+
+dove $\nabla \cdot \mathbf{b}$ è la divergenza in tre dimensioni. 
+
+\subsection{D'Alembertiano}
+
+Contraendo il quadrigradiente con se stesso si ottiene il \emph{d'Alembertiano}:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \Box = \partial^\mu\partial_\mu = 
+    \frac{1}{c^2}\partial_t^2 - \nabla^2
+\end{equation}
+\end{tcolorbox}
+
+Essendo la contrazione di un vettore covariante con uno controvariante, $\Box$ è uno scalare di Lorentz: ha la stessa forma in tutti i sistemi di riferimento inerziali. 
+Ritroviamo così l'operatore d'Alembertiano \eqref{eq:dalembert} già incontrato nello studio delle onde elettromagnetiche, e ne capiamo ora il significato profondo: è il laplaciano quadridimensionale invariante di Lorentz.\\
+
+L'invarianza del d'Alembertiano ha una conseguenza importante: se $\Box\psi = 0$ in un sistema di riferimento, allora $\Box'\psi' = 0$ in qualsiasi altro sistema inerziale. 
+L'equazione delle onde è manifestamente covariante.\\
+
+Di seguito riportiamo una tabella in cui si confrontano diversi operatori differenziali in tre e quattro dimensioni.\\
+
+\begin{table}[h]
+\centering
+\renewcommand{\arraystretch}{2.2}
+\begin{tabular}{lcc}
+\hline
+& \textbf{Tre dimensioni} & \textbf{Quattro dimensioni} \\
+\hline
+Vettore & 
+$\mathbf{A} = (A_x, A_y, A_z)$ & 
+$a^\mu = (a^0, \mathbf{a}) = (a^0, a^1, a^2, a^3)$ \\
+
+Prodotto scalare & 
+$\mathbf{A}\cdot\mathbf{B} = A_xB_x + A_yB_y + A_zB_z$ & 
+$a^\mu b_\mu = a^0b^0 - \mathbf{a}\cdot\mathbf{b}$ \\
+
+Operatore vettoriale & 
+$\nabla = \left(\partial_x, \partial_y, \partial_z\right)$ & 
+$\partial_\mu = \left(\dfrac{1}{c}\partial_t,\, \nabla\right) \quad 
+\partial^\mu = \left(\dfrac{1}{c}\partial_t,\, -\nabla\right)$ \\
+
+Gradiente & 
+$\nabla\psi = \left(\dfrac{\partial\psi}{\partial x}, 
+\dfrac{\partial\psi}{\partial y}, 
+\dfrac{\partial\psi}{\partial z}\right)$ & 
+$\partial_\mu\phi = \left(\dfrac{1}{c}\partial_t\phi,\, 
+\nabla\phi\right)$ \\
+
+Divergenza & 
+$\nabla\cdot\mathbf{A} = \partial_x A_x + \partial_y A_y + 
+\partial_z A_z$ & 
+$\partial_\mu a^\mu = \dfrac{1}{c}\partial_t a^0 + 
+\nabla\cdot\mathbf{a}$ \\
+
+Laplaciano / D'Alembertiano & 
+$\nabla^2 = \partial_x^2 + \partial_y^2 + \partial_z^2$ & 
+$\Box = \partial^\mu\partial_\mu = \dfrac{1}{c^2}\partial_t^2 - 
+\nabla^2$ \\
+\hline
+\end{tabular}
+\caption{Confronto tra operatori differenziali in tre e quattro 
+dimensioni.}
+\label{tab: operatori_3D_4D}
+\end{table}
+
+\newpage
+
+\section{Quadrivelocità}
+
+In meccanica classica, la velocità di una particella è definita come la derivata della posizione rispetto al tempo: $\mathbf{v} = d\mathbf{x}/dt$. Tuttavia, il tempo $t$ non è un invariante di Lorentz — dipende dal sistema di riferimento — e quindi $\mathbf{v}$ non è un quadrivettore.\\
+
+Per costruire una velocità quadridimensionale che si trasformi correttamente sotto le trasformazioni di Lorentz, dobbiamo derivare il quadrivettore posizione rispetto a una quantità invariante. 
+La scelta naturale è il \emph{tempo proprio} $\tau$, \mkeyword{tempo proprio}definito come il tempo misurato dall'orologio solidale con la particella. Esso è uno scalare di Lorentz, legato al tempo coordinato da:
+
+\begin{equation}
+    d\tau = \frac{dt}{\gamma} = dt\sqrt{1 - \frac{v^2}{c^2}}
+\end{equation}
+
+Definiamo allora la \emph{quadrivelocità}: \mkeyword{quadrivelocità}
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}\label{eq: quadrivelocità}
+    u^\mu = \frac{dx^\mu}{d\tau} = \gamma\frac{dx^\mu}{dt} = \gamma\left(c, \mathbf{v}\right)
+\end{equation}
+\end{tcolorbox}
+
+Essendo la derivata di un quadrivettore ($x^\mu$) rispetto a uno scalare ($\tau$), $u^\mu$ è per costruzione un quadrivettore.\\
+
+Il modulo quadrato della quadrivelocità è un invariante di Lorentz e vale:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    u^\mu u_\mu = \gamma^2(c^2 - v^2) = \frac{c^2 - v^2}{1 - v^2/c^2} = c^2
+\end{equation}
+\end{tcolorbox}
+
+Questo risultato è fisicamente significativo: il fatto che $u^\mu u_\mu = c^2$ sia costante in tutti i sistemi di riferimento corrisponde al fatto che ogni particella si muove sempre alla velocità $c$ nello spaziotempo — anche una particella a riposo nello spazio si muove nel tempo.\\
+
+\subsection{Quadrimpulso}
+
+A partire dalla quadrivelocità è naturale definire il \emph{quadrimpulso}: \mkeyword{quadrimpulso}
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}\label{eq: quadrimpulso}
+    p^\mu = mu^\mu = m\gamma(c, \mathbf{v}) = \left(\frac{E}{c}, \mathbf{p}\right)
+\end{equation}
+\end{tcolorbox}
+
+dove $m$ è la massa a riposo (scalare di Lorentz), $\mathbf{p} = m\gamma\mathbf{v}$ è il momento relativistico e $E = m\gamma c^2$ è l'energia totale della particella. 
+Il modulo quadrato del quadrimpulso è un invariante:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}\label{eq: relazione_energia_impulso}
+    p^\mu p_\mu = m^2c^2 \quad \Rightarrow \quad E^2 = c^2|\mathbf{p}|^2 + m^2c^4
+\end{equation}
+\end{tcolorbox}
+
+che è la celebre \emph{relazione energia-impulso relativistica}. \mkeyword{relazione energia-impulso} 
+Nel limite non relativistico $v \ll c$, espandendo al primo ordine in $v^2/c^2$:
+
+\begin{equation}
+    E = mc^2\sqrt{1 + \frac{|\mathbf{p}|^2}{m^2c^2}} \approx mc^2 + \frac{|\mathbf{p}|^2}{2m}
+\end{equation}
+
+dove il primo termine è l'energia a riposo $E_0 = mc^2$ e il secondo è la classica energia cinetica $p^2/2m$.
+
+\section{Quadricorrente}
+
+Abbiamo visto che, se la densità di carica nel sistema solidale alla distribuzione è $\rho_0$, in un sistema di riferimento in cui la distribuzione si muove a velocità $\mathbf{v}$ la densità di carica diventa 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \rho = \frac{\rho_0}{\sqrt{1 - v^2/c^2}}
+\end{equation}
+\end{tcolorbox}
+
+e nello stesso sistema vale 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \mathbf{j} = \rho \mathbf{v} = \frac{\rho_0 \mathbf{v}}{\sqrt{1 - v^2/c^2}}
+\end{equation}
+\end{tcolorbox}
+
+Allora possiamo andare a definire la quadricorrente come
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    J^{\mu} = (c \rho, \ \mathbf{j}) = \rho_0 u^{\mu}
+\end{equation}
+\end{tcolorbox}
+
+Dove $u^{\mu}$ è la quadrivelocità. Poiché $u^{\mu}$ è un quadrivettore e $\rho_0$ è uno scalare, $J^{\mu}$ è un quadrivettore. \\
+
+L'equazione di continuità $\partial_t\rho + \nabla\cdot\mathbf{j} = 0$ si scrive in notazione covariante nel modo notevolmente compatto:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}\label{eq: continuita_covariante}
+    \partial_\mu J^\mu = 0
+\end{equation}
+\end{tcolorbox}
+
+\section{Quadripotenziale}
+
+Le equazioni d'onda per i potenziali in gauge di Lorenz sono:
+
+\begin{align}
+    \Box\varphi &= \frac{\rho}{\varepsilon_0} \\
+    \Box\mathbf{A} &= \mu_0\mathbf{J} = \frac{1}{\varepsilon_0 c^2} \mathbf{J}
+\end{align}
+
+Queste si possono scrivere in modo unitario notando che $(\varphi, c\mathbf{A})$ e $(c\rho, \mathbf{J}) = J^\mu$ hanno la stessa struttura (e quindi sono entrambi quadrivettori). Si definisce il \emph{quadripotenziale}\mkeyword{quadripotenziale}:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}\label{eq: quadripotenziale}
+    A^\mu = (\varphi,\, c\mathbf{A})
+\end{equation}
+\end{tcolorbox}
+
+Le equazioni d'onda diventano allora:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}\label{eq: onda_covariante}
+    \Box A^\mu = \frac{1}{\varepsilon_0 c}\,J^\mu
+\end{equation}
+\end{tcolorbox}
+
+La gauge di Lorenz $\nabla\cdot\mathbf{A} + \frac{1}{c^2}\partial_t \varphi = 0$ si scrive elegantemente come:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation} \label{eq: gauge_Lorentz_covariante}
+    \partial_\mu A^\mu = 0
+\end{equation}
+\end{tcolorbox}
+
+La trasformazione di gauge $A^\mu \to A^\mu - \partial^\mu(c\psi)$ corrisponde alle trasformazioni già note per $\varphi$ e $\mathbf{A}$.
+
+\section{Formulazione covariante dell'elettromagnetismo}
+
+Nella sezioni precedenti abbiamo trovato che $A^{\mu}$ e $J^{\mu}$ sono quadrivettori e quindi per passare da un sistema all'altro basta applicare a questi le trasformazioni di Lorentz.\\
+
+Tuttavia non abbiamo ancora un modo diretto per ottenere facilmente i campi elettrico e magnetico da un sistema di riferimento all'altro, per adesso il metodo più veloce è passare per i potenziali efficaci. \\
+
+Andiamo quindi a costruire un metodo più efficiente. Abbiamo visto che le equazioni di Maxwell in gauge di Lorentz possono essere scritte come 
+
+\begin{equation}
+    \Box A^{\nu} = \partial_{\mu}\partial^{\mu} A^{\nu} = \frac{1}{\eps_0 c} J^{\nu}
+\end{equation}
+
+Essendo in gauge di Lorentz deve valere \eqref{eq: gauge_Lorentz_covariante} e quindi si ha 
+
+\begin{equation}
+    (\partial_{\mu}\partial^{\mu}) A^{\nu} - \partial^{\nu} (\partial_{\mu} A^{\mu}) = \partial_{\mu} (\partial^{\mu}A^{\nu} - \partial^{\nu} A^{\mu}) = \frac{1}{\eps_0 c} J^{\nu}
+\end{equation}
+
+Ma allora definendo il tensore del campo elettromagnetico (o anche detto tensore di Faraday) \mkeyword{tensore del campo elettremagnetico} come 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    F^{\mu \nu} = \partial^{\mu} A^{\nu} - \partial^{\nu} A^{\mu}
+\end{equation}
+\end{tcolorbox}
+
+Si nota che questa quantità è un 2-tensore grazie alla contrazione degli indici. \\
+
+$F^{\mu\nu}$ è antisimmetrico per definizione: $F^{\mu\nu} = -F^{\nu\mu}$, quindi ha al massimo $\binom{4}{2} = 6$ componenti indipendenti. 
+Calcolando esplicitamente:
+
+\begin{align}
+    F^{12} &= \partial^1 A^2 - \partial^2 A^1 =  -\partial_x(cA_y) + \partial_y(cA_x) = -cB_z \\
+    F^{01} &= \partial^0 A^1 - \partial^1 A^0 = \frac{1}{c}\partial_t(cA_x) - (-\partial_x)\varphi = \partial_t A_x + \partial_x\varphi = -E_x
+\end{align}
+
+e analogamente per le altre componenti. \\
+
+Il risultato si organizza nella matrice:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}\label{eq: tensore_Faraday}
+    F^{\mu\nu} = 
+    \begin{pmatrix} 
+    0 & -E_x & -E_y & -E_z \\ 
+    E_x & 0 & -cB_z & cB_y \\ 
+    E_y & cB_z & 0 & -cB_x \\ 
+    E_z & -cB_y & cB_x & 0 
+    \end{pmatrix}
+\end{equation}
+\end{tcolorbox}
+
+Un altro tensore che sarà utile ai nostri scopi è il \emph{tensore duale} che \mkeyword{tensore duale}si ottiene contraendo $F^{\mu\nu}$ con il tensore di Levi-Civita $\varepsilon^{\mu\nu\rho\sigma}$ a quattro indici (completamente antisimmetrico, con $\varepsilon^{0123} = +1$):
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \tilde{F}^{\mu\nu} = \frac{1}{2}\varepsilon^{\mu\nu\rho\sigma} F_{\rho\sigma}
+\end{equation}
+\end{tcolorbox}
+
+La sua forma esplicita si ottiene dalla \eqref{eq: tensore_Faraday} con la sostituzione $\mathbf{E} \to c\mathbf{B}$, $c\mathbf{B} \to -\mathbf{E}$:
+
+\begin{equation}
+    \tilde{F}^{\mu\nu} = 
+    \begin{pmatrix} 
+    0 & cB_x & cB_y & cB_z \\ 
+    -cB_x & 0 & -E_z & E_y \\ 
+    -cB_y & E_z & 0 & -E_x \\ 
+    -cB_z & -E_y & E_x & 0 
+    \end{pmatrix}
+\end{equation}
+
+\subsection{equazioni di Maxwell in forma covariante }
+
+Le quattro equazioni di Maxwell si riducono a due sole equazioni tensoriali, notevolmente compatte.\\
+
+In gauge di Lorentz si ha che
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation} \label{eq: Maxwell_covariante_1}
+    \partial_{\mu} F^{\mu \nu} = \frac{1}{\eps_0 c} J^{\nu}
+\end{equation}
+\end{tcolorbox}
+
+la quale, esplicitando le componenti, diventa:
+
+\begin{itemize}
+    \item $\nu = 0$: $\partial_i F^{i0} = \nabla\cdot\mathbf{E} = \rho/\varepsilon_0$ \quad (legge di Gauss)
+    \item $\nu = j$: $\nabla\times\mathbf{B} - \frac{1}{c^2}\partial_t\mathbf{E} = \mu_0\mathbf{J}$ \quad (legge di Ampère-Maxwell)
+\end{itemize}
+
+Le equazioni omogenee (legge di Gauss per $\mathbf{B}$ e legge di Faraday) seguono invece dall'antisimmetria di $F^{\mu\nu}$ attraverso il tensore duale:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}\label{eq: Maxwell_covariante_2}
+    \partial_\mu \tilde{F}^{\mu\nu} = 0
+\end{equation}
+\end{tcolorbox}
+
+oppure equivalentemente dalla combinazione ciclica:
+
+\begin{equation}
+    \partial_\mu F_{\nu\rho} + \partial_\nu F_{\rho\mu} + 
+    \partial_\rho F_{\mu\nu} = 0
+\end{equation}
+
+La bellezza di questa formulazione è evidente: le equazioni \eqref{eq: Maxwell_covariante_1} e \eqref{eq: Maxwell_covariante_2} sono esplicitamente invarianti di Lorentz — hanno la stessa forma in tutti i sistemi di riferimento inerziali. 
+Il principio di relatività è soddisfatto per costruzione.
+
+\subsection{Trasformazione dei campi}
+
+Conoscendo come si trasforma il tensore $F^{\mu\nu}$, possiamo ricavare le leggi di trasformazione di $\mathbf{E}$ e $\mathbf{B}$. Per un boost con velocità $v$ lungo $\hat{x}$:
+
+\begin{equation}
+    F'^{\mu\nu} = \Lambda^\mu_{\ \rho}\,\Lambda^\nu_{\ \sigma}\,
+    F^{\rho\sigma}
+\end{equation}
+
+Calcolando esplicitamente le componenti, si ottengono le \emph{leggi di trasformazione dei campi}: \mkeyword{trasformazione dei campi}
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{align}
+    E'_\parallel &= E_\parallel \label{eq: trasf_E_par} \\
+    \mathbf{E}'_\perp &= \gamma\left(\mathbf{E}_\perp + c\boldsymbol{\beta}\times\mathbf{B}\right) \label{eq: trasf_E_perp} \\[6pt]
+    B'_\parallel &= B_\parallel \label{eq: trasf_B_par} \\
+    \mathbf{B}'_\perp &= \gamma\left(\mathbf{B}_\perp - \frac{1}{c}\boldsymbol{\beta}\times\mathbf{E}\right) \label{eq: trasf_B_perp}
+\end{align}
+\end{tcolorbox}
+
+dove $\parallel$ e $\perp$ indicano le componenti parallela e perpendicolare alla direzione del boost $\boldsymbol{\beta}$.\\
+
+Queste relazioni mostrano esplicitamente che $\mathbf{E}$ e $\mathbf{B}$ si \emph{mescolano} sotto trasformazioni di Lorentz: quello che in un sistema è puramente campo elettrico può apparire come combinazione di campo elettrico e magnetico in un altro sistema, e viceversa.
+
+\subsection{Invarianti del campo elettromagnetico}
+
+Due combinazioni di $\mathbf{E}$ e $\mathbf{B}$ sono invarianti di Lorentz, perché si costruiscono contraendo il tensore $F^{\mu\nu}$ con se stesso: \mkeyword{invarianti del campo}
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{align}
+    F_{\mu\nu}F^{\mu\nu} &= 2\left(c^2B^2 - E^2\right) \\
+    F_{\mu\nu}\tilde{F}^{\mu\nu} &= -4c\,\mathbf{E}\cdot\mathbf{B}
+\end{align}
+\end{tcolorbox}
+
+Questi invarianti hanno conseguenze fisiche importanti: 
+
+\begin{itemize}
+    \item Se $\mathbf{E} \cdot \mathbf{B} = 0$ in un sistema di riferimento, allora \emph{i campi elettrico e magnetico saranno ortogonali in ogni sistema adi riferimento}
+    \item Se $c^2B^2 - E^2 > 0$ lo è in tutti i sistemi di riferimento e quindi esiste un sistema in cui $E' = 0$
+    \item Se $c^2B^2 - E^2 < 0$ lo è in tutti i sistemi di riferimento e quindi esiste un sistema in cui $B' = 0$
+    \item Se in un sistema di riferimento $\mathbf{E}\cdot \mathbf{B} = 0$ e $B^2 = E^2/c^2$, allora questo è valido in tutti i sistemi di riferimento. Come nel caso della luce
+\end{itemize}
+
+Si nota inoltre che la densità di energia $u = 1/2 \ \eps_0(E^2 + c^2 B^2)$ \emph{non} è un invariante del moto. 
