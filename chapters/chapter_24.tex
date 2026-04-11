@@ -441,15 +441,15 @@ L'equazione di continuità $\partial_t\rho + \nabla\cdot\mathbf{j} = 0$ si scriv
 Le equazioni d'onda per i potenziali in gauge di Lorenz sono:
 
 \begin{align}
-    \Box\varphi &= \frac{\rho}{\varepsilon_0} \\
+    \Box\phi &= \frac{\rho}{\varepsilon_0} \\
     \Box\mathbf{A} &= \mu_0\mathbf{J} = \frac{1}{\varepsilon_0 c^2} \mathbf{J}
 \end{align}
 
-Queste si possono scrivere in modo unitario notando che $(\varphi, c\mathbf{A})$ e $(c\rho, \mathbf{J}) = J^\mu$ hanno la stessa struttura (e quindi sono entrambi quadrivettori). Si definisce il \emph{quadripotenziale}\mkeyword{quadripotenziale}:
+Queste si possono scrivere in modo unitario notando che $(\phi, c\mathbf{A})$ e $(c\rho, \mathbf{J}) = J^\mu$ hanno la stessa struttura (e quindi sono entrambi quadrivettori). Si definisce il \emph{quadripotenziale}\mkeyword{quadripotenziale}:
 
 \begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
 \begin{equation}\label{eq: quadripotenziale}
-    A^\mu = (\varphi,\, c\mathbf{A})
+    A^\mu = (\phi,\, c\mathbf{A})
 \end{equation}
 \end{tcolorbox}
 
@@ -461,7 +461,7 @@ Le equazioni d'onda diventano allora:
 \end{equation}
 \end{tcolorbox}
 
-La gauge di Lorenz $\nabla\cdot\mathbf{A} + \frac{1}{c^2}\partial_t \varphi = 0$ si scrive elegantemente come:
+La gauge di Lorenz $\nabla\cdot\mathbf{A} + \frac{1}{c^2}\partial_t \phi = 0$ si scrive elegantemente come:
 
 \begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
 \begin{equation} \label{eq: gauge_Lorentz_covariante}
@@ -469,7 +469,7 @@ La gauge di Lorenz $\nabla\cdot\mathbf{A} + \frac{1}{c^2}\partial_t \varphi = 0$
 \end{equation}
 \end{tcolorbox}
 
-La trasformazione di gauge $A^\mu \to A^\mu - \partial^\mu(c\psi)$ corrisponde alle trasformazioni già note per $\varphi$ e $\mathbf{A}$.
+La trasformazione di gauge $A^\mu \to A^\mu - \partial^\mu(c\psi)$ corrisponde alle trasformazioni già note per $\phi$ e $\mathbf{A}$.
 
 \section{Formulazione covariante dell'elettromagnetismo}
 
@@ -504,7 +504,7 @@ Calcolando esplicitamente:
 
 \begin{align}
     F^{12} &= \partial^1 A^2 - \partial^2 A^1 =  -\partial_x(cA_y) + \partial_y(cA_x) = -cB_z \\
-    F^{01} &= \partial^0 A^1 - \partial^1 A^0 = \frac{1}{c}\partial_t(cA_x) - (-\partial_x)\varphi = \partial_t A_x + \partial_x\varphi = -E_x
+    F^{01} &= \partial^0 A^1 - \partial^1 A^0 = \frac{1}{c}\partial_t(cA_x) - (-\partial_x)\phi = \partial_t A_x + \partial_x\phi = -E_x
 \end{align}
 
 e analogamente per le altre componenti. \\
