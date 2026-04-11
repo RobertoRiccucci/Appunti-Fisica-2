@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.12)  9 APR 2026 17:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.12)  10 APR 2026 08:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1027,13 +1027,15 @@ File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 3.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (build/Appunti_Fisica_2.aux
+) (build/Appunti_Fisica_2.aux (build/chapters/chapter_1.aux) (build/chapters/chapter_2.aux) (build/chapters/chapter_3.aux) (build/chapters/chapter_4.aux) (build/chapters/chapter_5.aux)
+(build/chapters/chapter_6.aux) (build/chapters/chapter_7.aux) (build/chapters/chapter_8.aux) (build/chapters/chapter_9.aux) (build/chapters/chapter_10.aux) (build/chapters/chapter_11.aux) (build/chapters/chapter_12.aux) (build/chapters/chapter_13.aux) (build/chapters/chapter_14.aux) (build/chapters/chapter_15.aux) (build/chapters/chapter_16.aux
 
 LaTeX Warning: Label `fig:placeholder' multiply defined.
 
 
 LaTeX Warning: Label `fig:placeholder' multiply defined.
 
+) (build/chapters/chapter_17.aux
 
 LaTeX Warning: Label `fig:placeholder' multiply defined.
 
@@ -1049,6 +1051,7 @@ LaTeX Warning: Label `fig:placeholder' multiply defined.
 
 LaTeX Warning: Label `sub@fig:placeholder' multiply defined.
 
+) (build/chapters/chapter_18.aux) (build/chapters/chapter_19.aux
 
 LaTeX Warning: Label `fig:sub1' multiply defined.
 
@@ -1064,19 +1067,22 @@ LaTeX Warning: Label `sub@fig:sub2' multiply defined.
 
 LaTeX Warning: Label `fig:campi' multiply defined.
 
+) (build/chapters/chapter_20.aux) (build/chapters/chapter_21.aux) (build/chapters/chapter_22.aux
 
 LaTeX Warning: Label `fig:etichetta' multiply defined.
 
 
 LaTeX Warning: Label `fig:etichetta' multiply defined.
 
+) (build/chapters/chapter_23.aux
 
 LaTeX Warning: Label `fig:etichetta' multiply defined.
 
+) (build/chapters/chapter_24.aux
 
 LaTeX Warning: Label `fig:etichetta' multiply defined.
 
-)
+))
 \openout1 = `Appunti_Fisica_2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -1388,7 +1394,10 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 ) [8
 
 
-{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}] (./chapters/chapter_1.tex
+{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+\openout2 = `chapters/chapter_1.aux'.
+
+ (./chapters/chapter_1.tex
 
 Package geometry Warning: `a4paper': not available in `\newgeometry'; skipped.
 
@@ -1425,6 +1434,7 @@ Package geometry Warning: `a4paper': not available in `\newgeometry'; skipped.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 [1
+
 
 
 
@@ -1489,7 +1499,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-) (./chapters/chapter_2.tex [4 <./figure/image3.png>]
+) [4 <./figure/image3.png>]
+\openout2 = `chapters/chapter_2.aux'.
+
+ (./chapters/chapter_2.tex
 chapter 2.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -1508,6 +1521,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--49
  []
 
 [5
+
+
+
 
 
 ]
@@ -1535,7 +1551,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
-[8]) (./chapters/chapter_3.tex
+[8])
+\openout2 = `chapters/chapter_3.aux'.
+
+ (./chapters/chapter_3.tex
 chapter 3.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -1568,6 +1587,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
  []
 
 [9
+
+
+
 
 
  <./figure/image6.png>]
@@ -1606,16 +1628,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
 LaTeX Warning: Citation 'ElettromagnetismoeOnde' on page 12 undefined on input line 131.
 
 )
-Overfull \hbox (32.05005pt too wide) in paragraph at lines 131--57
-\T1/lmr/m/n/10.95 (-20) glia al let-to-re di ap-pro-fon-di-re leg-gen-do ta-le ar-go-men-to in [[]]
+Overfull \hbox (32.05005pt too wide) in paragraph at lines 131--56
+\T1/lmr/m/n/10.95 (-20) glia al let-to-re di ap-pro-fon-di-re leg-gen-do ta-le ar-go-men-to in [[]] 
  []
 
+[12]
+\openout2 = `chapters/chapter_4.aux'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--57
-
- []
-
-(./chapters/chapter_4.tex [12]
+ (./chapters/chapter_4.tex
 chapter 4.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -1639,6 +1659,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
  []
 
 [13
+
+
+
 
 
 ]
@@ -1705,7 +1728,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 313--314
 
  []
 
-) (./chapters/chapter_5.tex [20]
+) [20]
+\openout2 = `chapters/chapter_5.aux'.
+
+ (./chapters/chapter_5.tex
 chapter 5.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -1731,6 +1757,9 @@ Package pdftex.def Info: figure/image5.png  used on input line 9.
 [21
 
 
+
+
+
  <./figure/image5.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
@@ -1741,7 +1770,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
-) (./chapters/chapter_6.tex [23]
+) [23]
+\openout2 = `chapters/chapter_6.aux'.
+
+ (./chapters/chapter_6.tex
 chapter 6.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -1760,6 +1792,9 @@ File: figure/image12.png Graphic file (type png)
 Package pdftex.def Info: figure/image12.png  used on input line 14.
 (pdftex.def)             Requested size: 150.22826pt x 169.6112pt.
 [24
+
+
+
 
 
  <./figure/image12.png>]
@@ -1830,7 +1865,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 283--284
 
  []
 
-) (./chapters/chapter_7.tex [30]
+) [30]
+\openout2 = `chapters/chapter_7.aux'.
+
+ (./chapters/chapter_7.tex
 chapter 7.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -1869,6 +1907,9 @@ File: figure/image30.png Graphic file (type png)
 Package pdftex.def Info: figure/image30.png  used on input line 22.
 (pdftex.def)             Requested size: 300.46225pt x 145.19623pt.
 [31
+
+
+
 
 
  <./figure/image30.png>]
@@ -2042,7 +2083,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 323--324
 
  []
 
-) (./chapters/chapter_8.tex [40]
+) [40]
+\openout2 = `chapters/chapter_8.aux'.
+
+ (./chapters/chapter_8.tex
 chapter 8.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -2076,6 +2120,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
  []
 
 [41
+
+
+
 
 
 ] [42]
@@ -2144,7 +2191,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 190--190
   [][][]\T1/lmr/m/n/9 (+20) Per le con-di-zio-ni al con-tor-no di Neu-mann si con-si-glia di guar-da-re
  []
 
-[45]) (./chapters/chapter_9.tex
+[45])
+\openout2 = `chapters/chapter_9.aux'.
+
+ (./chapters/chapter_9.tex
 chapter 9.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -2178,6 +2228,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--21
  []
 
 [46
+
+
+
 
 
 ]
@@ -2400,7 +2453,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 616--617
 
  []
 
-) (./chapters/chapter_10.tex [59]
+) [59]
+\openout2 = `chapters/chapter_10.aux'.
+
+ (./chapters/chapter_10.tex
 chapter 10.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -2429,6 +2485,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
  []
 
 [60
+
+
+
 
 
 ]
@@ -2476,7 +2535,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
  []
 
-) (./chapters/chapter_11.tex [64]
+) [64]
+\openout2 = `chapters/chapter_11.aux'.
+
+ (./chapters/chapter_11.tex
 chapter 11.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -2520,6 +2582,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--29
  []
 
 [65
+
+
+
 
 
  <./figure/image23.png>]
@@ -2691,7 +2756,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 504--505
 
  []
 
-[75]) (./chapters/chapter_12.tex [76]
+[75]) [76]
+\openout2 = `chapters/chapter_12.aux'.
+
+ (./chapters/chapter_12.tex
 
 Package geometry Warning: `a4paper': not available in `\newgeometry'; skipped.
 
@@ -2728,6 +2796,9 @@ Package geometry Warning: `a4paper': not available in `\newgeometry'; skipped.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 [77
+
+
+
 
 
 
@@ -2791,7 +2862,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
-) (./chapters/chapter_13.tex [80]
+) [80]
+\openout2 = `chapters/chapter_13.aux'.
+
+ (./chapters/chapter_13.tex
 chapter 13.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -2830,6 +2904,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
  []
 
 [81
+
+
+
 
 
 ]
@@ -2929,7 +3006,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
 
-) (./chapters/chapter_14.tex [86]
+) [86]
+\openout2 = `chapters/chapter_14.aux'.
+
+ (./chapters/chapter_14.tex
 chapter 14.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -2958,6 +3038,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
  []
 
 [87
+
+
+
 
 
  <./figure/image43.png>]
@@ -3062,7 +3145,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 638--641
 
  []
 
-) (./chapters/chapter_15.tex [98]
+) [98]
+\openout2 = `chapters/chapter_15.aux'.
+
+ (./chapters/chapter_15.tex
 chapter 15.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -3093,7 +3179,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--62
 [99
 
 
-]) (./chapters/chapter_16.tex [100]
+
+
+
+]) [100]
+\openout2 = `chapters/chapter_16.aux'.
+
+ (./chapters/chapter_16.tex
 chapter 16.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -3132,6 +3224,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
  []
 
 [101
+
+
+
 
 
  <./figure/image49.png>]
@@ -3196,7 +3291,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
-) (./chapters/chapter_17.tex [106]
+) [106]
+\openout2 = `chapters/chapter_17.aux'.
+
+ (./chapters/chapter_17.tex
 chapter 17.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -3235,6 +3333,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
  []
 
 [107
+
+
+
 
 
  <./figure/image52.png> <./figure/image53.png>]
@@ -3357,7 +3458,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 387--389
 
  []
 
-[114 <./figure/image60.png> <./figure/image61.png>]) (./chapters/chapter_18.tex [115]
+[114 <./figure/image60.png> <./figure/image61.png>]) [115]
+\openout2 = `chapters/chapter_18.aux'.
+
+ (./chapters/chapter_18.tex
 
 Package geometry Warning: `a4paper': not available in `\newgeometry'; skipped.
 
@@ -3394,6 +3498,9 @@ Package geometry Warning: `a4paper': not available in `\newgeometry'; skipped.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 [116
+
+
+
 
 
 
@@ -3489,7 +3596,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
-) (./chapters/chapter_19.tex [121]
+) [121]
+\openout2 = `chapters/chapter_19.aux'.
+
+ (./chapters/chapter_19.tex
 chapter 19.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -3515,6 +3625,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 [122
 
 
+
+
+
 ]
 <figure/image64.png, id=1603, 261.97874pt x 260.975pt>
 File: figure/image64.png Graphic file (type png)
@@ -3530,7 +3643,10 @@ File: figure/image65.png Graphic file (type png)
 <use figure/image65.png>
 Package pdftex.def Info: figure/image65.png  used on input line 91.
 (pdftex.def)             Requested size: 126.19199pt x 118.79962pt.
-) (./chapters/chapter_20.tex [123 <./figure/image64.png> <./figure/image65.png>]
+) [123 <./figure/image64.png> <./figure/image65.png>]
+\openout2 = `chapters/chapter_20.aux'.
+
+ (./chapters/chapter_20.tex
 chapter 20.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -3556,6 +3672,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--9
 [124
 
 
+
+
+
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
@@ -3571,7 +3690,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
-[125] [126]) (./chapters/chapter_21.tex [127]
+[125] [126]) [127]
+\openout2 = `chapters/chapter_21.aux'.
+
+ (./chapters/chapter_21.tex
 chapter 21.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -3585,6 +3707,9 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              that will remove this deprecated code.
 
 [128
+
+
+
 
 
 ]
@@ -3602,7 +3727,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 192--193
 
  []
 
-[131]) (./chapters/chapter_22.tex [132]
+[131]) [132]
+\openout2 = `chapters/chapter_22.aux'.
+
+ (./chapters/chapter_22.tex
 chapter 22.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -3636,6 +3764,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
  []
 
 [133
+
+
+
 
 
 ]
@@ -3823,7 +3954,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 1310--1312
 
  []
 
-) (./chapters/chapter_23.tex [159]
+) [159]
+\openout2 = `chapters/chapter_23.aux'.
+
+ (./chapters/chapter_23.tex
 chapter 23.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -3855,6 +3989,9 @@ Underfull \hbox (badness 3029) in paragraph at lines 19--19
  []
 
 [160
+
+
+
 
 
 ]
@@ -3932,7 +4069,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 337--339
 
  []
 
-[167] [168]) (./chapters/chapter_24.tex [169]
+[167] [168]) [169]
+\openout2 = `chapters/chapter_24.aux'.
+
+ (./chapters/chapter_24.tex
 chapter 24.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -3989,6 +4129,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
  []
 
 [170
+
+
+
 
 
 ]
@@ -4119,11 +4262,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 603--604
 
  []
 
-)
+) [181]
 
 LaTeX Warning: Empty bibliography on input line 100.
 
-[181] (build/Appunti_Fisica_2.aux)
+(build/Appunti_Fisica_2.aux (build/chapters/chapter_1.aux) (build/chapters/chapter_2.aux) (build/chapters/chapter_3.aux) (build/chapters/chapter_4.aux) (build/chapters/chapter_5.aux) (build/chapters/chapter_6.aux) (build/chapters/chapter_7.aux) (build/chapters/chapter_8.aux) (build/chapters/chapter_9.aux) (build/chapters/chapter_10.aux) (build/chapters/chapter_11.aux) (build/chapters/chapter_12.aux) (build/chapters/chapter_13.aux) (build/chapters/chapter_14.aux) (build/chapters/chapter_15.aux) (build/chapters/chapter_16.aux) (build/chapters/chapter_17.aux) (build/chapters/chapter_18.aux) (build/chapters/chapter_19.aux) (build/chapters/chapter_20.aux) (build/chapters/chapter_21.aux) (build/chapters/chapter_22.aux) (build/chapters/chapter_23.aux) (build/chapters/chapter_24.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
@@ -4145,15 +4288,15 @@ Package logreq Info: Writing requests to 'Appunti_Fisica_2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42918 strings out of 467525
- 833701 string characters out of 5418982
- 1786014 words of memory out of 5000000
- 69582 multiletter control sequences out of 15000+600000
+ 43375 strings out of 467525
+ 850489 string characters out of 5418982
+ 1847614 words of memory out of 5000000
+ 69942 multiletter control sequences out of 15000+600000
  773846 words of font info for 372 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,18n,111p,11311b,2253s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on build/Appunti_Fisica_2.pdf (189 pages, 9974221 bytes).
+Output written on build/Appunti_Fisica_2.pdf (189 pages, 9974230 bytes).
 PDF statistics:
  3177 PDF objects out of 3580 (max. 8388607)
  2757 compressed objects within 28 object streams
