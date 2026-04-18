@@ -1,0 +1,57 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  charge/.style={circle,draw=black,line width=0.5pt,inner sep=1pt,minimum size=6mm},
+  pluscharge/.style={charge,fill=posred},
+  minuscharge/.style={charge,fill=negblue},
+  dashline/.style={dashed,thin,gray!70!black},
+  uvec/.style={->,line width=0.9pt,black},
+  evec/.style={->,line width=1.2pt,ered}
+]
+
+% Punto P al centro
+\coordinate (P) at (0,0);
+\node[below right=1pt] at (P) {$P$};
+\fill (P) circle (1pt);
+
+% Posizioni delle cariche
+\coordinate (qi1) at (-3.6, 2.6);   % q_i in alto a sinistra
+\coordinate (q2)  at (-0.4, 3.2);   % q_i (q_2) in alto al centro
+\coordinate (q1)  at ( 3.2, 0.8);   % q_1 a destra
+\coordinate (qn)  at (-3.6,-0.2);   % q_n a sinistra (negativa)
+
+% Linee tratteggiate r_i dai punti a P
+\draw[dashline] (qi1) -- node[pos=0.55,right] {$r_i$} (P);
+\draw[dashline] (q2)  -- node[pos=0.55,right] {$r_2$} (P);
+\draw[dashline] (q1)  -- node[pos=0.55,above] {$r_1$} (P);
+\draw[dashline] (qn)  -- node[pos=0.55,above] {$r_n$} (P);
+
+% Cariche
+\node[pluscharge]  (CQi1) at (qi1) {\small$+$};
+\node[pluscharge]  (CQ2)  at (q2)  {\small$+$};
+\node[pluscharge]  (CQ1)  at (q1)  {\small$+$};
+\node[minuscharge] (CQn)  at (qn)  {\small$-$};
+
+% Etichette cariche
+\node[below=1pt of CQi1] {$q_i$};
+\node[right=2pt of CQ2]  {$q_i$};
+\node[right=2pt of CQ1]  {$q_1$};
+\node[below=1pt of CQn]  {$q_n$};
+
+% Versori u_i (neri) posti vicino alle cariche, diretti verso P
+\draw[uvec] ($(qi1)+(-0.2,-0.55)$) -- ++(0.9,-0.55) node[above,pos=0.9] {$\mathbf{u}_i$};
+\draw[uvec] ($(q2)+(-0.1,-0.65)$) -- ++(0.2,-1.1) node[right,pos=0.8] {$\mathbf{u}_2$};
+\draw[uvec] ($(q1)+(-0.3,-0.25)$) -- ++(-1.0,-0.25) node[above,pos=0.9] {$\mathbf{u}_1$};
+\draw[uvec] ($(qn)+(0.3,0.25)$)  -- ++(1.0, 0.25) node[above,pos=0.9] {$\mathbf{u}_n$};
+
+% Campi E al punto P (rossi), uscenti da P
+\draw[evec] (P) -- ++(-3.0, 0.4) node[above left] {$\mathbf{E}_n$};
+\draw[evec] (P) -- ++(-2.0,-1.8) node[below]      {$\mathbf{E}_1$};
+\draw[evec] (P) -- ++( 0.2,-2.4) node[below]      {$\mathbf{E}_2$};
+\draw[evec] (P) -- ++( 2.0,-1.5) node[below right]{$\mathbf{E}_i$};
+
+% Etichetta E_n lungo r_n (in corsivo)
+\node[ered,above=6pt of P,xshift=-1.3cm] {$\mathbf{E}_n$};
+
+\end{tikzpicture}
+

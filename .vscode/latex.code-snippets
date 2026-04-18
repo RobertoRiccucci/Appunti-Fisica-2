@@ -24,6 +24,19 @@
       "\\varepsilon"
     ],
     "description": "Modo più veloce di scrivere varepsilon"
+},
+
+  "Figure-Tikz": {
+    "prefix": "FFIG",
+    "body": [
+      "\\begin{figure}[h]",
+      "  \\centering",
+      "  \\input{figure/image${1:numero}.tex}",
+      "  \\caption{${2:didascalia}}",
+      "  \\label{fig:${3:etichetta}}",
+      "\\end{figure}"
+    ],
+    "description": "Figura con TikZ"
 }
 }
 

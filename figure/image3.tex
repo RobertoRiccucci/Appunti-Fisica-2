@@ -1,0 +1,48 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  uvec/.style={->,line width=1pt,black},
+  evec/.style={->,line width=1.2pt,ered},
+  dashline/.style={dashed,thin,gray!70!black}
+]
+
+% Corpo esteso (blob)
+\fill[blobpink,draw=blobpink!70!black,line width=0.4pt]
+  plot [smooth cycle, tension=0.9] coordinates {
+    (-2.6,3.6) (-1.2,4.6) (0.8,4.9) (2.6,4.6) (3.4,3.8)
+    (3.6,2.6)  (2.7,2.0)  (3.3,1.2) (2.2,0.6) (0.8,0.9)
+    (-0.8,1.3) (-2.2,1.1) (-3.0,2.0) (-3.3,3.0)
+  };
+
+% P' e cubetto dq
+\coordinate (Pp) at (0.8,3.6);
+\node[left] at (Pp) {$P'$};
+% Piccolo cubo (assonometria)
+\begin{scope}[shift={(1.0,3.6)}]
+  \fill[cubecol] (0,0) -- (0.35,0.15) -- (0.35,0.55) -- (0,0.40) -- cycle;
+  \fill[cubecol!80!black] (0,0.40) -- (0.35,0.55) -- (0.25,0.70) -- (-0.10,0.55) -- cycle;
+  \fill[cubecol!60!black] (0.35,0.15) -- (0.35,0.55) -- (0.25,0.70) -- (0.25,0.30) -- cycle;
+  \draw[thin,black] (0,0) -- (0.35,0.15) -- (0.35,0.55) -- (0,0.40) -- cycle;
+  \draw[thin,black] (0,0.40) -- (0.25,0.70) -- (0.35,0.55);
+  \draw[thin,black] (-0.10,0.55) -- (0.25,0.70);
+  \draw[thin,black] (-0.10,0.55) -- (0,0.40);
+\end{scope}
+
+\node[right] at (1.6,4.1) {$dq = \rho(x',y',z')\,d\tau$};
+
+% Vettore u da P'
+\draw[uvec] (Pp) -- ++(0.15,-1.1) node[midway,left] {$\mathbf{u}$};
+
+% Punto P fuori dal corpo
+\coordinate (P) at (-0.4,-1.1);
+\fill (P) circle (1.3pt);
+\node[left=2pt] at (P) {$P$};
+
+% Linea tratteggiata r da P a P'
+\draw[dashline] (P) -- ($(Pp)+(0.15,-1.15)$);
+\node[right] at (0.3,1.4) {$r$};
+
+% Vettore dE in P
+\draw[evec] (P) -- ++(-0.55,-1.35) node[below] {$d\mathbf{E}$};
+
+\end{tikzpicture}

@@ -11,6 +11,32 @@
 \usepackage{lmodern}     % font semplice e diffuso
 \usepackage{microtype}   % micro-tipografia, migliore resa
 
+% ---------- FIGURE IN TIKZ -----------
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, patterns, decorations.markings, decorations.pathmorphing, calc, positioning}
+\usepackage{amsmath, amssymb, bm}
+
+% Stile coerente con le immagini a colori
+\definecolor{posred}{RGB}{239,130,140}   % rosa-rosso per cariche positive
+\definecolor{negblue}{RGB}{120,190,230}  % azzurro per cariche negative
+\definecolor{ered}{RGB}{227,35,35}       % rosso vivo per i vettori E
+\definecolor{surfblue}{RGB}{205,230,245} % azzurro chiaro per la superficie
+\definecolor{gray60}{gray}{0.55}
+\definecolor{blobpink}{RGB}{245,205,190} % colore del corpo esteso
+\definecolor{cubecol}{RGB}{235,190,170}
+\definecolor{charge}{RGB}{245,175,120}      % arancione chiaro delle cariche
+\definecolor{matpink}{RGB}{245,210,195}     % superficie superiore del materiale
+\definecolor{matpinkdk}{RGB}{225,175,155}   % fianco laterale
+\definecolor{loopblue}{RGB}{90,130,200}     % anelli di corrente
+\definecolor{mred}{RGB}{227,35,35}          % vettore M
+\definecolor{surrfblue}{RGB}{190,215,235}   % regione chiusa C (riempimento)
+\definecolor{surfedge}{RGB}{80,120,170}     % bordo della curva C
+\definecolor{ghost}{RGB}{140,140,140}       % traslazione (tratteggiata)
+\definecolor{vred}{RGB}{227,35,35}          % vettori v
+
+
+
 % ---------- GEOMETRIA PAGINA ----------
 % Scegli *una* delle due geometrie qui sotto.
 % (1) Impostazioni consigliate per A4 (Italia) con ampio margine esterno:
