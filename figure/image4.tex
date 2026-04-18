@@ -1,0 +1,53 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  dashline/.style={dashed,thin,gray!70!black},
+  evec/.style={->,line width=1.3pt,ered},
+  curvearr/.style={->,thick,black},
+  ch/.style={circle,draw=black!70,fill=charge,inner sep=0pt,minimum size=7mm}
+]
+
+% Punti A e B
+\coordinate (A) at (-3.5, 2.3);
+\coordinate (B) at ( 3.4, 2.2);
+
+% Cariche q1, q2, q3
+\coordinate (Q1) at (-1.8,-1.6);
+\coordinate (Q2) at ( 1.3,-1.7);
+\coordinate (Q3) at ( 0.1, 0.9);
+
+% Linee tratteggiate r_{A,i}
+\draw[dashline] (A) -- node[pos=0.65,below] {$r_{A,1}$} (Q1);
+\draw[dashline] (A) -- node[pos=0.55,below] {$r_{A,2}$} (Q2);
+\draw[dashline] (A) -- node[pos=0.6,above right] {$r_{A,3}$} (Q3);
+
+% Linee tratteggiate r_{B,i}
+\draw[dashline] (B) -- node[pos=0.75,below] {$r_{B,1}$} (Q1);
+\draw[dashline] (B) -- node[pos=0.55,below] {$r_{B,2}$} (Q2);
+\draw[dashline] (B) -- node[pos=0.55,above right] {$r_{B,3}$} (Q3);
+
+% Cariche
+\node[ch] at (Q1) {};
+\node[ch] at (Q2) {};
+\node[ch] at (Q3) {};
+\node[below=1pt] at (Q1) {$q_1$};
+\node[below=1pt] at (Q2) {$q_2$};
+\node[below=2pt] at (Q3) {$q_3$};
+
+% Etichette punti
+\node[left] at (A) {$A$};
+\node[right] at (B) {$B$};
+\fill (A) circle (1.2pt);
+\fill (B) circle (1.2pt);
+
+% Curva da A a B con andamento sinuoso
+\draw[thick,black] (A) .. controls (-1.5,3.3) and (1.5,1.2) .. (B);
+
+% Vettore E totale in A
+\draw[evec] (A) -- ++(1.0,1.0) node[above right] {$\mathbf{E} = \mathbf{E}_1+\mathbf{E}_2+\mathbf{E}_3$};
+
+% Vettore ds tangente alla curva
+\draw[curvearr] (0.6,2.05) -- (1.6,2.15);
+\node[below] at (1.2,2.0) {$ds$};
+
+\end{tikzpicture}

@@ -1,0 +1,149 @@
+\begin{tikzpicture}[
+    >=Stealth,
+    font=\normalsize,
+    every node/.style={inner sep=1pt},
+    vec/.style={-{Stealth[length=3.5mm, width=2.5mm]}, red, line width=1.6pt},
+    dashdotted/.style={dash pattern=on 4pt off 2pt on 1pt off 2pt},
+    scale=0.5
+]
+
+% ==========================================================
+%  (a)  Sistema S
+% ==========================================================
+\begin{scope}[shift={(0,0)}]
+
+    % --- Parametri cilindro ---
+    \def\cL{6}      % semi-lunghezza
+    \def\cR{0.9}    % raggio
+    \def\eR{0.35}   % schiacciamento ellisse
+
+    % --- Corpo del cilindro (sfondo azzurrino) ---
+    % Rettangolo di riempimento
+    \fill[blue!6] (-\cL,-\cR) rectangle (\cL,\cR);
+    % Ellisse sinistra riempimento
+    \fill[blue!6] (-\cL,0) ellipse ({\eR} and {\cR});
+    % Ellisse destra riempimento
+    \fill[blue!6] (\cL,0) ellipse ({\eR} and {\cR});
+
+    % --- Bordi del cilindro ---
+    % Linee superiore e inferiore
+    \draw[thick] (-\cL,\cR) -- (\cL,\cR);
+    \draw[thick] (-\cL,-\cR) -- (\cL,-\cR);
+
+    % Ellisse sinistra (tratteggiata dietro, piena davanti)
+    \draw[thick, dashed] (-\cL,0) ++(0,-\cR) arc[start angle=-90, end angle=90,
+        x radius=\eR, y radius=\cR];
+    \draw[thick] (-\cL,0) ++(0,\cR) arc[start angle=90, end angle=270,
+        x radius=\eR, y radius=\cR];
+
+    % Ellisse destra (piena, con tratteggio pattern)
+    \fill[pattern=north east lines, pattern color=gray!60]
+        (\cL,0) ellipse ({\eR} and {\cR});
+    \draw[thick] (\cL,0) ellipse ({\eR} and {\cR});
+
+    % --- Asse dash-dot centrale ---
+    \draw[dashdotted, thin] (-\cL-0.3,0) -- (\cL+0.3,0);
+
+    % --- Densità di carica e velocità dentro il cilindro ---
+    % rho+ a sinistra
+    \node at (-2.5,0.0) {$\rho_+$};
+    \node at (-2.5,-0.55) {$\mathbf{v}_+ = 0$};
+
+    % rho- a destra con pallino e freccia
+    \node at (2.2,0.0) {$\rho_-$};
+    \fill (3.0,0) circle (2pt);
+    \draw[vec, line width=1.2pt] (3.05,0) -- ++(0.7,0);
+    \node at (2.2,-0.55) {$\mathbf{v}_- = \mathbf{v}$};
+
+    % --- Carica q sopra il filo ---
+    \coordinate (q) at (0.5, 2.5);
+    \fill (q) circle (3pt);
+    \node[left=2pt] at (q) {$q\,(-)$};
+
+    % Vettore v0 (rosso)
+    \draw[vec] (q) -- ++(1.3,0) node[above=1pt] {$\mathbf{v}_0$};
+
+    % Distanza r
+    \draw[thick, |->] (0.5, 2.3) -- (0.5, \cR+0.05);
+    \node[right=3pt] at (0.5, 1.6) {$r$};
+
+    % --- Etichetta S ---
+    \node[font=\Large\bfseries] at (\cL+0.9, 2.5) {S};
+
+    % --- Corrente I sotto ---
+    \draw[vec] (1.5,-1.8) -- ++(1.2,0) node[right=1pt, black] {$I$};
+
+    % --- Etichetta (a) ---
+    \node[font=\Large\bfseries] at (-\cL-0.6, -1.8) {(a)};
+
+\end{scope}
+
+% ==========================================================
+%  (b)  Sistema S'
+% ==========================================================
+\begin{scope}[shift={(15,0)}]
+
+    % --- Parametri cilindro ---
+    \def\cL{6}
+    \def\cR{0.9}
+    \def\eR{0.35}
+
+    % --- Corpo del cilindro (sfondo azzurrino) ---
+    \fill[blue!6] (-\cL,-\cR) rectangle (\cL,\cR);
+    \fill[blue!6] (-\cL,0) ellipse ({\eR} and {\cR});
+    \fill[blue!6] (\cL,0) ellipse ({\eR} and {\cR});
+
+    % --- Bordi del cilindro ---
+    \draw[thick] (-\cL,\cR) -- (\cL,\cR);
+    \draw[thick] (-\cL,-\cR) -- (\cL,-\cR);
+
+    % Ellisse sinistra
+    \draw[thick, dashed] (-\cL,0) ++(0,-\cR) arc[start angle=-90, end angle=90,
+        x radius=\eR, y radius=\cR];
+    \draw[thick] (-\cL,0) ++(0,\cR) arc[start angle=90, end angle=270,
+        x radius=\eR, y radius=\cR];
+
+    % Ellisse destra (tratteggiata)
+    \fill[pattern=north east lines, pattern color=gray!60]
+        (\cL,0) ellipse ({\eR} and {\cR});
+    \draw[thick] (\cL,0) ellipse ({\eR} and {\cR});
+
+    % --- Asse dash-dot centrale ---
+    \draw[dashdotted, thin] (-\cL-0.3,0) -- (\cL+0.3,0);
+
+    % --- Densità di carica e velocità dentro il cilindro ---
+    % rho'+ a sinistra con pallino e freccia (verso sinistra)
+    \node at (-2.5,0.0) {$\rho'_+$};
+    \fill (-1.5,0) circle (2pt);
+    \draw[vec, line width=1.2pt] (-1.45,0) -- ++(-0.7,0);
+    \node at (-2.5,-0.55) {$\mathbf{v}'_+ = -\mathbf{v}$};
+
+    % rho'- a destra
+    \node at (2.5,0.0) {$\rho'_-$};
+    \node at (2.5,-0.55) {$\mathbf{v}'_- = 0$};
+
+    % --- Carica q sopra il filo ---
+    \coordinate (q2) at (0.5, 2.5);
+    \fill (q2) circle (3pt);
+    \node[left=2pt] at (q2) {$q$};
+
+    % Distanza r
+    \draw[thick, |->] (0.5, 2.3) -- (0.5, \cR+0.05);
+    \node[right=3pt] at (0.5, 1.6) {$r$};
+
+    % --- Etichetta S' ---
+    \node[font=\Large\bfseries] at (\cL+0.9, 2.5) {$\mathrm{S}'$};
+
+    % --- Velocità v del sistema (freccia a sinistra sotto) ---
+    \draw[vec] (-1.0,-1.8) -- ++(-1.2,0) node[left=1pt, black] {$\mathbf{v}$};
+
+    % --- Corrente I' sotto (verso destra) ---
+    \draw[vec] (2.5,-1.8) -- ++(1.2,0) node[right=1pt, black] {$I'$};
+
+    % --- Etichetta (b) ---
+    \node[font=\Large\bfseries] at (-\cL-0.6, -1.8) {(b)};
+
+\end{scope}
+
+\end{tikzpicture}
+
