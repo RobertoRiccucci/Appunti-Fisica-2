@@ -1,0 +1,29 @@
+\begin{tikzpicture}[
+  >={Latex[length=2.5mm,width=1.8mm]},
+  every node/.style={font=\small},
+  arr/.style={->,thick,black}
+]
+
+% Catena di dipoli
+\foreach \i in {0,1,2,3,4,5}{
+  \begin{scope}[xshift={\i*1.2 cm}]
+    \fill[black] (0,0) circle (2pt) node[below=2pt] {\small$-$};
+    \fill[black] (0.4,0) circle (2pt) node[below=2pt] {\small$+$};
+    \draw[arr] (0.02,0) -- (0.38,0);
+    % punto aggiunto tra cariche
+    \ifnum\i<5
+       \fill[black] (0.8,0) circle (2pt) node[below=2pt] {\small$-$};
+       \draw[arr] (0.42,0) -- (0.78,0);
+    \fi
+  \end{scope}
+}
+
+% Segno =
+\node at (8.3,0) {$=$};
+
+% Risultante
+\fill[black] (9.0,0) circle (2pt) node[below=2pt] {\small$-$};
+\fill[black] (13.5,0) circle (2pt) node[below=2pt] {\small$+$};
+\draw[arr] (9.02,0) -- (13.48,0);
+
+\end{tikzpicture}

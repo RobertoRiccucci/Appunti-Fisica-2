@@ -1,0 +1,44 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  bvec/.style={->,line width=1.3pt,bblue},
+  jvec/.style={->,line width=1.2pt,vpurple},
+  dashline/.style={dashed,thin,gray!60!black}
+]
+
+% Piano superiore (beige chiaro)
+\fill[ytangent!50,draw=ytangent!70!black]
+  (-3.5,1.8) -- (3.5,2.4) -- (3.5,3.0) -- (-3.5,2.4) -- cycle;
+
+% Piano inferiore (grigio chiaro)
+\fill[planegray,draw=planegray!70!black]
+  (-3.5,0.0) -- (3.5,0.6) -- (3.5,1.2) -- (-3.5,0.6) -- cycle;
+
+% Punto P (sopra)
+\coordinate (P) at (0,3.2);
+\fill (P) circle (1.5pt);
+\node[left] at (P) {$P$};
+
+% Linea verticale tratteggiata tra P e Q
+\draw[dashline] (0,0.3) -- (0,3.2);
+
+% Punto Q (sotto)
+\coordinate (Q) at (0,-0.2);
+\fill (Q) circle (1.5pt);
+\node[below] at (Q) {$Q$};
+\draw[dashline] (0,-0.5) -- (0,0.3);
+
+% Punto medio (tra i piani)
+\coordinate (M) at (0,1.6);
+\fill (M) circle (1pt);
+
+% Vettori B
+\draw[bvec] (P) -- ++(-1.6,0.5) node[above left] {$\mathbf{B}_P$};
+\draw[bvec] (M) -- ++(-1.5,0) node[left] {$\mathbf{B}_{P_t}$};
+\draw[bvec] (M) -- ++(1.5,0.2) node[right] {$\mathbf{B}_{Q_t}$};
+\draw[bvec] (Q) -- ++(0.4,-1.0) node[below] {$\mathbf{B}_Q$};
+
+% Corrente di superficie j_s (viola, a destra)
+\draw[jvec] (2.5,1.6) -- ++(1.2,0) node[right] {$\mathbf{j}_s$};
+
+\end{tikzpicture}

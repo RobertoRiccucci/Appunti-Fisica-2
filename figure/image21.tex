@@ -1,0 +1,37 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  evec/.style={->,line width=1.2pt,ered},
+  pvec/.style={->,line width=1.3pt,vpurple}
+]
+
+% Due piastre verticali (condensatore)
+\fill[blobgray!50] (-4.5,-3.5) rectangle (-4.1,3.5);
+\fill[blobgray!50] ( 4.1,-3.5) rectangle ( 4.5,3.5);
+
+% Cariche sui piatti
+\foreach \y in {-3,-1.5,0,1.5,3}{
+  \node at (-4.35,\y) {\small$+$};
+  \node at ( 4.35,\y) {\small$-$};
+}
+
+% Sfera dielettrica (V0)
+\fill[surfblue!60,draw=surfblue!70!black] (-0.5,-1.0) circle (1.8);
+\node[below left] at (-1.7,-2.2) {$V_0'$};
+
+% Elemento interno con vettori (E0, E, Ed, P)
+\coordinate (P1) at (-1.8,-0.3);
+\fill[ytangent,opacity=0.6] (P1) -- ++(1.4,0) -- ++(0.0,-1.3) -- ++(-1.4,0) -- cycle;
+\draw[evec] (P1) -- ++(1.4,0) node[right] {$\mathbf{E}_0$};
+\draw[evec] (P1) -- ++(0,-1.3) node[below left] {$\mathbf{E}_d$};
+\draw[evec] (P1) -- ++(1.4,-1.3) node[below] {$\mathbf{E}$};
+\draw[pvec] (-0.2,-1.6) -- ++(1.6,0) node[right] {$\mathbf{P}$};
+
+% Elemento esterno in alto a destra
+\coordinate (P2) at (1.8,1.3);
+\fill[ytangent,opacity=0.6] (P2) -- ++(1.2,0) -- ++(0,0.9) -- ++(-1.2,0) -- cycle;
+\draw[evec] (P2) -- ++(1.2,0) node[right] {$\mathbf{E}_0$};
+\draw[evec] (P2) -- ++(0,0.9) node[above left] {$\mathbf{E}_d$};
+\draw[evec] (P2) -- ++(1.2,0.9) node[above right] {$\mathbf{E}$};
+
+\end{tikzpicture}

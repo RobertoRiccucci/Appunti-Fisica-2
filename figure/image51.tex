@@ -1,0 +1,42 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  uvec/.style={->,line width=1pt,black},
+  bvec/.style={->,line width=1pt,bblue},
+  ivec/.style={->,line width=0.8pt,vpurple},
+  dashline/.style={dashed,thin,bblue}
+]
+
+% Superficie Σ (cupola beige)
+\fill[ytangent,draw=ytangent!70!black]
+  plot [smooth,tension=0.8] coordinates {(-3,0) (-2,1.5) (0,2.5) (2,2.0) (3,0.5)};
+\draw[thin,black] (-3,0) .. controls (-1,-0.3) and (1,-0.3) .. (3,0.5);
+
+% Etichette
+\node[left] at (-2.5,0.5) {$\Sigma$};
+\node[right] at (2.8,0.3) {$C$};
+
+% Elemento dΣ (piccolo rettangolo al centro)
+\fill[ytangent!80,draw=black!50] (-0.3,1.5) rectangle (0.3,2.0);
+\node[left] at (-0.3,1.7) {$d\Sigma$};
+
+% u_n
+\draw[uvec] (0,2.0) -- ++(0,1.0) node[above] {$\mathbf{u}_n$};
+
+% Linee B (curve azzurre, attraverso la superficie)
+\foreach \x in {-1.5,-0.5,0.5,1.5}{
+  \draw[bvec] (\x,-0.8) .. controls (\x,1.0) and ({\x+0.3},2.5) .. ({\x+0.5},3.5);
+}
+\draw[dashline] (-2.0,-0.8) .. controls (-2.0,0.5) .. (-1.8,1.5);
+\draw[dashline] (2.0,-0.8) .. controls (2.0,0.5) .. (2.2,1.5);
+\node[bblue] at (1.0,3.5) {$\mathbf{B}$};
+
+% Correnti di flusso (piccole frecce viola sulla superficie)
+\foreach \x/\y/\a in {-1.5/1.3/160, -0.5/1.8/140, 0.5/2.0/200, 1.0/1.5/220}{
+  \draw[ivec] (\x,\y) -- ++({\a}:0.5);
+}
+
+% Corrente i che passa attraverso
+\draw[ivec] (0,-0.5) -- ++(0.3,0.5) node[right] {$i$};
+
+\end{tikzpicture}

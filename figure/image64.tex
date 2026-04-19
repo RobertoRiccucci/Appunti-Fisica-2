@@ -1,0 +1,41 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  evec/.style={->,line width=1.2pt,ered}
+]
+
+% Sfondo esterno (beige chiaro)
+\fill[ytangent!50] (0,0) circle (3.0);
+
+% Regione interna B (più scura, beige)
+\fill[ytangent] (0,0) circle (1.8);
+
+% Etichetta B al centro
+\node[bblue,font=\large] at (0,0) {$\mathbf{B}$};
+
+% Punti B (uscenti dal foglio, azzurri)
+\foreach \x in {-1.0,0,1.0}{
+  \foreach \y in {-1.0,0,1.0}{
+    \fill[bblue] (\x,\y) circle (2pt);
+  }
+}
+\foreach \x in {-0.5,0.5}{
+  \foreach \y in {-0.5,0.5}{
+    \fill[bblue] (\x,\y) circle (2pt);
+  }
+}
+% Punti esterni
+\foreach \a in {0,45,...,315}{
+  \fill[bblue] ({2.3*cos(\a)},{2.3*sin(\a)}) circle (2pt);
+}
+
+% Cerchio (percorso chiuso)
+\draw[thick,black] (0,0) circle (1.8);
+
+% Vettori E tangenti al cerchio (rossi)
+\draw[evec] (0,1.8)   -- ++(0.8,0)  node[right] {$\mathbf{E}$};
+\draw[evec] (-1.8,0)   -- ++(0,0.8)  node[above left] {$\mathbf{E}$};
+\draw[evec] (1.8,0)    -- ++(0,-0.8) node[right] {$\mathbf{E}$};
+\draw[evec] (0,-1.8)   -- ++(-0.8,0) node[below left] {$\mathbf{E}$};
+
+\end{tikzpicture}

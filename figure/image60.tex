@@ -1,0 +1,33 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  bvec/.style={->,line width=1.3pt,bblue},
+  uvec/.style={->,line width=1.2pt,black},
+  dashline/.style={dashed,thin,gray!60!black}
+]
+
+% Blocco (mezzo inferiore, grigio)
+\fill[planegray,draw=planegray!60!black]
+  (-3.5,-2.0) -- (3.5,-1.5) -- (3.5,0.2) -- (-3.5,-0.3) -- cycle;
+\fill[blobgray!50,draw=blobgray!60!black]
+  (-3.5,-0.3) -- (3.5,0.2) -- (3.0,0.6) -- (-4.0,0.1) -- cycle;
+
+% Linea tratteggiata verticale
+\draw[dashline] (0,-2.2) -- (0,3.0);
+
+% Punto P
+\coordinate (P) at (0,0.3);
+\fill (P) circle (1.5pt);
+\node[below left] at (P) {$P$};
+
+% u_n verso l'alto
+\draw[uvec] (P) -- ++(0,1.0) node[above left] {$\mathbf{u}_n$};
+
+% B1 e B2
+\draw[bvec] (P) -- ++(1.0,1.5) node[above right] {$\mathbf{B}_1$};
+\draw[bvec] (P) -- ++(2.0,1.0) node[right] {$\mathbf{B}_2$};
+
+% Linea tratteggiata orizzontale (interfaccia superiore)
+\draw[dashline] (-3.5,0.3) -- (3.5,0.8);
+
+\end{tikzpicture}

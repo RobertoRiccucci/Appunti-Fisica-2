@@ -1,0 +1,50 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  axis/.style={->,thick,black},
+  evec/.style={->,line width=1.2pt,ered},
+  uvec/.style={->,line width=1pt,black},
+  dashline/.style={dashed,thin,gray!60!black}
+]
+
+% Assi
+\draw[axis] (0,0) -- (0,4.5) node[left] {$z$};
+\draw[axis] (0,0) -- (6,0.5) node[right] {$x$};
+\draw[axis] (0,0) -- (-1.5,-1.5) node[below left] {$y$};
+
+% Cubo in prospettiva
+\def\A{(1.5,-0.5)}   % A'
+\def\Ap{(-0.2,-1.3)} % A''
+\def\B{(4.2,-0.2)}   % B'
+\def\Bp{(2.5,-1.0)}  % B''
+\def\D{(1.5,1.6)}    % D'
+\def\Dp{(-0.2,0.8)}  % D''
+\def\C{(4.2,1.9)}    % C'
+\def\Cp{(2.5,1.1)}   % C''
+
+% Facce
+\fill[surfblue,opacity=0.6] \Ap -- \A -- \D -- \Dp -- cycle;   % faccia sinistra
+\fill[surfblue,opacity=0.8] \A -- \B -- \C -- \D -- cycle;     % faccia frontale
+\fill[surfblue!70,opacity=0.8] \Dp -- \D -- \C -- \Cp -- cycle;% faccia superiore
+
+% Bordi
+\draw[thick,black] \Ap -- \A -- \B -- \C -- \D -- cycle;
+\draw[thick,black] \D -- \Dp -- \Cp -- \C;
+\draw[dashline] \Ap -- \Bp -- \Cp;
+\draw[dashline] \Bp -- \B;
+
+% Etichette vertici
+\node[below]  at \A  {$A'$};   \node[below] at \Ap {$A''$};
+\node[right]  at \B  {$B'$};   \node[right] at \Bp {$B''$};
+\node[above right] at \C {$C'$};   \node[above] at \Cp {$C''$};
+\node[left]   at \D  {$D'$};   \node[left]  at \Dp {$D''$};
+
+% Vettori E' e E'' sulla faccia di dx/sx
+\draw[evec] (3.35,0.85) -- ++(0.6,1.6) node[above] {$\mathbf{E}'$};
+\draw[evec] (0.6,0.15) -- ++(0.6,1.6) node[above left] {$\mathbf{E}''$};
+
+% u_x e -u_x
+\draw[uvec] (4.3,0.85) -- ++(0.9,0) node[right] {$\mathbf{u}_x$};
+\draw[uvec] (0.6,0.15) -- ++(-1.0,-0.15) node[left] {$-\mathbf{u}_x$};
+
+\end{tikzpicture}

@@ -1,0 +1,58 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  evec/.style={->,line width=1.2pt,ered},
+  dvec/.style={->,line width=1.2pt,vpurple},
+  arr/.style={->,thin,bblue},
+  dashline/.style={dashed,thin,gray!60!black}
+]
+
+% --- (a) Continuità di E_t ---
+\begin{scope}
+  % Piani (regioni dielettriche)
+  \fill[blobpink!50,draw=blobpink!70!black] (-3,-1.6) rectangle (3,0);
+  \fill[blobpink!30,draw=blobpink!70!black] (-3,0) rectangle (3,1.6);
+  % Linea sigma orizzontale blu
+  \draw[thick,bblue] (-3,0) -- (3,0);
+  \node[left] at (-3,0) {$\Sigma$};
+  % Linea di separazione verticale (dashed)
+  \draw[dashline] (0,-1.6) -- (0,2.2);
+  % Vettori E1, E2, E1t, E2t
+  \draw[evec] (-0.8,-0.7) -- ++(1.2,0.7); \node[right] at (0.4,0) {$\mathbf{E}_2$};
+  \draw[evec] (0.5,0.0)  -- ++(1.2,0.8); \node[above] at (1.7,0.8) {$\mathbf{E}_{2t}$};
+  \draw[evec] (-0.6,-0.4) -- ++(-1.2,-0.4); \node[below] at (-1.8,-0.8) {$\mathbf{E}_1$};
+  \draw[evec] (-0.1,0.0)  -- ++(-1.2,-0.2); \node[below] at (-1.3,-0.2) {$\mathbf{E}_{1t}$};
+  % Angoli
+  \node at (0.5,0.25) {$\theta_2$};
+  \node at (-0.4,-0.2) {$\theta_1$};
+  % Etichette K_e1, K_e2
+  \node at (2.5,-0.9) {$\kappa_{e1}$};
+  \node at (2.5,1.0) {$\kappa_{e2}$};
+  % Piccolo rettangolo gaussiano azzurro attraverso sigma
+  \draw[arr,thick,bblue] (-0.7,-0.1) rectangle (0.7,0.1);
+  \node[below] at (0,-1.8) {$\mathbf{E}_{1t} = \mathbf{E}_{2t}$};
+\end{scope}
+
+% --- (b) Continuità di D_n ---
+\begin{scope}[xshift=8cm]
+  \fill[blobpink!50,draw=blobpink!70!black] (-3,-1.6) rectangle (3,0);
+  \fill[blobpink!30,draw=blobpink!70!black] (-3,0) rectangle (3,1.6);
+  \draw[thick,bblue] (-3,0) -- (3,0);
+  \node[right] at (3,0) {$\Sigma$};
+  \draw[dashline] (0,-1.6) -- (0,2.2);
+  % Vettori D1 e D2
+  \draw[dvec] (0,0) -- ++(-1.3,-1.0); \node[below left] at (-1.3,-1.0) {$\mathbf{D}_1$};
+  \draw[dvec] (0,0) -- ++(1.3,1.0); \node[above right] at (1.3,1.0) {$\mathbf{D}_2$};
+  \draw[dvec] (0,0) -- ++(0,-1.0); \node[below] at (0,-1.0) {$\mathbf{D}_{1n}$};
+  \draw[dvec] (0,0) -- ++(0,1.0); \node[above] at (0,1.0) {$\mathbf{D}_{2n}$};
+  % Cilindretto gaussiano attraverso sigma
+  \draw[thin,bblue] (-0.3,-0.4) rectangle (0.3,0.4);
+  \node[right] at (0.3,0.3) {$d\Sigma_2$};
+  \node[right] at (0.3,-0.3) {$d\Sigma_1$};
+  \node at (0.5,0.15) {$\theta_2$};
+  \node at (-0.5,-0.2) {$\theta_1$};
+  \node at (2.6,-0.9) {$\kappa_1$};
+  \node[below] at (0,-1.8) {$\mathbf{D}_{1n} = \mathbf{D}_{2n}$};
+\end{scope}
+
+\end{tikzpicture}

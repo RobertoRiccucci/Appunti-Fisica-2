@@ -1,0 +1,35 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  uvec/.style={->,line width=1.2pt,ered},
+  dashline/.style={dashed,thin,ered}
+]
+
+% Cilindro (3D) traslucido rosa
+% Bordo esterno
+\fill[blobpink!30,draw=blobpink!60!black,opacity=0.6]
+  (-2.0,3.5) -- (2.0,3.5) -- (2.0,-3.5) -- (-2.0,-3.5) -- cycle;
+% Ellisse in alto
+\fill[blobpink!20,draw=blobpink!60!black,opacity=0.7]
+  (0,3.5) ellipse (2.0 and 0.5);
+% Ellisse in basso
+\draw[blobpink!60!black,dashed] (0,-3.5) ellipse (2.0 and 0.5);
+
+% Cilindro interno (più stretto)
+\fill[blobpink!15,draw=blobpink!50!black,opacity=0.5]
+  (-0.8,3.0) -- (0.8,3.0) -- (0.8,-3.0) -- (-0.8,-3.0) -- cycle;
+\draw[blobpink!50!black] (0,3.0) ellipse (0.8 and 0.2);
+
+% Asse verticale
+\draw[thick,black] (0,-3.8) -- (0,4.0);
+
+% Versori u_rho (radiali, rossi)
+% A sinistra
+\draw[dashline] (0,0) -- (-2.0,0);
+\draw[uvec] (-2.0,-0.2) -- ++(-1.0,-0.3) node[below left] {$\mathbf{u}_\rho$};
+
+% A destra
+\draw[dashline] (0,0) -- (2.0,0);
+\draw[uvec] (2.0,-0.2) -- ++(1.0,-0.3) node[below right] {$\mathbf{u}_\rho$};
+
+\end{tikzpicture}

@@ -1,0 +1,56 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  bvec/.style={->,line width=1.3pt,bblue},
+  dashline/.style={dashed,thin,gray!60!black}
+]
+
+% Asse orizzontale
+\draw[->,thick] (-5,0) -- (5,0);
+
+% Filo infinito (cerchietti viola con punto = corrente uscente)
+\foreach \x in {-4.5,-4.0,...,-0.5}{
+  \draw[vpurple!40,fill=vpurple!15] (\x,1.2) circle (0.2);
+  \fill[vpurple] (\x,1.2) circle (1pt);
+}
+
+% dx' indicazione
+\draw[<->,thin] (-2.5,1.6) -- (-2.0,1.6);
+\node[above] at (-2.25,1.6) {$dx'$};
+
+% R verticale tratteggiata
+\draw[dashline] (-2.25,0) -- (-2.25,1.0);
+\node[left] at (-2.25,0.5) {$R$};
+
+% r diagonale
+\draw[thin] (-2.25,1.2) -- (2.5,0);
+\node[above] at (0.5,0.6) {$r$};
+
+% Angolo phi
+\draw[thin] (1.5,0) arc (180:155:1.0);
+\node[above left] at (1.5,0.15) {$\phi$};
+
+% Punto P
+\coordinate (P) at (2.5,0);
+\fill (P) circle (2pt);
+\node[above] at (P) {$P$};
+
+% dB
+\draw[bvec] (P) -- ++(0.8,0) node[right] {$d\mathbf{B}$};
+
+% Etichette
+\node[below] at (-2.25,-0.15) {$x'$};
+\node[below] at (2.5,-0.15) {$x$};
+
+% --- In basso: filo con corrente entrante (x = croce) ---
+\begin{scope}[yshift=-1.8cm]
+  \foreach \x in {-4.5,-4.0,...,4.0}{
+    \draw[vpurple!40,fill=vpurple!10] (\x,0) circle (0.2);
+    \draw[vpurple,thin] ({\x-0.1},-0.1) -- ({\x+0.1},0.1);
+    \draw[vpurple,thin] ({\x-0.1},0.1) -- ({\x+0.1},-0.1);
+  }
+  \draw[<->,thin] (-2.0,-0.5) -- (2.0,-0.5);
+  \node[below] at (0,-0.5) {$d$};
+\end{scope}
+
+\end{tikzpicture}

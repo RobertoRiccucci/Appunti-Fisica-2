@@ -1,0 +1,54 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  uvec/.style={->,line width=1pt,black},
+  pvec/.style={->,line width=1.3pt,vpurple},
+  posc/.style={circle,draw=black!60,fill=posred,inner sep=0pt,minimum size=4.5mm},
+  negc/.style={circle,draw=black!60,fill=negblue,inner sep=0pt,minimum size=4.5mm}
+]
+
+\coordinate (O) at (0,0);
+\coordinate (P) at (6,4.2);
+\coordinate (qp) at (0,1.0);    % +q
+\coordinate (qm) at (0,-1.0);   % -q
+
+% Asse verticale
+\draw[thin,black] (0,-1.8) -- (0,4.5);
+
+% Segmento a
+\draw[thin,black] (-1.4,1.0) -- (-1.4,-1.0);
+\draw[thin,black] (-1.5,1.0) -- (-1.3,1.0);
+\draw[thin,black] (-1.5,-1.0) -- (-1.3,-1.0);
+\node[left] at (-1.4,0) {$a$};
+
+% Cariche
+\node[posc] at (qp) {\tiny$+$}; \node[left] at (-0.3,1.0) {$+q$};
+\node[negc] at (qm) {\tiny$-$}; \node[left] at (-0.3,-1.0) {$-q$};
+\node[left] at (0,0) {$O$};
+\fill (O) circle (1pt);
+
+% Dipolo p
+\draw[pvec] (0,-1.0) -- (0,1.5) node[above left] {$\mathbf{p}$};
+
+% Triangolo da +q a P (r_1), da -q a P (r_2), da O a P (r)
+\draw[thin] (qp) -- node[midway,above] {$r_1$} (P);
+\draw[thin] (qm) -- node[pos=0.5,below right] {$r_2$} (P);
+\draw[thin] (O)  -- node[midway,above] {$r$} (P);
+
+% u_r
+\draw[uvec] (O) -- ++(0.9,0.65) node[right] {$\mathbf{u}_r$};
+
+% Angolo theta
+\draw[thin] (O) ++(0.3,0) arc (0:60:0.3);
+\node at (0.4,0.35) {$\theta$};
+
+% P
+\fill (P) circle (1.2pt);
+\node[right] at (P) {$P$};
+
+% r_2 - r_1 (segmento proiettato sulla retta)
+\draw[thin] (qm) -- (-0.01,-0.35);
+\fill[ytangent,draw=black!40,opacity=0.6] (qm) -- (qp) -- (0,-0.3) -- cycle;
+\node at (1.1,-0.3) {$r_2 - r_1$};
+
+\end{tikzpicture}

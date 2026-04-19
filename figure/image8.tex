@@ -1,0 +1,61 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  evec/.style={->,line width=1.2pt,ered},
+  uvec/.style={->,line width=1pt,black},
+  dashline/.style={dashed,thin,gray!70!black}
+]
+
+% --- (a) carica interna ---
+\begin{scope}
+  \fill[surfblue,draw=surfblue!60!black]
+    plot [smooth cycle,tension=0.9] coordinates {
+      (-2.8,0.4) (-1.6,1.5) (0.0,1.7) (1.4,1.4) (1.8,0.3)
+      (1.3,-0.8) (-0.2,-1.0) (-1.8,-0.9) (-2.6,-0.3)
+    };
+  % carica
+  \node[circle,draw=black!60,fill=charge,inner sep=0pt,minimum size=4mm] (Q) at (-0.4,-0.4) {};
+  \node[below] at (Q) {$q$};
+  % linea tratteggiata
+  \draw[dashline] (Q) -- (-0.4,0.8);
+  % vettore E in alto
+  \draw[evec] (-0.4,0.8) -- ++(-0.4,1.2) node[above left] {$\mathbf{E}$};
+  \draw[uvec] (-0.4,0.8) -- ++(0.6,0.6) node[right] {$\mathbf{u}_n$};
+  \draw[thin] (-0.4,0.8) ++ (0.05,0.6) arc (80:115:0.6);
+  \node at (-0.55,1.3) {$\theta$};
+  \node[below] at (0,-1.6) {(a)};
+  \node[below] at (0,-2.1) {$\Phi(\mathbf{E}) = \dfrac{q}{\varepsilon_0}$};
+\end{scope}
+
+% --- (b) carica esterna ---
+\begin{scope}[xshift=7.5cm]
+  \fill[surfblue,draw=surfblue!60!black]
+    plot [smooth cycle,tension=0.9] coordinates {
+      (-2.5,0.6) (-1.3,1.5) (0.3,1.7) (1.6,1.5) (2.2,0.4)
+      (1.5,-0.8) (-0.2,-1.0) (-1.7,-0.8) (-2.5,-0.3)
+    };
+  % carica fuori, in basso
+  \node[circle,draw=black!60,fill=charge,inner sep=0pt,minimum size=4mm] (Q2) at (-0.2,-2.4) {};
+  \node[below right=1pt] at (Q2) {$q$};
+  % linee tratteggiate dalla carica a punti sulla superficie
+  \foreach \p in {(-1.2,1.0),(-0.2,1.4),(0.6,1.5),(1.3,1.0)}{
+     \draw[dashline] (Q2) -- \p;
+  }
+  % piccoli elementi di superficie
+  \node[right] at (-1.0,1.15) {$d\Sigma_1$};
+  \node[right] at (1.4,1.1) {$d\Sigma_2$};
+  % vettori E
+  \draw[evec] (-0.2,1.4) -- ++(0.1,1.0) node[above] {$\mathbf{E}_1$};
+  \draw[evec] (0.9,1.25) -- ++(0.9,0.7) node[above right] {$\mathbf{E}_2$};
+  % u_n
+  \draw[uvec] (-0.2,1.4) -- ++(-0.5,0.9) node[above left] {$\mathbf{u}_n$};
+  \draw[uvec] (0.9,1.25) -- ++(0.9,0.3) node[right] {$\mathbf{u}_n$};
+  % angolo d\Omega alla carica
+  \draw[dashline] (Q2) -- (-1.2,1.0);
+  \draw[dashline] (Q2) -- (1.3,1.0);
+  \node at (-0.2,-1.0) {$d\Omega$};
+  \node[below] at (0,-2.8) {(b)};
+  \node[below] at (0,-3.3) {$\Phi(\mathbf{E}) = 0$};
+\end{scope}
+
+\end{tikzpicture}

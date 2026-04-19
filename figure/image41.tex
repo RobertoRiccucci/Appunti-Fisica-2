@@ -1,0 +1,39 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  bvec/.style={->,line width=1.3pt,bblue},
+  vvec/.style={->,line width=1.2pt,ered},
+  Fvec/.style={->,line width=1.2pt,black}
+]
+
+% Piano (giallo chiaro, prospettiva)
+\fill[ytangent,draw=ytangent!70!black]
+  (-3.5,-1.5) -- (3.5,-0.8) -- (3.5,1.0) -- (-3.5,0.3) -- cycle;
+
+% Vettori B (azzurri, verticali verso l'alto)
+\foreach \x/\y in {-2.5/-0.7, -1.5/0.0, -0.5/0.1, 0.5/0.0, 1.5/0.0, 2.5/-0.3,
+                    -2.0/0.3, 0.0/0.5, 2.0/0.3}{
+  \draw[bvec] (\x,\y) -- ++(0,1.8);
+}
+\node[bblue,right] at (0.6,2.2) {$\mathbf{B}$};
+
+% Carica positiva al centro
+\coordinate (Q) at (0.3,0.5);
+\node[circle,fill=posred,draw=black!60,minimum size=4mm,inner sep=0pt] at (Q) {};
+\node[below left] at (Q) {$+q$};
+
+% Velocità v (rossa, a destra)
+\draw[vvec] (Q) -- ++(1.8,0) node[right] {$\boldsymbol{v}$};
+
+% Forza F (nera, verso il basso)
+\draw[Fvec] (Q) -- ++(0,-1.4) node[below] {$\mathbf{F}$};
+
+% Arco traiettoria circolare
+\draw[thin,black,->] (Q) ++(0.8,0.3) arc (20:160:0.8);
+
+% Centro C
+\coordinate (C) at (0.0,-1.5);
+\fill (C) circle (1.5pt);
+\node[below] at (C) {$C$};
+
+\end{tikzpicture}

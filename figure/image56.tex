@@ -1,0 +1,39 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  uvec/.style={->,line width=1pt,black},
+  mvec/.style={->,line width=1.3pt,black}
+]
+
+% Solenoide appiattito (forma a nastro chiuso irregolare)
+% Contorno esterno
+\draw[thick,black]
+  plot [smooth cycle,tension=0.8] coordinates {
+    (-4.5,0.8) (-3.0,2.2) (-0.5,2.0) (1.5,2.5) (3.5,1.8)
+    (4.5,0.5) (3.5,-0.5) (2.0,0.2) (1.0,-0.2) (-0.5,-0.5)
+    (-2.5,-0.8) (-4.0,-0.2)
+  };
+% Contorno interno (piccola distanza)
+\draw[thick,black]
+  plot [smooth cycle,tension=0.8] coordinates {
+    (-4.0,0.7) (-2.7,1.8) (-0.5,1.6) (1.3,2.1) (3.0,1.5)
+    (3.8,0.5) (3.0,-0.1) (2.0,0.5) (1.0,0.2) (-0.3,-0.1)
+    (-2.2,-0.4) (-3.5,0.1)
+  };
+
+% Segmenti tra i due bordi (fili del solenoide)
+\foreach \a in {0,20,...,340}{
+  \draw[thin,black]
+    ({3.5*cos(\a)+0.5},{1.2*sin(\a)+0.6}) --
+    ({3.0*cos(\a)+0.5},{1.0*sin(\a)+0.6});
+}
+
+% Freccia corrente I
+\draw[->,thick] (-3.5,2.3) -- ++(-0.8,0.3) node[above] {$I$};
+\draw[->,thick] (-3.0,-1.2) -- ++(0.8,-0.3) node[below] {$I$};
+
+% M e n-hat (a destra)
+\draw[mvec] (4.2,0.3) -- ++(0,1.6) node[above] {$\mathbf{M}$};
+\draw[uvec] (4.2,0.3) -- ++(1.0,0) node[right] {$\hat{n}$};
+
+\end{tikzpicture}

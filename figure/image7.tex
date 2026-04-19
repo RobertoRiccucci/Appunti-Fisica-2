@@ -1,0 +1,49 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  uvec/.style={->,line width=1pt,black},
+  dashline/.style={dashed,thin,gray!70!black}
+]
+
+% Origine O
+\coordinate (O) at (0,0);
+\node[below] at (O) {$O$};
+\fill (O) circle (1pt);
+
+% Cono di linee fino a dSigma0
+\coordinate (A0) at (-1.2,3.8);
+\coordinate (B0) at ( 1.5,3.5);
+\coordinate (C0) at ( 1.6,4.6);
+\coordinate (D0) at (-1.0,4.9);
+
+% dSigma (più grande, più lontano)
+\coordinate (A) at (-1.6,5.1);
+\coordinate (B) at ( 2.1,4.7);
+\coordinate (C) at ( 2.2,6.1);
+\coordinate (D) at (-1.3,6.5);
+
+% Linee del cono
+\draw[thin,black] (O) -- (A);
+\draw[thin,black] (O) -- (B);
+\draw[thin,black] (O) -- (C);
+\draw[thin,black] (O) -- (D);
+
+% dSigma0 (area gialla tangente interna)
+\fill[ytangent,draw=ytangent!70!black] (A0) -- (B0) -- (C0) -- (D0) -- cycle;
+\node[right] at (2.0,4.0) {$d\Sigma_0$};
+
+% dSigma (area azzurra esterna)
+\fill[surfblue,draw=surfblue!60!black] (A) -- (B) -- (C) -- (D) -- cycle;
+\node[right] at (2.3,5.4) {$d\Sigma$};
+
+% r da O a centro della sfera
+\draw[dashline] (O) -- node[midway,left] {$r$} (0.3,5.8);
+
+% Versori u_n e u_r al centro di dSigma
+\coordinate (C1) at (0.4,5.8);
+\draw[uvec] (C1) -- ++(-0.5,1.3) node[above left] {$\mathbf{u}_n$};
+\draw[uvec] (C1) -- ++( 0.2,1.4) node[above right] {$\mathbf{u}_r$};
+\draw[thin] (C1) ++(-0.2,1.0) arc (110:80:1.05);
+\node at (0.2,6.7) {$\alpha$};
+
+\end{tikzpicture}

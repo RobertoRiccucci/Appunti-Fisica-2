@@ -1,0 +1,50 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  uvec/.style={->,line width=1pt,black},
+  ivec/.style={->,line width=1.2pt,vpurple},
+  bvec/.style={->,line width=1.3pt,bblue},
+  dashline/.style={dashed,thin,ered}
+]
+
+% Piano in prospettiva (giallo chiaro)
+\fill[ytangent,opacity=0.4,draw=ytangent!70!black]
+  (-3,-1.5) -- (4,-1.0) -- (4,1.2) -- (-3,0.7) -- cycle;
+
+% Filo rettilineo verticale (grigio)
+\fill[blobgray!60,draw=black!50] (-0.15,-2.5) rectangle (0.15,3.0);
+
+% Corrente i (viola, dal basso)
+\draw[ivec] (-0.3,-2.0) -- ++(0,0.8) node[left] {$i$};
+
+% ds in alto
+\draw[uvec,line width=1.2pt] (0,2.0) -- ++(0,1.0) node[above] {$d\mathbf{s}$};
+
+% Angolo theta
+\draw[thin] (0,2.0) ++(0.5,0) arc (0:35:0.5);
+\node at (0.65,2.25) {$\theta$};
+
+% Raggio 2a (cerchio tratteggiato rosso nel piano)
+\draw[dashline] (0,0) ellipse (2.2 and 0.5);
+\node[left] at (-2.2,0) {$2a$};
+
+% R orizzontale
+\draw[thin] (0,0.1) -- (2.2,0.1);
+\node[above] at (1.1,0.1) {$R$};
+
+% Punto P
+\coordinate (P) at (2.5,-0.1);
+\fill (P) circle (2pt);
+\node[below right] at (P) {$P$};
+
+% u_r da ds verso P
+\draw[uvec] (0.3,2.0) -- ++(1.2,-0.8) node[below] {$\mathbf{u}_r$};
+
+% r da ds a P
+\draw[thin] (0,2.0) -- (P);
+\node[right] at (1.2,1.0) {$r$};
+
+% dB (azzurro, verso destra in basso)
+\draw[bvec] (P) -- ++(1.0,0.4) node[right] {$d\mathbf{B}$};
+
+\end{tikzpicture}

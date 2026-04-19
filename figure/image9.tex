@@ -1,0 +1,37 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  uvec/.style={->,line width=1pt,black},
+  dashline/.style={dashed,thin,ered}
+]
+
+\coordinate (O) at (0,0);
+\node[below] at (O) {$O$};
+
+% Due raggi del settore
+\draw[thick,black] (O) -- (2.5,4.7);   % bordo sinistro (r)
+\draw[thick,black] (O) -- (4.0,4.0);   % bordo destro (r+dr)
+
+% Archi tratteggiati rossi
+\draw[dashline] (1.6,3.0) arc (62:45:3.5);
+\draw[dashline] (2.6,4.8) arc (62:45:5.5);
+
+% Angoli theta e d theta
+\draw[thin] (0.6,0) arc (0:62:0.6);
+\node at (0.5,0.9) {$\theta$};
+\draw[thin] (1.2,0) arc (0:45:1.2);
+\node at (1.35,0.35) {$d\theta$};
+
+% Etichette r e r+dr
+\node at (1.4,3.2) {$r$};
+\node at (3.3,2.2) {$r+dr$};
+
+% Area tangente (parallelogramma) in alto
+\fill[ytangent,draw=ytangent!70!black] (2.5,4.7) -- (3.3,5.3) -- (4.0,4.6) -- (3.2,4.0) -- cycle;
+
+% Vettori
+\draw[uvec] (3.2,4.0) -- (2.6,4.65) node[pos=1.1,above] {$dr\,\mathbf{u}_r$};
+\draw[uvec] (3.2,4.0) -- (4.0,4.6) node[right] {$rd\theta\,\mathbf{u}$};
+\draw[uvec] (3.2,4.0) -- (3.6,4.95) node[above right] {$d\mathbf{s}$};
+
+\end{tikzpicture}

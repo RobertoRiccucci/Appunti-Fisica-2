@@ -1,0 +1,35 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  evec/.style={->,line width=1.2pt,ered},
+  uvec/.style={->,line width=1pt,black},
+  dashline/.style={dashed,thin,gray!60!black}
+]
+
+% Piano di separazione (grigio chiaro, in prospettiva)
+\fill[planegray,draw=planegray!60!black]
+  (-4.5,-0.8) -- (4.5,-0.4) -- (4.5,0.4) -- (-4.5,0.0) -- cycle;
+
+% Cilindretto gaussiano (azzurro trasparente)
+\fill[surfblue,opacity=0.5,draw=surfblue!60!black]
+  (-0.6,-1.5) -- (0.6,-1.5) -- (0.6,1.5) -- (-0.6,1.5) -- cycle;
+% Ellissi superiore e inferiore del cilindro
+\draw[surfblue!70!black] (0,1.5) ellipse (0.6 and 0.15);
+\draw[surfblue!70!black,dashed] (0,-1.5) ellipse (0.6 and 0.15);
+\draw[surfblue!70!black] (0,0) ellipse (0.6 and 0.12);
+
+% Etichette
+\node[right] at (0.7,1.5) {$d\Sigma_2$};
+\node[right] at (0.8,0) {$d\Sigma$};
+\node[right] at (0.7,-1.5) {$d\Sigma_1$};
+
+% u_n verso l'alto
+\draw[uvec] (0.15,0.15) -- ++(0,1.0) node[right] {$\mathbf{u}_n$};
+\node[below right] at (0.15,0.15) {$P$};
+\fill (0.15,0.15) circle (1pt);
+
+% Vettori E
+\draw[evec] (0,1.5) -- ++(0.8,1.2) node[above] {$\mathbf{E}_2$};
+\draw[evec] (0,-1.5) -- ++(0.8,-1.2) node[below right] {$\mathbf{E}_1$};
+
+\end{tikzpicture}

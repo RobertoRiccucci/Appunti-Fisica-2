@@ -1,0 +1,70 @@
+\begin{tikzpicture}[
+  >={Latex[length=2.5mm,width=1.8mm]},
+  every node/.style={font=\small},
+  evec/.style={->,line width=1pt,ered},
+  eivec/.style={->,line width=1pt,bblue},
+  efield/.style={->,thin,ered}
+]
+
+% --- (a) Dielettrico tra le piastre ---
+\begin{scope}
+  % Piastre
+  \fill[blobgray!50] (-2.5,-3.5) rectangle (-2.1,3.5);
+  \fill[blobgray!50] ( 2.1,-3.5) rectangle ( 2.5,3.5);
+  \foreach \y in {-3,-2,...,3}{
+    \node at (-2.35,\y) {\small$+$};
+    \node at ( 2.35,\y) {\small$-$};
+  }
+  \node[left] at (-2.5,3.2) {$+\sigma$};
+  \node[right] at (2.5,3.2) {$-\sigma$};
+
+  % Dielettrico al centro (corpo irregolare azzurro)
+  \fill[surfblue!50,draw=surfblue!70!black,rounded corners=4pt]
+    (-0.8,-2.8) -- (0.8,-2.8) -- (0.8,2.8) -- (-0.8,2.8) -- cycle;
+
+  % Cariche indotte sulla superficie del dielettrico
+  \foreach \y in {-2.5,-2.0,...,2.5}{
+    \node at (-0.72,\y) {\small$-$};
+    \node at ( 0.72,\y) {\small$+$};
+  }
+  \node[below left] at (-0.7,-2.8) {$-\sigma_i$};
+  \node[below right] at (0.7,-2.8) {$+\sigma_i$};
+
+  % Vettori E (rosso) e E_i (blu)
+  \draw[evec] (-2.0,0) -- (-0.9,0) node[above,pos=0.5] {$\mathbf{E}$};
+  \draw[evec] (-0.7,0) -- (0.7,0) node[above,pos=0.5] {$\mathbf{E}$};
+  \draw[evec] (0.8,0) -- (2.0,0) node[above,pos=0.5] {$\mathbf{E}$};
+  \draw[eivec] (0.6,-1.5) -- (-0.6,-1.5) node[below,pos=0.5] {$\mathbf{E}_i$};
+\end{scope}
+
+% --- (b) Sfera conduttrice nel campo ---
+\begin{scope}[xshift=7.5cm]
+  \fill[blobgray!50] (-2.5,-3.5) rectangle (-2.1,3.5);
+  \fill[blobgray!50] ( 2.1,-3.5) rectangle ( 2.5,3.5);
+  \foreach \y in {-3,-2,...,3}{
+    \node at (-2.35,\y) {\small$+$};
+    \node at ( 2.35,\y) {\small$-$};
+  }
+
+  % Sfera conduttrice
+  \fill[left color=blobgray!40,right color=blobgray!90] (0,0) circle (1.2);
+
+  % Cariche indotte
+  \foreach \a in {130,155,180,205,230}{
+    \node at ({1.1*cos(\a)},{1.1*sin(\a)}) {\small$-$};
+  }
+  \foreach \a in {-50,-25,0,25,50}{
+    \node at ({1.1*cos(\a)},{1.1*sin(\a)}) {\small$+$};
+  }
+
+  % Linee di campo curve (ered)
+  \foreach \y in {-2.5,-1.5,1.5,2.5}{
+    \draw[efield,smooth] (-2.0,\y) .. controls (0,\y*0.6) .. (2.0,\y);
+  }
+  \foreach \y in {-0.6,0.6}{
+    \draw[efield,smooth] (-2.0,\y) .. controls (-1.5,\y*0.3) .. (-1.2,\y*0.15);
+    \draw[efield,smooth] (1.2,\y*0.15) .. controls (1.5,\y*0.3) .. (2.0,\y);
+  }
+\end{scope}
+
+\end{tikzpicture}

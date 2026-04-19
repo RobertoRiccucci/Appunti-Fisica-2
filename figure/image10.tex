@@ -1,0 +1,53 @@
+\begin{tikzpicture}[
+  >={Latex[length=2.5mm,width=1.8mm]},
+  every node/.style={font=\small},
+  efield/.style={thin,ered,->},
+  bfield/.style={thin,bblue,dashed},
+  charge/.style={circle,fill=negblue,minimum size=2.5mm,inner sep=0pt}
+]
+
+% --- (a) dipolo: linee di campo chiuse ---
+\begin{scope}
+  \fill[blobpink!30] (-3.2,-2.6) rectangle (3.2,2.6);
+  % due cariche vicine
+  \node[charge] (p1) at (-0.4,0) {};
+  \node[charge,fill=posred] (p2) at (0.4,0) {};
+  % linee di campo: ellissi concentriche attorno ai due poli
+  \foreach \s in {0.3,0.7,1.2,1.8,2.4}{
+    \draw[efield] (0,0) ellipse ({\s+0.4} and \s);
+  }
+  % dipolo: linee chiuse a forma di cardioide (approssimazione)
+  \foreach \a in {30,60,90,120,150}{
+    \draw[efield,domain=-180:180,samples=60,smooth]
+       plot ({1.2*cos(\x)+0.1*\a*cos(\x+\a)/180},{1.0*sin(\x)});
+  }
+  % equipotenziali tratteggiate blu
+  \foreach \s in {0.6,1.2,1.8,2.4}{
+    \draw[bfield] (0,0) circle (\s);
+  }
+  \node[below] at (0,-2.8) {(a)};
+\end{scope}
+
+% --- (b) due cariche uguali ---
+\begin{scope}[xshift=8cm]
+  \fill[blobpink!30] (-3.2,-2.6) rectangle (3.2,2.6);
+  \node[charge,fill=posred] (q1) at (-1.4,0) {};
+  \node[charge,fill=posred] (q2) at ( 1.4,0) {};
+  % linee di campo radiali uscenti
+  \foreach \a in {0,30,60,90,120,150,180,210,240,270,300,330}{
+     \draw[efield] (q1) -- ++(\a:1.2);
+     \draw[efield] (q2) -- ++(\a:1.2);
+  }
+  % linee che si respingono al centro
+  \foreach \dy in {-1.6,-0.8,0.8,1.6}{
+     \draw[efield,smooth] (-3,\dy) .. controls (-1.4,\dy*0.3) and (1.4,\dy*0.3) .. (3,\dy);
+  }
+  % equipotenziali blu intorno a ciascuna
+  \foreach \s in {0.5,0.9}{
+    \draw[bfield] (q1) circle (\s);
+    \draw[bfield] (q2) circle (\s);
+  }
+  \node[below] at (0,-2.8) {(b)};
+\end{scope}
+
+\end{tikzpicture}

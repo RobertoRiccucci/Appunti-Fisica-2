@@ -1,0 +1,35 @@
+\begin{tikzpicture}[
+  >={Latex[length=2.5mm,width=1.8mm]},
+  every node/.style={font=\small},
+  mvec/.style={->,line width=0.9pt,vpurple},
+  bvec/.style={->,line width=1.2pt,black}
+]
+
+% --- (a) Senza campo B: m random ---
+\begin{scope}
+  \fill[blobgray!50,draw=blobgray!70!black,rounded corners=10pt]
+    (-2.5,-1.2) rectangle (2.5,1.2);
+  \foreach \x/\y/\a in {
+    -1.8/0.6/200, -0.5/0.8/130, 0.5/0.5/310, 1.5/0.7/60,
+    -1.8/-0.3/80, -0.8/0.0/250, 0.3/-0.1/150, 1.2/0.1/350,
+    -1.2/-0.8/100, 0.0/-0.7/220, 1.0/-0.6/40, 1.8/-0.3/160}{
+    \draw[mvec] (\x,\y) -- ++({\a}:0.4);
+  }
+\end{scope}
+
+% --- (b) Con campo B: m allineati ---
+\begin{scope}[xshift=7cm]
+  \fill[blobgray!50,draw=blobgray!70!black,rounded corners=10pt]
+    (-2.5,-1.2) rectangle (2.5,1.2);
+  % Campo B (nero, verso l'alto al centro)
+  \draw[bvec] (0,0) -- ++(0,1.0) node[above right] {$\mathbf{B}$};
+  \foreach \x/\y/\a in {
+    -1.8/0.6/85, -0.5/0.8/80, 0.5/0.5/95, 1.5/0.7/90,
+    -1.8/-0.3/80, -0.8/0.0/90, 0.3/-0.1/85, 1.2/0.1/95,
+    -1.2/-0.8/100, 0.5/-0.7/75, 1.0/-0.6/90, 1.8/-0.3/85,
+    -0.3/0.4/80, 0.8/0.8/90}{
+    \draw[mvec] (\x,\y) -- ++({\a}:0.4);
+  }
+\end{scope}
+
+\end{tikzpicture}

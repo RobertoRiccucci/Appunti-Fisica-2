@@ -1,0 +1,38 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  Fvec/.style={->,line width=1.2pt,bblue},
+  bvec/.style={->,line width=1pt,black},
+  dashline/.style={dashed,thin,black}
+]
+
+% Supporto in alto
+\fill[blobgray] (-0.8,5.5) rectangle (0.8,5.8);
+
+% Molla (disegno a zig-zag)
+\draw[bblue,thick,decorate,decoration={zigzag,segment length=4pt,amplitude=3pt}]
+  (0,5.5) -- (0,3.8);
+\node[bblue,right] at (0.3,4.5) {$\mathbf{F}$};
+
+% Massa m (rettangolino grigio)
+\fill[blobgray!70,draw=black!60] (-0.3,3.5) rectangle (0.3,3.8);
+\node[right] at (0.35,3.65) {$m$};
+
+% Freccia B verso il basso (tratteggiata)
+\draw[dashline] (0,3.5) -- (0,1.5);
+\draw[bvec] (0,2.5) -- (0,1.5) node[below] {$\mathbf{B}$};
+
+% Solenoide a sinistra (cerchietti con punto = corrente uscente)
+\foreach \y in {0.0,0.5,1.0,1.5,2.0,2.5,3.0,3.5}{
+  \draw[posred!40,fill=posred!15] (-1.2,\y) circle (0.2);
+  \fill[posred] (-1.2,\y) circle (1pt);
+}
+
+% Solenoide a destra (cerchietti con croce = corrente entrante)
+\foreach \y in {0.0,0.5,1.0,1.5,2.0,2.5,3.0,3.5}{
+  \draw[posred!40,fill=posred!15] (1.2,\y) circle (0.2);
+  \draw[posred,thin] ({1.2-0.08},{\y-0.08}) -- ({1.2+0.08},{\y+0.08});
+  \draw[posred,thin] ({1.2-0.08},{\y+0.08}) -- ({1.2+0.08},{\y-0.08});
+}
+
+\end{tikzpicture}

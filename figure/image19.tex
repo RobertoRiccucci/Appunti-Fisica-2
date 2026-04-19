@@ -1,0 +1,36 @@
+\begin{tikzpicture}[
+  >={Latex[length=2.2mm,width=1.6mm]},
+  every node/.style={font=\small},
+  efield/.style={->,thin,ered},
+  dashefield/.style={->,thin,ered,dashed}
+]
+
+% Sfondo (campo di sfondo)
+\fill[blobpink!15] (-4.5,-2.0) rectangle (4.5,2.0);
+
+% Piano verticale centrale (muro conduttore)
+\fill[blobgray!80,draw=black!50] (-0.15,-2.0) rectangle (0.15,2.0);
+% Piccoli segni di equipotenziale sul piano
+\foreach \y in {-1.8,-1.4,...,1.8}{
+  \draw[black!60,thin] (-0.15,\y) -- (0.15,\y);
+}
+
+% Carica positiva a destra
+\coordinate (Q) at (2.5,0);
+\node[circle,fill=posred,draw=black!60,minimum size=3mm,inner sep=0pt] at (Q) {};
+
+% Linee di campo uscenti dalla carica
+\foreach \a in {0,30,60,90,120,150,180,210,240,270,300,330}{
+  \draw[efield] (Q) -- ++(\a:1.5);
+}
+% Linee che si piegano verso il piano
+\foreach \y in {-1.6,-1.2,-0.8,0.8,1.2,1.6}{
+  \draw[efield,smooth] (Q) .. controls (1.5,\y*0.8) .. (0.1,\y);
+}
+
+% Immagine virtuale (tratteggiata) a sinistra
+\foreach \a in {0,30,60,90,120,150,180,210,240,270,300,330}{
+  \draw[dashefield] (-2.5,0) -- ++(\a:1.5);
+}
+
+\end{tikzpicture}

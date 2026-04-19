@@ -1,0 +1,32 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  dashline/.style={dashed,thin,gray!60!black}
+]
+
+% Corpo conduttore (blob grigio sfumato)
+\fill[left color=blobgray!50,right color=blobgray!90,draw=blobgray!70!black]
+  plot [smooth cycle,tension=0.9] coordinates {
+    (-1.8,0.5) (-0.8,2.2) (1.0,2.5) (2.2,1.8)
+    (2.8,0.4) (2.2,-1.0) (0.6,-1.5) (-1.2,-1.2) (-2.0,-0.3)
+  };
+
+% Cariche + sulla superficie
+\foreach \a in {30,60,90,120,160,200,250,290,340}{
+  \node[ered] at ({1.8*cos(\a)},{1.3*sin(\a)+0.5}) {\small$+$};
+}
+
+% Punto P interno
+\coordinate (P) at (0.2,1.0);
+\fill (P) circle (1.5pt);
+\node[above left] at (P) {$P$};
+
+% r' da P all'elemento di superficie
+\draw[dashline] (P) -- (2.0,-0.5);
+\node[midway,right] at (1.1,0.3) {$r'$};
+
+% Elemento dq'
+\fill[charge,draw=charge!70!black] (2.0,-0.5) -- (2.4,-0.3) -- (2.6,-0.7) -- (2.2,-0.9) -- cycle;
+\node[below right] at (2.6,-0.9) {$dq' = \sigma\;d\Sigma$};
+
+\end{tikzpicture}

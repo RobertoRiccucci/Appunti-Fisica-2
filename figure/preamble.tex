@@ -1,0 +1,68 @@
+% ============================================================
+%  PREAMBOLO COMUNE — Pacchetti e Colori
+%  Da includere nel documento principale prima di \begin{document}
+% ============================================================
+
+% --- Pacchetti ---
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{
+  arrows.meta,
+  calc,
+  positioning,
+  decorations.markings,
+  decorations.pathmorphing,
+  patterns
+}
+
+% ============================================================
+%  PALETTE COLORI UNIFICATA  (un solo nome per ciascun colore)
+% ============================================================
+
+% ---- Rossi / Rosa ----
+\definecolor{posred}{RGB}{239,130,140}      % rosa‐rosso per cariche positive (+)
+\definecolor{ered}{RGB}{227,35,35}          % rosso vivo per vettori E, F, v, frecce campo
+
+% ---- Blu / Azzurri ----
+\definecolor{negblue}{RGB}{120,190,230}     % azzurro per cariche negative (-)
+\definecolor{surfblue}{RGB}{205,230,245}    % azzurro chiaro per superfici chiuse, Gauss
+\definecolor{bblue}{RGB}{85,155,220}        % blu per vettori B, H, D, linee di flusso magnetico
+
+% ---- Viola ----
+\definecolor{vpurple}{RGB}{160,80,160}      % viola per vettori p, M, m, j, correnti
+
+% ---- Arancioni / Beige ----
+\definecolor{charge}{RGB}{245,175,120}      % arancione per sfere di carica puntiforme
+\definecolor{blobpink}{RGB}{245,210,195}    % rosa pallido per corpi estesi / distribuzioni
+\definecolor{ytangent}{RGB}{250,235,190}    % giallo paglierino per aree tangenti / parallelogrammi
+
+% ---- Grigi ----
+\definecolor{blobgray}{RGB}{220,220,220}    % grigio chiaro per conduttori / corpi metallici
+\definecolor{planegray}{RGB}{230,230,230}   % grigio chiarissimo per piani di separazione
+
+% ============================================================
+%  COLORI AGGIUNTIVI (usati solo nei file preesistenti
+%  image1–4, image55, image63 e da NON rinominare)
+% ============================================================
+%  I file image55.tex e image63.tex, già scritti e non modificabili,
+%  usano i seguenti alias che sono identici a colori della palette:
+%
+%    matpink   = blobpink      RGB(245,210,195)
+%    matpinkdk = blobpink scuro  RGB(225,175,155)   (solo image55)
+%    loopblue  = bblue variant   RGB(90,130,200)    (solo image55)
+%    mred      = ered            RGB(227,35,35)     (solo image55)
+%    surfedge  = bblue variant   RGB(80,120,170)    (solo image63)
+%    ghost     = grigio medio    RGB(140,140,140)   (solo image63)
+%    vred      = ered            RGB(227,35,35)     (solo image63)
+%    cubecol   = blobpink tenue  RGB(235,190,170)   (solo image3)
+%
+%  Se si compilano quei file all'interno dello stesso documento,
+%  aggiungere queste definizioni:
+\definecolor{matpink}{RGB}{245,210,195}
+\definecolor{matpinkdk}{RGB}{225,175,155}
+\definecolor{loopblue}{RGB}{90,130,200}
+\definecolor{mred}{RGB}{227,35,35}
+\definecolor{surfedge}{RGB}{80,120,170}
+\definecolor{ghost}{RGB}{140,140,140}
+\definecolor{vred}{RGB}{227,35,35}
+\definecolor{cubecol}{RGB}{235,190,170}

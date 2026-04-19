@@ -1,0 +1,38 @@
+\begin{tikzpicture}[
+  >={Latex[length=2.5mm,width=1.8mm]},
+  every node/.style={font=\small},
+  efield/.style={->,thin,ered}
+]
+
+% Due piastre
+\fill[blobgray!50] (-4.2,-3.2) rectangle (-3.8,3.2);
+\fill[blobgray!50] ( 3.8,-3.2) rectangle ( 4.2,3.2);
+\foreach \y in {-2.8,-2.1,...,2.8}{
+  \node at (-4.0,\y) {\small$+$};
+  \node at ( 4.0,\y) {\small$-$};
+}
+
+% Sfera conduttrice neutrale al centro
+\fill[left color=blobgray!40,right color=blobgray!90] (0,0) circle (1.5);
+
+% Cariche indotte sulla sfera
+\foreach \a in {130,160,180,200,230}{
+  \node at ({1.4*cos(\a)},{1.4*sin(\a)}) {\small$-$};
+}
+\foreach \a in {-50,-30,0,30,50}{
+  \node at ({1.4*cos(\a)},{1.4*sin(\a)}) {\small$+$};
+}
+
+% Linee di campo (curve, da sx a dx)
+\foreach \y in {-2.8,-2.1,-1.4,1.4,2.1,2.8}{
+  \draw[efield,smooth] (-3.7,\y) .. controls (-1.5,\y*0.7) and (1.5,\y*0.7) .. (3.7,\y);
+}
+% Linee che entrano/escono dalla sfera
+\foreach \y in {-0.7,0.7}{
+   \draw[efield,smooth] (-3.7,\y) .. controls (-2.2,\y*0.5) .. (-1.5,\y*0.2);
+   \draw[efield,smooth] (1.5,\y*0.2) .. controls (2.2,\y*0.5) .. (3.7,\y);
+}
+\draw[efield] (-3.7,0) -- (-1.5,0);
+\draw[efield] ( 1.5,0) -- ( 3.7,0);
+
+\end{tikzpicture}

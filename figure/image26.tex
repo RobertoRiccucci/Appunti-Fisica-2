@@ -1,0 +1,31 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  axis/.style={->,thick,black}
+]
+
+% Regione destra ε1 (grigio chiaro)
+\fill[planegray] (0,-3.0) rectangle (5.5,3.0);
+\node at (3.5,2.0) {$\varepsilon_1$};
+
+% Regione sinistra ε2 (grigio leggermente più scuro)
+\fill[blobgray] (-5.5,-3.0) rectangle (0,3.0);
+\node at (-3.0,2.0) {$\varepsilon_2$};
+
+% Linea di confine
+\draw[thick,black] (0,-3.0) -- (0,3.0);
+
+% Assi
+\draw[axis] (0,0) -- (5.5,0) node[right] {$\mathbf{z}$};
+\draw[axis] (0,0) -- (0,3.2) node[above] {$x$};
+
+% Carica q
+\coordinate (q) at (2.0,0);
+\fill (q) circle (2pt);
+\node[above] at (q) {$q$};
+
+% Distanza d
+\draw[<->,thin] (0,-0.7) -- (2.0,-0.7);
+\node[below] at (1.0,-0.7) {$d$};
+
+\end{tikzpicture}

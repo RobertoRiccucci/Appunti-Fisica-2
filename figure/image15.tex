@@ -1,0 +1,40 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  uvec/.style={->,line width=1pt,black},
+  ch/.style={circle,draw=black!70,fill=charge,inner sep=0pt,minimum size=5mm}
+]
+
+\coordinate (O) at (0,0);
+\coordinate (qi) at (0,1.6);
+\coordinate (P) at (5.5,3.2);
+
+\node[below left] at (O) {$O$};
+\fill (O) circle (1.2pt);
+
+% Vettore d_i (verticale)
+\draw[uvec] (O) -- (qi) node[midway,left] {$\mathbf{d}_i$};
+
+% Carica q_i
+\node[ch] at (qi) {};
+\node[left=2pt] at (qi) {$q_i$};
+
+% r_i da q_i a P
+\draw[thin,black] (qi) -- node[midway,above] {$r_i$} (P);
+
+% r da O a P con freccia
+\draw[uvec] (O) -- (P);
+\node[above right] at (3.0,1.8) {$r$};
+
+% u_r piccolo versore su r vicino O
+\draw[uvec] (O) -- ++(0.8,0.45) node[below right] {$\mathbf{u}_r$};
+
+% P
+\fill (P) circle (1.2pt);
+\node[right] at (P) {$P$};
+
+% Angolo theta_i
+\draw[thin] (0.1,0.1) arc (45:78:0.5);
+\node at (0.35,0.4) {$\theta_i$};
+
+\end{tikzpicture}

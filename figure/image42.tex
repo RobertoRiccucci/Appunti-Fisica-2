@@ -1,0 +1,58 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  axis/.style={->,thick,black},
+  vvec/.style={->,line width=1.2pt,ered},
+  bvec/.style={->,line width=1.2pt,bblue},
+  wvec/.style={->,line width=1.2pt,ered}
+]
+
+% --- Sinistra: moto elicoidale ---
+\begin{scope}
+  % Assi
+  \draw[axis] (0,0) -- (0,2.5) node[above] {$y$};
+  \draw[axis] (0,0) -- (2.5,0) node[right] {$x$};
+  \draw[axis] (0,0) -- (-1.5,-1.5) node[below left] {};
+
+  % Carica +q
+  \coordinate (Q) at (1.0,1.2);
+  \node[circle,fill=posred,draw=black!60,minimum size=3mm,inner sep=0pt] at (Q) {};
+  \node[below right] at (Q) {$q$};
+
+  % v (rosso)
+  \draw[vvec] (Q) -- ++(-0.6,0.8) node[above left] {$\boldsymbol{v}$};
+  % omega
+  \draw[wvec] (Q) -- ++(-1.0,0.5) node[above left] {$\boldsymbol{\omega}$};
+
+  % Angolo theta
+  \draw[thin] (Q) ++(0.4,0) arc (0:60:0.4);
+  \node at (1.4,1.5) {$\theta$};
+
+  % Elica (tratteggiata, verso z)
+  \draw[thin,black,->] (0,0) -- (2.0,-2.5) node[right] {$z$};
+  % B lungo z
+  \draw[bvec] (0.5,-0.7) -- ++(0.7,-0.9);
+  \node[bblue] at (1.5,-1.6) {$\mathbf{B}$};
+
+  % Spire circolari (tratteggiato rosso)
+  \foreach \d in {-0.5,-1.2,-1.9}{
+    \draw[ered,dashed,thin] ({0.7+\d*0.3},{\d}) ellipse (0.5 and 0.2);
+  }
+
+  % Passo p
+  \node at (2.2,-0.4) {$p$};
+  \node at (1.8,-0.2) {$r$};
+\end{scope}
+
+% --- Destra: decomposizione di v ---
+\begin{scope}[xshift=6.5cm,yshift=-0.5cm]
+  \fill[ytangent,opacity=0.7] (0,0) -- (1.5,0) -- (1.5,1.2) -- (0,1.2) -- cycle;
+  \draw[vvec] (0,0) -- (0,1.2) node[above] {$\boldsymbol{v}_n$};
+  \draw[vvec] (0,0) -- (1.5,0) node[right] {$\boldsymbol{v}$};
+  \draw[vvec] (0,0) -- (1.5,-0.8) node[below right] {$\boldsymbol{v}_p$};
+  \draw[bvec] (1.5,0) -- ++(1.0,0) node[right] {$\mathbf{B}$};
+  \draw[thin] (0.6,0) arc (0:-30:0.6);
+  \node at (0.7,-0.2) {$\theta$};
+\end{scope}
+
+\end{tikzpicture}

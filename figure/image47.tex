@@ -1,0 +1,44 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  uvec/.style={->,line width=1pt,black},
+  ivec/.style={->,line width=1.2pt,vpurple},
+  bvec/.style={->,line width=1.3pt,bblue},
+  Fvec/.style={->,line width=1.3pt,bblue}
+]
+
+% Filo 1 (in alto a sinistra, grigio inclinato)
+\fill[blobgray!60,draw=black!50,rotate=25]
+  (-4.0,-0.12) rectangle (-1.5,0.12);
+% Filo 2 (in basso a destra, grigio inclinato)
+\fill[blobgray!60,draw=black!50,rotate=-15]
+  (1.0,-0.12) rectangle (4.0,0.12);
+
+% Corrente i1 (viola)
+\draw[ivec] (-3.5,-0.8) -- ++(-0.6,-0.3) node[below left] {$i_1$};
+% Corrente i2 (viola)
+\draw[ivec] (3.0,-0.2) -- ++(0.6,0.3) node[above right] {$i_2$};
+
+% ds_1 e ds_2
+\draw[uvec,line width=1.2pt] (-2.5,0.2) -- ++(-0.8,-0.3) node[above left] {$d\mathbf{s}_1$};
+\draw[uvec,line width=1.2pt] (2.5,-0.6) -- ++(0.8,0.2) node[above right] {$d\mathbf{s}_2$};
+
+% u_1 e u_2
+\draw[uvec] (-1.6,0.3) -- ++(0.8,0) node[below] {$\mathbf{u}_1$};
+\draw[uvec] (2.0,-0.3) -- ++(-0.8,0) node[above] {$\mathbf{u}_2$};
+
+% r tra i due elementi
+\draw[<->,thin] (-1.0,0.3) -- (1.5,-0.3);
+\node[above] at (0.3,0) {$r$};
+
+% dB_2 (in alto a sinistra, azzurro)
+\draw[bvec] (-2.5,0.5) -- ++(-0.3,1.2) node[above left] {$d\mathbf{B}_2$};
+% dB_1 (in basso a destra, azzurro)
+\draw[bvec] (2.5,-0.8) -- ++(0.3,-1.2) node[below right] {$d\mathbf{B}_1$};
+
+% dF_{1,2}
+\draw[Fvec] (2.5,-0.4) -- ++(0.6,0.8) node[above right] {$d\mathbf{F}_{1,2}$};
+% dF_{2,1}
+\draw[Fvec] (-2.0,0.2) -- ++(-0.6,-0.8) node[below left] {$d\mathbf{F}_{2,1}$};
+
+\end{tikzpicture}

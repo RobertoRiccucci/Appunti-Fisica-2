@@ -1,0 +1,32 @@
+\begin{tikzpicture}[
+  >={Latex[length=2.5mm,width=1.8mm]},
+  every node/.style={font=\small},
+  evec/.style={->,line width=1pt,ered}
+]
+
+% Anello esterno (R2 azzurro)
+\fill[surfblue,draw=surfblue!70!black] (0,0) circle (2.4);
+% Anello interno (R1 grigio chiaro)
+\fill[blobgray!50,draw=blobgray!70!black] (0,0) circle (1.0);
+
+% Etichette R1, R2
+\draw[thin] (0,0) -- (75:1.0);
+\node[above left] at (0.15,0.5) {$R_1$};
+\draw[thin] (0,0) -- (30:2.4);
+\node[above right] at (0.6,0.6) {$R_2$};
+
+% Cariche + sulla superficie interna
+\foreach \a in {0,30,...,330}{
+  \node at ({1.15*cos(\a)},{1.15*sin(\a)}) {\tiny$+$};
+}
+% Cariche - (o +) sulla superficie esterna
+\foreach \a in {15,45,...,345}{
+  \node at ({2.25*cos(\a)},{2.25*sin(\a)}) {\tiny$+$};
+}
+
+% Vettori E radiali (rossi)
+\foreach \a in {0,30,60,90,120,150,180,210,240,270,300,330}{
+  \draw[evec] ({1.25*cos(\a)},{1.25*sin(\a)}) -- ({1.9*cos(\a)},{1.9*sin(\a)});
+}
+
+\end{tikzpicture}

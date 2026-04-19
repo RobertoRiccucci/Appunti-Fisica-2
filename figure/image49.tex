@@ -1,0 +1,30 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  dashline/.style={dashed,thin,gray!60!black}
+]
+
+% Sfera grigia (distribuzione di corrente)
+\fill[blobgray,draw=blobgray!70!black] (0,0) circle (1.2);
+
+% Punto interno con j(r')
+\coordinate (J) at (-0.3,0.3);
+\fill (J) circle (1pt);
+\node[below left] at (J) {$\mathbf{j}(\mathbf{r}')$};
+\draw[dashline] (0,0) -- (J);
+\node[above left] at (-0.15,0.15) {$r'$};
+
+% Centro O
+\fill (0,0) circle (1pt);
+\node[below] at (0,-0.15) {$O$};
+
+% Punto P esterno
+\coordinate (P) at (4.5,0.3);
+\fill (P) circle (1.5pt);
+\node[above right] at (P) {$P$};
+
+% r da O a P
+\draw[->,thick] (0,0) -- (P);
+\node[above] at (2.3,0.3) {$r$};
+
+\end{tikzpicture}

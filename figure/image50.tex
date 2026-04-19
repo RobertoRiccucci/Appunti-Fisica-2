@@ -1,0 +1,47 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  uvec/.style={->,line width=1pt,black},
+  mvec/.style={->,line width=1.3pt,vpurple},
+  ivec/.style={->,line width=1pt,vpurple},
+  bvec/.style={->,line width=1.3pt,bblue},
+  dashline/.style={dashed,thin,gray!60!black}
+]
+
+% Spira (grigia, piccola, in basso a sinistra)
+\draw[blobgray!80,thick] (-0.3,0) ellipse (0.6 and 0.15);
+
+% Corrente i
+\draw[ivec] (0.2,-0.15) arc (-90:180:0.3 and 0.15);
+\node[vpurple,below] at (0,-0.3) {$i$};
+
+% Vettore m (viola, verso l'alto)
+\draw[mvec] (-0.3,0.2) -- ++(0,1.2) node[above left] {$\mathbf{m}$};
+
+% Asse tratteggiato verticale
+\draw[dashline] (-0.3,-0.5) -- (-0.3,1.5);
+
+% u_r versore da spira verso P
+\draw[uvec] (-0.2,0.3) -- ++(1.0,0.5) node[below right] {$\mathbf{u}_r$};
+
+% Angolo theta
+\draw[thin] (-0.3,0.8) arc (90:30:0.5);
+\node at (-0.05,0.7) {$\theta$};
+
+% Linea r
+\draw[thin] (-0.3,0.3) -- (4.5,2.5);
+\node[above] at (2.0,1.5) {$r$};
+
+% Punto P in alto a destra
+\coordinate (P) at (4.5,2.5);
+\fill (P) circle (1.5pt);
+
+% Parallelogramma giallo per decomposizione di B
+\fill[ytangent,opacity=0.6] (P) -- ++(1.5,0) -- ++(-0.4,1.0) -- ++(-1.5,0) -- cycle;
+
+% Vettori B al punto P (azzurri)
+\draw[bvec] (P) -- ++(1.5,0) node[right] {$\mathbf{B}$};
+\draw[bvec] (P) -- ++(-0.4,1.0) node[above left] {$\mathbf{B}_r$};
+\draw[bvec] (P) -- ++(0.4,-0.8) node[below right] {$\mathbf{B}_\theta$};
+
+\end{tikzpicture}

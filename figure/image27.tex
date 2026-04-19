@@ -1,0 +1,44 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  axis/.style={->,thick,black},
+  dashline/.style={dashed,thin,gray!60!black}
+]
+
+% Regioni
+\fill[planegray] (0,-1.5) rectangle (4.5,2.2);
+\fill[blobgray!70] (-4.5,-1.5) rectangle (0,2.2);
+
+% Confine
+\draw[thick,black] (0,-1.5) -- (0,2.4);
+\node[above left] at (0,2.4) {$\varepsilon_2$};
+\node[above right] at (0,2.4) {$\varepsilon_1$};
+
+% Punto P in alto
+\coordinate (P) at (1.5,2.0);
+\fill (P) circle (1.5pt);
+\node[above] at (P) {$P$};
+
+% Carica q a destra
+\coordinate (q) at (2.8,0);
+\fill (q) circle (1.5pt);
+\node[below right] at (q) {$q$};
+\node[right] at (2.8,-0.2) {$A$};
+
+% Carica immagine q' a sinistra
+\coordinate (qp) at (-2.8,0);
+\fill (qp) circle (1.5pt);
+\node[below left] at (qp) {$q'$};
+\node[left] at (-2.8,-0.2) {$A'$};
+
+% R1, R2
+\draw[thin] (P) -- node[midway,right] {$R_1$} (q);
+\draw[thin] (P) -- node[midway,left]  {$R_2$} (qp);
+
+% Distanze d
+\draw[<->,thin] (0,-1.0) -- (2.8,-1.0);
+\node[below] at (1.4,-1.0) {$d$};
+\draw[<->,thin] (-2.8,-1.0) -- (0,-1.0);
+\node[below] at (-1.4,-1.0) {$d$};
+
+\end{tikzpicture}

@@ -1,0 +1,37 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  axis/.style={->,thick,black},
+  efield/.style={->,thin,black}
+]
+
+% Linee di campo E0 entranti da sinistra
+\foreach \y in {-1.0,-0.5,0,0.5,1.0}{
+  \draw[efield] (-4.5,\y) -- (-2.5,\y);
+}
+\node[below] at (-4.3,-1.0) {$E_0$};
+
+% Sfera dielettrica
+\fill[blobgray,draw=black] (0,0) circle (1.6);
+\node at (0,-0.4) {$\varepsilon$};
+
+% Asse z
+\draw[axis] (-4.5,0) -- (4.5,0) node[right] {$z$};
+
+% Angolo α all'interno
+\draw[thin] (0,0) -- (120:1.6);
+\draw[thin] (0.6,0) arc (0:120:0.6);
+\node at (0.3,0.5) {$\alpha$};
+
+% Punto P esterno a destra
+\coordinate (P) at (3.0,0.8);
+\fill (P) circle (1.5pt);
+\node[right] at (P) {$P$};
+\draw[thin] (0,0) -- (P);
+\node[above] at (1.5,0.4) {$r$};
+
+% Angolo theta
+\draw[thin] (1.0,0) arc (0:15:1.0);
+\node[right] at (1.05,0.15) {$\theta$};
+
+\end{tikzpicture}

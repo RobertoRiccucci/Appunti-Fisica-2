@@ -1,0 +1,34 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small}
+]
+
+% Quattro piastre in prospettiva
+\foreach \x/\lab in {-1.6/+q, -0.5/{}, 0.5/{}, 1.6/-q}{
+  \fill[left color=blobgray!40,right color=blobgray!70,draw=black!50]
+    (\x,-1.6) -- (\x+0.1,-1.6) -- (\x+0.3,1.6) -- (\x+0.2,1.6) -- cycle;
+}
+
+% Cariche sulle piastre
+\foreach \y in {-1.2,-0.6,0,0.6,1.2}{
+  \node at (-1.4,\y) {\small$+$};
+  \node at (-0.35,\y) {\small$+$};
+  \node at (0.6,\y) {\small$-$};
+  \node at (1.7,\y) {\small$-$};
+}
+
+% Etichette +q, -q
+\node[above left] at (-1.6,1.7) {$+q$};
+\node[above right] at (1.8,1.7) {$-q$};
+
+% Asse orizzontale
+\draw[thin,black] (-3,0) -- (3,0);
+
+% Separazione h
+\draw[<->,thin] (-0.5,-2.0) -- (0.5,-2.0);
+\node[below] at (0,-2.0) {$h$};
+
+% Superficie Σ
+\node[right] at (1.9,-0.2) {$\Sigma$};
+
+\end{tikzpicture}

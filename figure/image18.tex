@@ -1,0 +1,24 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  uvec/.style={->,line width=1pt,black},
+  pvec/.style={->,line width=1.3pt,vpurple},
+  dashline/.style={dashed,thin,gray!60!black}
+]
+
+\coordinate (A) at (0,0);
+\coordinate (B) at (6,0.8);
+
+% Asse centrale
+\draw[thin,black] (A) -- (B);
+\draw[dashline] (B) -- ++(0.8,0.1);
+\node at (3,0.8) {$r$};
+
+% Versore u_r
+\draw[uvec] (A) -- ++(1.5,0.2) node[below] {$\mathbf{u}_r$};
+
+% Dipoli p_1 e p_2
+\draw[pvec] (A) ++(-0.15,-0.3) -- ++(0.4,1.4) node[above] {$\mathbf{p}_1$};
+\draw[pvec] (B) ++(-0.15,-0.3) -- ++(0.4,1.4) node[above] {$\mathbf{p}_2$};
+
+\end{tikzpicture}

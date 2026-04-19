@@ -1,0 +1,27 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  evec/.style={->,line width=1.2pt,ered},
+  uvec/.style={->,line width=1pt,black}
+]
+
+% Cupola (superficie curva azzurra)
+\fill[surfblue,draw=surfblue!60!black,line width=0.5pt]
+  plot [smooth,tension=0.8] coordinates {(-4,0) (-3,1.6) (-1,2.6) (1,2.9) (3,2.4) (4,1.2) (4.2,0)};
+\draw[thick,surfblue!70!black] (-4,0) .. controls (-2,-0.4) and (2,-0.4) .. (4.2,0);
+\fill[surfblue!80] (-4,0) .. controls (-2,-0.4) and (2,-0.4) .. (4.2,0) --
+                   (4.2,0) .. controls (2,-0.7) and (-2,-0.7) .. (-4,0) -- cycle;
+
+% Elemento di superficie (piccolo rombo inclinato)
+\begin{scope}[shift={(1.3,1.9)},rotate=-20]
+  \fill[surfblue!50!white,draw=black!40] (-0.3,-0.25) -- (0.3,-0.25) -- (0.3,0.25) -- (-0.3,0.25) -- cycle;
+\end{scope}
+
+% Vettori in P
+\coordinate (P) at (1.3,1.9);
+\draw[evec] (P) -- ++(0,1.4) node[above] {$\mathbf{E}$};
+\draw[uvec] (P) -- ++(0.9,0.9) node[right] {$\mathbf{u}_n$};
+\draw[thin] (P) ++(0.25,0.6) arc (90:45:0.6);
+\node at (1.75,2.55) {$\theta$};
+
+\end{tikzpicture}

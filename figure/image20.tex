@@ -1,0 +1,32 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  dashline/.style={dashed,thin,gray!60!black},
+  axis/.style={->,thick,black}
+]
+
+% Sfera grigia conduttrice a sinistra
+\fill[blobgray,draw=blobgray!70!black] (-3,0) circle (1.4);
+\node[left] at (-4.3,0.6) {$R$};
+\draw[thin] (-3,0) -- (-4.3,0.6);
+
+% Carica q_i sulla sfera
+\node[circle,fill=negblue,draw=black!60,minimum size=3mm,inner sep=0pt] (qi) at (-2.4,0.1) {};
+\node[above=1pt] at (qi) {$q_i$};
+
+% Asse x
+\draw[axis] (-3,0) -- (5,0) node[right] {$x$};
+
+% Carica q a destra
+\coordinate (q) at (2.2,0);
+\node[circle,fill=charge,draw=black!60,minimum size=4mm,inner sep=0pt] at (q) {};
+\node[below] at (q) {$q$};
+
+% Punto T e linee tratteggiate
+\coordinate (T) at (-1.6,-1.1);
+\fill (T) circle (1pt);
+\node[below] at (T) {$T$};
+\draw[dashline] (qi) -- (T);
+\draw[dashline] (T) -- (5,0.4);
+
+\end{tikzpicture}

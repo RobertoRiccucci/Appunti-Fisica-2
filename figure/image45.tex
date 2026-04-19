@@ -1,0 +1,53 @@
+\begin{tikzpicture}[
+  >={Latex[length=3mm,width=2.2mm]},
+  every node/.style={font=\small},
+  axis/.style={->,thick,black},
+  uvec/.style={->,line width=0.9pt,black},
+  ivec/.style={->,line width=1.2pt,vpurple},
+  bvec/.style={->,line width=1.2pt,bblue},
+  b1vec/.style={->,line width=1.2pt,ered},
+  dashline/.style={dashed,thin,gray!60!black}
+]
+
+% Assi
+\draw[axis] (0,0) -- (0,3.5) node[above] {$y$};
+\draw[axis] (0,0) -- (5.5,0) node[right] {$x$};
+\draw[axis] (0,0) -- (0,-2.0) node[below] {$x$};
+\draw[axis] (0,0) -- (-1.5,-1.5) node[below left] {$z$};
+\node[below left] at (0,0) {$O$};
+
+% Spira circolare (grigia, nel piano yz)
+\draw[blobgray!80,thick] (0,0) ellipse (0.5 and 1.8);
+
+% Corrente i (viola, sulla spira)
+\draw[ivec] (-0.4,1.5) -- ++(0.4,0.6) node[above] {$i$};
+
+% ds_1 e u_1 (in alto a sinistra)
+\draw[uvec,line width=1.2pt] (-0.4,1.6) -- ++(-0.5,0.3) node[above left] {$d\mathbf{s}_1$};
+\draw[uvec] (-0.3,1.4) -- ++(0.6,-0.4) node[right] {$\mathbf{u}_1$};
+
+% ds_2 e u_2 (in basso)
+\draw[uvec,line width=1.2pt] (0.3,-1.5) -- ++(-0.6,0) node[left] {$d\mathbf{s}_2$};
+\draw[uvec] (0.3,-1.4) -- ++(0.3,0.6) node[right] {$\mathbf{u}_2$};
+
+% r dal centro della spira a P
+\draw[dashline] (0,0) -- (4.5,0);
+\node[above] at (2.5,0) {$r$};
+\draw[dashline] (0,0) -- (4.5,0);
+
+% Punto P a destra (quadrato piccolo come rombo)
+\coordinate (P) at (4.2,0);
+\draw[thin] (P) ++(-0.08,-0.08) rectangle ++(0.16,0.16);
+
+% dB1 (rosso, diagonale in alto a destra)
+\draw[b1vec] (P) -- ++(0.9,1.0) node[above right] {$d\mathbf{B}_1$};
+% dB2 (rosso, in basso)
+\draw[b1vec] (P) -- ++(0.3,-1.2) node[below] {$d\mathbf{B}_2$};
+% dB totale (rosso, orizzontale a destra)
+\draw[b1vec] (P) -- ++(1.2,0) node[right] {$d\mathbf{B}$};
+
+% Angolo theta
+\draw[thin] (P) ++(0.5,0) arc (0:50:0.5);
+\node at (4.75,0.3) {$\theta$};
+
+\end{tikzpicture}
