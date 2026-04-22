@@ -436,6 +436,11 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/italian.lbx
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/italian.lbx
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/italian.lbx
 OUTPUT build/Appunti_Fisica_2.bcf
+INPUT build/Appunti_Fisica_2.bbl
+INPUT build/Appunti_Fisica_2.bbl
+INPUT build/Appunti_Fisica_2.bbl
+INPUT build/Appunti_Fisica_2.bbl
+INPUT build/Appunti_Fisica_2.bbl
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
@@ -602,7 +607,6 @@ INPUT ./figure/image2.png
 INPUT ./figure/image2.png
 INPUT ./figure/image2.png
 INPUT ./figure/image2.png
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmbx9.tfm
 INPUT ./figure/image11.png
 INPUT ./figure/image11.png
 INPUT ./figure/image11.png

@@ -177,4 +177,5 @@
 \contentsline {subsection}{\numberline {24.6.1}equazioni di Maxwell in forma covariante }{180}{subsection.24.6.1}%
 \contentsline {subsection}{\numberline {24.6.2}Trasformazione dei campi}{181}{subsection.24.6.2}%
 \contentsline {subsection}{\numberline {24.6.3}Invarianti del campo elettromagnetico}{181}{subsection.24.6.3}%
+\contentsline {chapter}{\nonumberline Bibliografia}{182}{chapter*.67}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
