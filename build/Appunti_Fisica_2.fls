@@ -419,6 +419,9 @@ INPUT build/chapters/chapter_23.aux
 INPUT build/chapters/chapter_24.aux
 INPUT build/chapters/chapter_24.aux
 INPUT build/chapters/chapter_24.aux
+INPUT build/chapters/chapter_25.aux
+INPUT build/chapters/chapter_25.aux
+INPUT build/chapters/chapter_25.aux
 OUTPUT build/Appunti_Fisica_2.aux
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
@@ -1057,6 +1060,12 @@ INPUT ./figure/image71.png
 INPUT ./figure/image71.png
 INPUT ./figure/image71.png
 INPUT ./figure/image71.png
+INPUT ./chapters/chapter_25.tex
+INPUT ./chapters/chapter_25.tex
+OUTPUT build/chapters/chapter_25.aux
+INPUT ./chapters/chapter_25.tex
+INPUT ./chapters/chapter_25.tex
+INPUT chapters/chapter_25.tex
 INPUT build/Appunti_Fisica_2.aux
 INPUT build/chapters/chapter_1.aux
 INPUT build/chapters/chapter_1.aux
@@ -1130,6 +1139,9 @@ INPUT build/chapters/chapter_23.aux
 INPUT build/chapters/chapter_24.aux
 INPUT build/chapters/chapter_24.aux
 INPUT build/chapters/chapter_24.aux
+INPUT build/chapters/chapter_25.aux
+INPUT build/chapters/chapter_25.aux
+INPUT build/chapters/chapter_25.aux
 INPUT build/Appunti_Fisica_2.run.xml
 OUTPUT build/Appunti_Fisica_2.run.xml
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb

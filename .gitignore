@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# LaTeX build artifacts
+build/*.aux
+build/*.bbl
+build/*.bcf
+build/*.blg
+build/*.fdb_latexmk
+build/*.fls
+build/*.log
+build/*.run.xml
+build/*.synctex.gz
+build/*.toc

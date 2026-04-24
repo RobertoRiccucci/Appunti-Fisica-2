@@ -1,0 +1,226 @@
+\chapter{Elettromagnetismo nella materia}
+
+Nei capitoli precedenti abbiamo visto come le equazioni di Maxwell prevedano l’esistenza di onde elettromagnetiche che si propagano nello spazio vuoto con velocità $c = 1/\sqrt{\eps_0 \mu_0}$. 
+Abbiamo inoltre accennato al fatto che le stesse equazioni ammettono l’esistenza di onde elettromagnetiche che si propagano in un dielettrico trasparente non ferromagnetico ($\kappa_m \approx 1$) con velocità $v = c/\sqrt{\kappa_e}$.\\
+
+In questo capitolo, invece, andremo a studiare come un'onda elettromagnetica si propaga nei dielettrici e nei conduttori. 
+
+\section{Propagazione di un'onda elettromagnetica in un dielettrico}
+
+Iniziamo studiando le onde elettromagnetiche all'interno di un dielettrico lineare. \\
+
+Analogamente a quanto fatto per la trattazione dell'irraggiamento atomico, trattiamo l'atomo come un oscillatore, caratterizzato dalla pulsazione propria $\omega_0$, sottoposto durante il suo moto ad una forza di tipo viscoso $-m_e \gamma dz/dt$, che riassume l'effetto di eventuali interazioni con gli atomi circostanti.
+Consideriamo un'onda elettromagnetica armonica, con pulsazione $\omega$ e ampiezza $E_0$, linearmente polarizzata lungo una direzione che chiamiamo $z$, che interagisce con un atomo. 
+L'equazione del moto di un elettrone dell'atomo è quella dell'oscillatore forzato:
+
+\begin{equation}
+    \frac{d^2 z(t)}{dt^2} + \gamma \frac{dz(t)}{dt} + \omega_0^2 z(t) = -\frac{e}{m_e} E_0 e^{-i\omega t}
+\end{equation}
+
+Per risolvere questa equazione differenziale dovremmo prima risolvere l'equazione omogenea e poi la particolare, tuttavia è facile notare che la soluzionen dell'omogenea è una somma di esponenziali che decrescono con il tempo e quindi quando il sistema è a regime la soluzione dell'omogenea da un contributo nullo. 
+Quindi basta trovare la soluzione della particolare. Consideriamo l'ansatz $z(t) = z_0 e^{-i\omega t}$, sostituendo si ha
+
+\begin{equation}
+    -z_0 \omega^2 e^{-i\omega t} - i \gamma \omega z_0 e^{-i\omega t} + z_0 \omega_0^2 e^{-i\omega t} = -\frac{e E_0}{m_e} e^{-i\omega t}
+\end{equation}
+
+Quindi si ottiene che 
+
+\begin{equation}
+    z_0 = - \frac{e E_0}{m_e [(\omega_0^2 - \omega^2) - i\gamma \omega]}
+\end{equation}
+
+Quindi la soluzione a regime risulta essere 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    z(t) = - \frac{e E_0}{m_e [(\omega_0^2 - \omega^2) - i\gamma \omega]} \ e^{-i\omega t}
+\end{equation}
+\end{tcolorbox}
+
+Pertanto possiamo associare a ogni atomo un momento di dipolo elettrico 
+
+\begin{equation}
+    p = -e z(t) = \frac{e^2 E_0}{m_e [(\omega_0^2 - \omega^2) - i\gamma \omega]} \ e^{-i\omega t}
+\end{equation}
+
+Per compattare la notazione definiamo la quantita $\alpha(\omega)$ come 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \alpha(\omega) = \frac{e^2}{m_e \eps_0 [(\omega_0^2 - \omega^2) - i\gamma \omega]}
+\end{equation}
+\end{tcolorbox}
+
+E quindi possiamo scrivere il momenti di dipolo come 
+
+\begin{equation}
+    p = \eps_0 \alpha(\omega) E(t)
+\end{equation}
+
+Dato che stiamo considerando un dielettrico, supponendo che contenga $N$ atomi per unità di volume, la polarizzazione è 
+
+\begin{equation}
+    P = N \eps_0 \alpha E(t)
+\end{equation}
+
+Tuttavia, essendo il dielettrico \emph{lineare}:
+
+\begin{equation}
+    P = \eps_0 \chi_e E(t)
+\end{equation}
+
+Uguagliando i risultati (e ricordando che $\chi_e = \kappa_e - 1$ ) si ottiene che \emph{la costante dielettrica relativa dipende dalla pulsazione dell'onda e quindi onde con pulsazioni diverse che incidono sullo stesso dielettrico vengono trasformate in modo diverso}\footnote{I ragionamenti fatti fino ad ora in questa sezioni sono serviti solamente per ottenere questo risultato. Per una trattazione più completa dell'argomento sarebbero necessarie nozioni riguardanti la meccanica quantistica.}, in particolare:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \kappa_e (\omega) = 1 + N\alpha(\omega) = 1 + \alpha(\omega) = 1 + \frac{N e^2}{m_e[(\omega_0^2 - \omega^3) - i\gamma \omega]}
+\end{equation}
+\end{tcolorbox}
+
+Si nota che questa quantità è complessa (a noi interessa solo la parte reale, tuttavia una trattazione dell'argomento con i numeri complessi è più semplice).\\
+Supponendo di considerare un dielettrico non ferromagnetico, possiamo approssimare l'indice di rifrazione (complesso) del mezzo come 
+
+\begin{equation}
+    \tilde{n} \approx \sqrt{\kappa_e} = \left( 1 + \frac{N e^2}{m_e \eps_0 [(\omega_0^2 - \omega^3) - i\gamma \omega]} \right) ^{1/2}
+\end{equation}
+
+Se il dielettrico considerato è un gas si ha che $\tilde{n} \approx 1 \implies N\alpha \ll 1$, quindi possiamo sviluppare in Taylor e ottenere 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    \tilde{n} = 1 + \frac{N e^2}{2m_e \eps_0[(\omega_0^2 - \omega^3) - i\gamma \omega]} = n + i \eta
+\end{equation}
+\end{tcolorbox}
+
+\newpage
+
+Dove, razionalizzando 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    n = 1 + \frac{N e^2}{2 \eps_0 m_e} \frac{\omega_0^2 - \omega^2}{(\omega_0^2 - \omega^2)^2 + \gamma^2 \omega^2} \quad , \quad \eta = \frac{N e^2}{2 \eps_0 m_e}
+\end{equation}
+\end{tcolorbox}
+
+Dalla relazione tra il numero d'onda e la pulsazione ($k = \omega n/c$) si nota che anche il numero d'onda è un numero complesso e dipende dalla pulsazione $\omega$. 
+Scrivendo esplicitamente il numero d'onda complesso $\tilde{k}$ come $\tilde{k} = k_r + i k_i$ e sostituendo nell'espressione dell'onda
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    E(t) = E_0 e^{i (\tilde{k} z - \omega t)} = E_0 e^{-k_i z} e^{i(k_r - \omega t)}
+\end{equation}
+\end{tcolorbox}
+
+Da questa relazione si vede che il campo elettrico (e quindi anche il campo magnetico) \emph{diminuisce esponenzialmente con la distanza}. \\
+
+In particolare si ha 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    k_r = \omega \frac{n}{c} \quad , \quad k_i = \omega \frac{\eta}{c}
+\end{equation}
+\end{tcolorbox}
+
+\subsection{Velocità di gruppo}
+
+Dalla trattazione svolta finora abbiamo visto che, in un mezzo dielettrico, l'indice di rifrazione $n$ dipende dalla pulsazione $\omega$ dell'onda incidente. Un mezzo con questa proprietà si dice \mkeyword{mezzo dispersivo}: onde con pulsazioni diverse si propagano al suo interno con velocità diverse $v(\omega) = c/n(\omega)$, che prende il nome di \mkeyword{velocità di fase}.\\
+
+Quando nel mezzo si propaga una singola onda armonica monocromatica, la velocità di fase è sufficiente a descriverne completamente la propagazione. Tuttavia, un'onda armonica indefinita nel tempo e nello spazio è un'idealizzazione matematica che non trasporta alcuna informazione: un segnale fisico reale è sempre costituito da una \emph{sovrapposizione} di onde armoniche di pulsazioni diverse, ovvero da un \mkeyword{pacchetto d'onde}. In un mezzo dispersivo le diverse componenti del pacchetto si propagano a velocità diverse, e sorge quindi la questione di definire con quale velocità si propaghi il pacchetto nel suo complesso.\\
+
+\subsubsection*{Sovrapposizione di due onde armoniche}
+
+Per introdurre il concetto nel modo più semplice, consideriamo la sovrapposizione di due onde armoniche di uguale ampiezza $E_0$, pulsazioni $\omega_1$ e $\omega_2$ molto vicine tra loro, e corrispondenti numeri d'onda $k_1$ e $k_2$:
+
+\begin{equation}
+    E(z,t) = E_0 \cos(k_1 z - \omega_1 t) + E_0 \cos(k_2 z - \omega_2 t)
+\end{equation}
+
+Definiamo le pulsazioni e i numeri d'onda medi, nonchè le loro differenze, come
+
+\begin{equation}
+    \omega = \frac{\omega_1 + \omega_2}{2} \quad, \quad k = \frac{k_1 + k_2}{2} \quad, \quad \Delta\omega = \frac{\omega_1 - \omega_2}{2} \quad, \quad \Delta k = \frac{k_1 - k_2}{2}
+\end{equation}
+
+Utilizzando le formule di prostaferesi, possiamo riscrivere la sovrapposizione come
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    E(z,t) = 2 E_0 \cos(\Delta k \, z - \Delta\omega \, t) \cos(k z - \omega t)
+\end{equation}
+\end{tcolorbox}
+
+Il risultato ha una struttura interessante: è il prodotto di due fattori oscillanti. Il secondo fattore, $\cos(kz - \omega t)$, è un'onda armonica di pulsazione media $\omega$ che si propaga con velocità di fase $v = \omega/k$. Il primo fattore, $\cos(\Delta k z - \Delta \omega t)$, oscilla molto più lentamente (dato che $\Delta \omega \ll \omega$) e rappresenta un \emph{inviluppo} modulante che si propaga con velocità 
+
+\begin{equation}
+    v_g = \frac{\Delta\omega}{\Delta k}
+\end{equation}
+
+Nel limite in cui $\omega_1 \to \omega_2$ (cioè considerando un pacchetto costituito da componenti con pulsazioni infinitamente vicine) otteniamo la definizione generale di \mkeyword{velocità di gruppo}:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    v_g = \frac{d\omega}{dk}
+\end{equation}
+\end{tcolorbox}
+
+La velocità di gruppo è quindi la velocità con cui si propaga l'inviluppo del pacchetto d'onde, e nelle situazioni in cui il concetto mantiene un chiaro significato fisico rappresenta anche la velocità di propagazione dell'energia e del segnale.\\
+
+\subsubsection*{Relazione tra velocità di fase e di gruppo}
+
+Per ricavare il legame esplicito tra $v$ e $v_g$ in un mezzo dispersivo, partiamo dalla definizione e usiamo la relazione $k = \omega n(\omega)/c$:
+
+\begin{equation}
+    \frac{1}{v_g} = \frac{dk}{d\omega} = \frac{d}{d\omega} \left( n\frac{\omega}{c} \right) = \frac{n}{c} + \frac{\omega}{c} \frac{dn}{d\omega} = \frac{1}{v} + \frac{\omega}{v} \frac{1}{n} \frac{dn}{d\omega}
+\end{equation}
+
+Da cui si ottiene
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    v_g = \frac{v}{1 + \dfrac{\omega}{n}\dfrac{dn}{d\omega}} = \frac{c}{n + \omega \dfrac{dn}{d\omega}}
+\end{equation}
+\end{tcolorbox}
+
+Si osserva immediatamente che \emph{la velocità di fase e di gruppo coincidono quando $dn/d\omega = 0$}, ovvero quando l'indice di rifrazione non dipende da $\omega$ oppure quando passa per un massimo o un minimo. Nei restanti casi si distinguono due regimi:
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{align}
+    \text{dispersione normale:} \quad & \frac{dn}{d\omega} > 0 \quad \implies \quad v_g < v \\[0.3em]
+    \text{dispersione anomala:} \quad & \frac{dn}{d\omega} < 0 \quad \implies \quad v_g > v
+\end{align}
+\end{tcolorbox}
+
+Nelle zone di dispersione normale si può dimostrare che la velocità di gruppo è sempre minore di $c$, anche nei casi in cui $n<1$ e quindi $v>c$ (come accade a pulsazioni molto elevate, si veda il seguito). Al contrario, in presenza di dispersione anomala --- che si verifica in prossimità di una pulsazione caratteristica $\omega_0$ --- si ha $n<1$, $v>c$ e di conseguenza anche $v_g > v > c$.\\
+
+Il fatto che si trovi $v > c$ per la velocità di fase non costituisce un problema fisico: la velocità di fase è infatti la velocità di propagazione di un'onda armonica monocromatica indefinita nel tempo e nello spazio, che non trasporta alcuna informazione. Più delicato è invece il risultato $v_g > c$, che entrerebbe in conflitto con l'idea che la velocità di gruppo rappresenti la velocità di propagazione dell'energia, e quindi del segnale fisico. La risoluzione del paradosso richiede un'analisi più accurata di ciò che accade al pacchetto d'onde in vicinanza di una pulsazione caratteristica $\omega_0$: in tale regione il pacchetto risulta fortemente distorto e il concetto stesso di velocità di gruppo perde di significato; un'analisi dettagliata mostra che, nonostante $v$ e $v_g$ definite nel modo consueto siano entrambe maggiori di $c$, la velocità effettiva con cui si propaga il segnale fisico costituito dal pacchetto rimane sempre inferiore a $c$. Lontano dalle pulsazioni caratteristiche, invece, $n(\omega)$ è una funzione lentamente variabile e l'interpretazione di $v_g$ come velocità di propagazione del segnale viene pienamente recuperata, risultando sempre $v_g < c$.\\
+
+\subsubsection*{Limite di alte pulsazioni}
+
+Esaminiamo esplicitamente, come anticipato, il caso $\omega \gg \omega_0$, dove $\omega_0$ è la massima pulsazione caratteristica del mezzo dielettrico considerato. In questo limite, nell'espressione di $n(\omega)$ ricavata in precedenza si possono trascurare sia $\omega_0^2$ rispetto a $\omega^2$ al numeratore, sia $\gamma^2 \omega^2$ rispetto a $\omega^4$ al denominatore, ottenendo 
+
+\begin{equation}
+    n(\omega) = 1 + \frac{N e^2}{2 \eps_0 m_e} \frac{\omega_0^2 - \omega^2}{(\omega_0^2 - \omega^2)^2 + \gamma^2 \omega^2} \approx 1 + \frac{N e^2}{2 \eps_0 m_e} \left( \frac{-\omega^2}{\omega^4} \right) = 1 - \frac{N e^2}{2 \eps_0 m_e} \frac{1}{\omega^2}
+\end{equation}
+
+Si nota quindi che \emph{in questo regime l'indice di rifrazione è minore di $1$} e, di conseguenza, la velocità di fase risulta maggiore di $c$. Infatti, sfruttando il fatto che $Ne^2 / (2 \eps_0 m_e \omega^2) \ll 1$, si ha 
+
+\begin{equation}
+    v = \frac{c}{n} = \frac{c}{1 - \dfrac{N e^2}{2 \eps_0 m_e \omega^2}} \approx c \left( 1 + \frac{N e^2}{2 \eps_0 m_e \omega^2} \right)
+\end{equation}
+
+Calcoliamo ora la velocità di gruppo. Derivando l'espressione approssimata di $n(\omega)$ si ottiene 
+
+\begin{equation}
+    \frac{dn}{d\omega} = \frac{N e^2}{\eps_0 m_e \omega^3} \quad \implies \quad n + \omega \frac{dn}{d\omega} = 1 + \frac{N e^2}{2 \eps_0 m_e \omega^2}
+\end{equation}
+
+E quindi, sostituendo nell'espressione generale di $v_g$, si ha 
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=orange!70!black, boxrule=0.8pt]
+\begin{equation}
+    v_g = \frac{c}{1 + \dfrac{N e^2}{2 \eps_0 m_e \omega^2}}
+\end{equation}
+\end{tcolorbox}
+
+Si verifica così che, pur avendo $v > c$, la velocità di gruppo soddisfa $v_g < c$, coerentemente con l'interpretazione di $v_g$ come velocità di propagazione del segnale.

@@ -177,5 +177,8 @@
 \contentsline {subsection}{\numberline {24.6.1}equazioni di Maxwell in forma covariante }{180}{subsection.24.6.1}%
 \contentsline {subsection}{\numberline {24.6.2}Trasformazione dei campi}{181}{subsection.24.6.2}%
 \contentsline {subsection}{\numberline {24.6.3}Invarianti del campo elettromagnetico}{181}{subsection.24.6.3}%
-\contentsline {chapter}{\nonumberline Bibliografia}{182}{chapter*.67}%
+\contentsline {chapter}{\numberline {25}Elettromagnetismo nella materia}{182}{chapter.25}%
+\contentsline {section}{\numberline {25.1}Propagazione di un'onda elettromagnetica in un dielettrico}{182}{section.25.1}%
+\contentsline {subsection}{\numberline {25.1.1}Velocità di gruppo}{184}{subsection.25.1.1}%
+\contentsline {chapter}{\nonumberline Bibliografia}{188}{chapter*.67}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
