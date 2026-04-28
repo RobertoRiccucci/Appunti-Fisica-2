@@ -4,7 +4,9 @@
 # LaTeX build artifacts
 build/*.aux
 build/*.bbl
+build/*.bbl-SAVE-ERROR
 build/*.bcf
+build/*.bcf-SAVE-ERROR
 build/*.blg
 build/*.fdb_latexmk
 build/*.fls
@@ -12,3 +14,4 @@ build/*.log
 build/*.run.xml
 build/*.synctex.gz
 build/*.toc
+build/chapters/
