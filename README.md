@@ -1,10 +1,43 @@
-# Appunti Fisica 2
+# 📖 Appunti Fisica 2
 
-Queste note nascono come riferimento per lo studio del corso di Fisica 2, tenuto dal professor Francesco Forti. Il contenuto segue prevalentemente il programma svolto nell'anno accademico 2025/2026, per cui non è garantito che rimanga valido anche per gli anni successivi.  
+> Note per il corso di **Fisica 2** tenuto dal professor **Francesco Forti**.  
+> Il contenuto segue il programma dell'anno accademico **2025/2026** — non è garantita la validità per anni successivi.
 
-Le presenti note sono state scritte con due obiettivi principali: riportare in un unico testo tutto il programma dell'intero anno e riportare in forma più compatta teoremi e dimostrazioni presenti nei libri: "Classical Electrodynamics" di John David Jackson, "Introduction to Electrodynamics" di David J. Griffiths e "Fisica - Volume II - Elettromagnetismo e Onde" di P. Mazzoldi, M. Nigro, C. Voci. Che sono i testi principali utilizzati per scrivere questi appunti.  
+---
 
-È importante sottolineare che sono presenti approfondimenti non svolti a lezione ma spiegati nei corsi di Elettrodinamica 1 ed Elettrodimanica 2 tenuti alla Scuola Normale Superiore dal professore Giuseppe Carlo La Rocca.  
+## 📝 Obiettivi
 
-Non sempre gli argomenti seguiranno l'ordine delle lezioni.
+Queste note sono state scritte con due obiettivi principali:
+
+- Raccogliere in un **unico testo** l'intero programma del corso
+- Presentare in forma **più compatta** teoremi e dimostrazioni rispetto ai testi di riferimento
+
+---
+
+## 📚 Testi di riferimento
+
+| Autore | Titolo |
+|--------|--------|
+| J. D. Jackson | *Classical Electrodynamics* |
+| D. J. Griffiths | *Introduction to Electrodynamics* |
+| P. Mazzoldi, M. Nigro, C. Voci | *Fisica — Volume II: Elettromagnetismo e Onde* |
+
+Sono inoltre presenti approfondimenti tratti dai corsi di **Elettrodinamica 1** ed **Elettrodinamica 2** tenuti alla *Scuola Normale Superiore* dal professor **Giuseppe Carlo La Rocca**.
+
+---
+
+## 🔢 Esercizi
+
+Queste note non contengono esercizi. Per la pratica si consiglia:
+
+> *Problems in Classical Electromagnetism — 203 Exercises with Solutions*  
+> A. Macchi, G. Moruzzi, F. Pegoraro
+
+Il testo copre l'intero programma di Fisica 2 e non solo, costituendo un riferimento completo per chi voglia approfondire l'elettromagnetismo classico.
+
+---
+
+## ⚠️ Note
+
+Gli argomenti non seguono necessariamente l'ordine delle lezioni.
 
