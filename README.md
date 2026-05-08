@@ -1,11 +1,11 @@
-# 📖 Appunti Fisica 2
+# Appunti Fisica 2
 
 > Note per il corso di **Fisica 2** tenuto dal professor **Francesco Forti**.  
 > Il contenuto segue il programma dell'anno accademico **2025/2026** — non è garantita la validità per anni successivi.
 
 ---
 
-## 📝 Obiettivi
+## Obiettivi
 
 Queste note sono state scritte con due obiettivi principali:
 
@@ -14,7 +14,7 @@ Queste note sono state scritte con due obiettivi principali:
 
 ---
 
-## 📚 Testi di riferimento
+## Testi di riferimento
 
 | Autore | Titolo |
 |--------|--------|
@@ -26,7 +26,7 @@ Sono inoltre presenti approfondimenti tratti dai corsi di **Elettrodinamica 1** 
 
 ---
 
-## 🔢 Esercizi
+## Esercizi
 
 Queste note non contengono esercizi. Per la pratica si consiglia:
 
@@ -37,7 +37,7 @@ Il testo copre l'intero programma di Fisica 2 e non solo, costituendo un riferim
 
 ---
 
-## ⚠️ Note
+## Note
 
 Gli argomenti non seguono necessariamente l'ordine delle lezioni.
 
